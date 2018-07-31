@@ -1,0 +1,42 @@
+body
+{
+    background-color: white;
+}
+.nav-item
+{
+    font-family: "Open Sans Regular",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+}
+.navbar{
+    padding: 0px;
+
+    background-image: linear-gradient(to bottom, #dbdbd4 0, #a7a5a4 100%);
+    box-shadow: 3px 4px 8px rgba(0, 0, 0, .3);
+}
+.nav-link
+{
+    color: white!important;
+    font-family: "Open Sans Regular",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+}
+.navbar-menu
+{
+    overflow: hidden;
+    padding: 0;
+    list-style: none;
+    margin: auto;
+}
+.navbar-menu li {
+    float: left;
+}
+.navbar-menu a {
+    display: block;
+    padding: 1em;
+    border-right: 1px solid #82909a;
+    color: white!important;
+    font-family: "Open Sans Regular",Helvetica,Arial,sans-serif;
+    text-decoration: none   ;
+}
+.navbar-menu a:hover {
+    background: rgba(173, 192, 206, 0.3);
+}
