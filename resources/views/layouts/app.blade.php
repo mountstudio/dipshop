@@ -14,10 +14,11 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
     <link href="{{ asset('css/login.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 <body>
-    <div id="app">
+    <div id="app" class="mb-5">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -59,32 +60,36 @@
                                 </div>
                             </li>
                         @endguest
+
                     </ul>
                 </div>
             </div>
         </nav>
         <div class="container">
-            <div class="row justify-content-center text-center">
-                <div class="col-3 p-5">ЛОГО</div>
-                <div class="col-5 p-5">Поиск или что то такое</div>
+            <div class="row justify-content-center text-center" >
+                <div class="col-3 p-2"><img src="images/2.png" style="width:120px; height:100px;" alt=""></div>
+                <div class="col-5 p-5">
+                    <form class="example" action="/">
+                        <input class="text-center" type="text" placeholder="Search.." name="search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
                 <div class="col-2 p-5">Плюшка 1</div>
                 <div class="col-2 p-5">Плюшка 2</div>
             </div>
         </div>
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+        <nav class="navbar-2 navbar-expand-md navbar-light navbar-laravel " style="border-top: solid 0.1px gray; border-bottom: solid 0.1px gray">
             <div class="container">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
-
-                    <ul class="navbar-menu">
-                        <li><a href="">Алкоголь</a></li>
-                        <li><a href="">Сигареты</a></li>
-                        <li><a href="">Драгоценности</a></li>
-                        <li><a href="">Подарки</a></li>
-                        <li><a href="">Аксессуары</a></li>
-                        <li><a href="">Прочее</a></li>
+                    <ul class="navbar-menu" style="margin-left: 200px;">
+                        <li><a style="color:black!important;" href="">Алкоголь</a></li>
+                        <li><a style="color:black!important;" href="">Сигареты</a></li>
+                        <li><a style="color:black!important;" href="">Драгоценности</a></li>
+                        <li><a style="color:black!important;" href="">Подарки</a></li>
+                        <li><a style="color:black!important;" href="">Аксессуары</a></li>
+                        <li><a style="color:black!important;" href="">Прочее</a></li>
                     </ul>
             </div>
         </nav>
