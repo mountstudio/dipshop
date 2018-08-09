@@ -33,7 +33,7 @@
                             <label class="form-check-label" for="exampleCheck1">Check me out</label>
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
-                        <a class="btn btn-link" href="{{ route('password.request') }}">
+                        <a class="btn btn-link" href="{{ route('login') }}">
                             {{ __('Already have an account? Sign in') }}
                         </a>
                     </form>

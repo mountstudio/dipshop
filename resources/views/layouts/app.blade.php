@@ -20,7 +20,7 @@
 
 </head>
 <body>
-    <header class="sticky-top">
+    <header class="">
         <nav class="navbar font-weight-normal shadow-sm navbar-expand-md navbar-light bg-white">
             <div class="container">
                 <a class="navbar-brand p-0" href="/"><img id="logo" src="/images/2.1.png" style="width:100px; height:auto;" alt=""></a>
