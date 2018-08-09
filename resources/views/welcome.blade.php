@@ -10,7 +10,7 @@
         <div class="row">
 
             <div class="col-3 mb-4">
-                <div class="card shadow-sm px-4 pt-3 border">
+                <div class="card  px-4 pt-3 border-0">
                     <img class="card-img-top" src="/images/0_0_orig.png" alt="Card image cap">
                     <div class="card-body d-flex px-0 pb-0">
                         <div class="text-capitalize mr-auto font-weight-bold">whiskey</div>
@@ -27,7 +27,7 @@
             </div>
 
             <div class="col-3 mb-4">
-                <div class="card shadow-sm px-4 pt-3 border">
+                <div class="card  px-4 pt-3 border-0">
                     <img class="card-img-top" src="/images/0_0_orig.png" alt="Card image cap">
                     <div class="card-body d-flex px-0 pb-0">
                         <div class="text-capitalize mr-auto font-weight-bold">whiskey</div>
@@ -44,7 +44,7 @@
             </div>
 
             <div class="col-3 mb-4">
-                <div class="card shadow-sm px-4 pt-3 border">
+                <div class="card  px-4 pt-3 border-0">
                     <img class="card-img-top" src="/images/0_0_orig.png" alt="Card image cap">
                     <div class="card-body d-flex px-0 pb-0">
                         <div class="text-capitalize mr-auto font-weight-bold">whiskey</div>
@@ -61,7 +61,7 @@
             </div>
 
             <div class="col-3 mb-4">
-                <div class="card shadow-sm px-4 pt-3 border">
+                <div class="card  px-4 pt-3 border-0">
                     <img class="card-img-top" src="/images/0_0_orig.png" alt="Card image cap">
                     <div class="card-body d-flex px-0 pb-0">
                         <div class="text-capitalize mr-auto font-weight-bold">whiskey</div>
@@ -78,7 +78,7 @@
             </div>
 
             <div class="col-3 mb-4">
-                <div class="card shadow-sm px-4 pt-3 border">
+                <div class="card  px-4 pt-3 border-0">
                     <img class="card-img-top" src="/images/0_0_orig.png" alt="Card image cap">
                     <div class="card-body d-flex px-0 pb-0">
                         <div class="text-capitalize mr-auto font-weight-bold">whiskey</div>
@@ -95,7 +95,7 @@
             </div>
 
             <div class="col-3 mb-4">
-                <div class="card shadow-sm px-4 pt-3 border">
+                <div class="card  px-4 pt-3 border-0">
                     <img class="card-img-top" src="/images/0_0_orig.png" alt="Card image cap">
                     <div class="card-body d-flex px-0 pb-0">
                         <div class="text-capitalize mr-auto font-weight-bold">whiskey</div>
@@ -120,7 +120,6 @@
         $('.owl-carousel').owlCarousel({
             loop:true,
             autoplayTimeout: 1000,
-            margin:10,
             nav:true,
             dots: true,
             items: 1
