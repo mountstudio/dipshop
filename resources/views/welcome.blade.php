@@ -1,14 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container p-5 bg-white">
-        <div class="row justify-content-center">
-            <div class="col-4"
-                 style="background-image: url('images/1.png'); width:100%; height: 370px; background-size: cover"></div>
-            <div class="col-6"
-                 style="background-image: url('images/4.png'); width:100%; height: 370px; background-size: cover"></div>
-        </div>
-    </div>
+    @include('_partials._after_header')
+    @include('_partials._categories')
+    @include('_partials._banners')
 
     <div class="container mb-5">
         <div class="row">
@@ -41,103 +36,103 @@
 
 
             <div class="col-3 mb-4">
-                <div class="card px-4 pt-3 border">
+                <div class="card shadow-sm px-4 pt-3 border">
                     <img class="card-img-top" src="/images/0_0_orig.png" alt="Card image cap">
                     <div class="card-body d-flex px-0 pb-0">
                         <div class="text-capitalize mr-auto font-weight-bold">whiskey</div>
                         <div class="ml-auto text-muted">#21243</div>
                     </div>
-                    <div class="card-body px-0 pb-0 d-flex">
-                        <div class="card-title mr-auto">Card title</div>
-                        <div class="card-title ml-auto">Card title</div>
+                    <div class="card-body px-0 pb-0 pt-1 d-flex">
+                        <div class="card-title mr-auto">Jack Daniels</div>
+                        <div class="card-title ml-auto font-weight-bold">$100</div>
                     </div>
                     <div class="card-body px-0  text-center">
-                        <a href="#" class="btn btn-outline-success shadow-lg">В корзину</a>
+                        <a href="#" class="btn btn-success shadow-lg font-weight-light">В корзину</a>
                     </div>
                 </div>
             </div>
 
             <div class="col-3 mb-4">
-                <div class="card px-4 pt-3 border">
+                <div class="card shadow-sm px-4 pt-3 border">
                     <img class="card-img-top" src="/images/0_0_orig.png" alt="Card image cap">
                     <div class="card-body d-flex px-0 pb-0">
                         <div class="text-capitalize mr-auto font-weight-bold">whiskey</div>
                         <div class="ml-auto text-muted">#21243</div>
                     </div>
-                    <div class="card-body px-0 pb-0 d-flex">
-                        <div class="card-title mr-auto">Card title</div>
-                        <div class="card-title ml-auto">Card title</div>
+                    <div class="card-body px-0 pb-0 pt-1 d-flex">
+                        <div class="card-title mr-auto">Jack Daniels</div>
+                        <div class="card-title ml-auto font-weight-bold">$100</div>
                     </div>
                     <div class="card-body px-0  text-center">
-                        <a href="#" class="btn btn-outline-success shadow-lg">В корзину</a>
+                        <a href="#" class="btn btn-success shadow-lg font-weight-light">В корзину</a>
                     </div>
                 </div>
             </div>
 
             <div class="col-3 mb-4">
-                <div class="card px-4 pt-3 border">
+                <div class="card shadow-sm px-4 pt-3 border">
                     <img class="card-img-top" src="/images/0_0_orig.png" alt="Card image cap">
                     <div class="card-body d-flex px-0 pb-0">
                         <div class="text-capitalize mr-auto font-weight-bold">whiskey</div>
                         <div class="ml-auto text-muted">#21243</div>
                     </div>
-                    <div class="card-body px-0 pb-0 d-flex">
-                        <div class="card-title mr-auto">Card title</div>
-                        <div class="card-title ml-auto">Card title</div>
+                    <div class="card-body px-0 pb-0 pt-1 d-flex">
+                        <div class="card-title mr-auto">Jack Daniels</div>
+                        <div class="card-title ml-auto font-weight-bold">$100</div>
                     </div>
                     <div class="card-body px-0  text-center">
-                        <a href="#" class="btn btn-outline-success shadow-lg">В корзину</a>
+                        <a href="#" class="btn btn-success shadow-lg font-weight-light">В корзину</a>
                     </div>
                 </div>
             </div>
 
             <div class="col-3 mb-4">
-                <div class="card px-4 pt-3 border">
+                <div class="card shadow-sm px-4 pt-3 border">
                     <img class="card-img-top" src="/images/0_0_orig.png" alt="Card image cap">
                     <div class="card-body d-flex px-0 pb-0">
                         <div class="text-capitalize mr-auto font-weight-bold">whiskey</div>
                         <div class="ml-auto text-muted">#21243</div>
                     </div>
-                    <div class="card-body px-0 pb-0 d-flex">
-                        <div class="card-title mr-auto">Card title</div>
-                        <div class="card-title ml-auto">Card title</div>
+                    <div class="card-body px-0 pb-0 pt-1 d-flex">
+                        <div class="card-title mr-auto">Jack Daniels</div>
+                        <div class="card-title ml-auto font-weight-bold">$100</div>
                     </div>
                     <div class="card-body px-0  text-center">
-                        <a href="#" class="btn btn-outline-success shadow-lg">В корзину</a>
+                        <a href="#" class="btn btn-success shadow-lg font-weight-light">В корзину</a>
                     </div>
                 </div>
             </div>
 
             <div class="col-3 mb-4">
-                <div class="card px-4 pt-3 border">
+                <div class="card shadow-sm px-4 pt-3 border">
                     <img class="card-img-top" src="/images/0_0_orig.png" alt="Card image cap">
                     <div class="card-body d-flex px-0 pb-0">
                         <div class="text-capitalize mr-auto font-weight-bold">whiskey</div>
                         <div class="ml-auto text-muted">#21243</div>
                     </div>
-                    <div class="card-body px-0 pb-0 d-flex">
-                        <div class="card-title mr-auto">Card title</div>
-                        <div class="card-title ml-auto">Card title</div>
+                    <div class="card-body px-0 pb-0 pt-1 d-flex">
+                        <div class="card-title mr-auto">Jack Daniels</div>
+                        <div class="card-title ml-auto font-weight-bold">$100</div>
                     </div>
                     <div class="card-body px-0  text-center">
-                        <a href="#" class="btn btn-outline-success shadow-lg">В корзину</a>
+                        <a href="#" class="btn btn-success shadow-lg font-weight-light">В корзину</a>
                     </div>
                 </div>
             </div>
 
             <div class="col-3 mb-4">
-                <div class="card px-4 pt-3 border">
+                <div class="card shadow-sm px-4 pt-3 border">
                     <img class="card-img-top" src="/images/0_0_orig.png" alt="Card image cap">
                     <div class="card-body d-flex px-0 pb-0">
                         <div class="text-capitalize mr-auto font-weight-bold">whiskey</div>
                         <div class="ml-auto text-muted">#21243</div>
                     </div>
-                    <div class="card-body px-0 pb-0 d-flex">
-                        <div class="card-title mr-auto">Card title</div>
-                        <div class="card-title ml-auto">Card title</div>
+                    <div class="card-body px-0 pb-0 pt-1 d-flex">
+                        <div class="card-title mr-auto">Jack Daniels</div>
+                        <div class="card-title ml-auto font-weight-bold">$100</div>
                     </div>
                     <div class="card-body px-0  text-center">
-                        <a href="#" class="btn btn-outline-success shadow-lg">В корзину</a>
+                        <a href="#" class="btn btn-success shadow-lg font-weight-light">В корзину</a>
                     </div>
                 </div>
             </div>
@@ -145,3 +140,16 @@
         </div>
     </div>
 @endsection
+
+@push('scripts')
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            autoplayTimeout: 1000,
+            margin:10,
+            nav:true,
+            dots: true,
+            items: 1
+        })
+    </script>
+@endpush

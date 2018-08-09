@@ -15,13 +15,14 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
     <link href="{{ asset('css/login.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 <body>
-    <nav class="navbar shadow navbar-expand-md navbar-light">
+    <nav class="navbar sticky-top font-weight-normal shadow navbar-expand-md navbar-light bg-white">
         <div class="container">
-            <a class="navbar-brand p-0" href="/"><img src="images/2.1.png" style="width:100px; height:auto;" alt=""></a>
+            <a class="navbar-brand p-0" href="/"><img id="logo" src="/images/2.1.png" style="width:100px; height:auto;" alt=""></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                 <span class="navbar-toggler-icon"></span>
@@ -29,12 +30,20 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Left Side Of Navbar -->
-                <ul class="navbar-nav mr-auto">
-
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a href="" class="nav-link">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">О проекте</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">Контакты</a>
+                    </li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
-                <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav">
                     <!-- Authentication Links -->
                     @guest
                         <li class="nav-item">
@@ -68,43 +77,27 @@
             </div>
         </div>
     </nav>
-    <div class="container">
-        <div class="row justify-content-center text-center">
-            <div class="col-3 p-2"><img src="images/2.1.png" style="width:100px; height:auto;" alt=""></div>
-            <div class="col-5 p-5">
-                <form class="example" action="/">
-                    <input class="text-center" type="text" placeholder="Search.." name="search">
-                    <button type="submit"><i class="fa fa-search"></i></button>
-                </form>
-            </div>
-            <div class="col-2 p-5">Плюшка 1</div>
-            <div class="col-2 p-5">Плюшка 2</div>
-        </div>
-    </div>
-
-    <div class="container border-top border-bottom py-2">
-        <ul class="nav justify-content-center">
-            <li class="nav-item">
-                <a class="nav-link text-dark" href="#">Алкоголь</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-dark" href="#">Сигареты</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-dark" href="#">Драгоценности</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-dark" href="#">Подарки</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-dark" href="#">Аксессуары</a>
-            </li>
-        </ul>
-    </div>
 
 @yield('content')
-<script src="{{ asset('js/app.js') }}" defer></script>
-<script src="{{ asset('js/classie.js') }}" defer></script>
+<script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+{{--<script src="{{ asset('js/classie.js') }}" defer></script>--}}
+    <script>
+        $(function () {
+            var scroll;
+            $(window).scroll(function() {
+                scroll = $(window).scrollTop();
+                if (scroll > 100) {
+                    $('#logo').css('width', 60);
+                }
+                else if (scroll <= 100) {
+                    $('#logo').css('width', 100);
+                }
+            });
+        });
+    </script>
+
+@stack('scripts')
 
 </body>
 </html>
