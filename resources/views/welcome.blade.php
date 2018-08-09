@@ -1,39 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-    @include('_partials._after_header')
+{{--    @include('_partials._after_header')--}}
+    @include('_partials._big_banner')
     @include('_partials._categories')
     @include('_partials._banners')
-
-    <div class="container mb-5">
+    <hr>
+    <div id="products" class="container my-5">
         <div class="row">
-
-
-            {{--<div class="col-3 mb-4">--}}
-                {{--<div class="shadow card rounded bg-white border border-light p-3">--}}
-                    {{--<div class="article" style="height: 20px;">--}}
-                        {{--<span class="float-left">Виски</span>--}}
-                        {{--<span class="float-right">#15864</span>--}}
-                    {{--</div>--}}
-                    {{--<div class="description">--}}
-                        {{--<p>Jack Daniels 0.5</p>--}}
-                    {{--</div>--}}
-                    {{--<div class="prod-img mb-3" style="background-image: url('images/1.png')">--}}
-                    {{--</div>--}}
-
-                    {{--<div class="price p-2" style="border-top: solid 1.5px #e1e1e1;">--}}
-                        {{--<span class="text-left main-font">Цена</span>--}}
-                        {{--<span class="float-right main-font">100$</span><br>--}}
-                        {{--<span class="text-left main-font">Кол-во</span>--}}
-                        {{--<span class="float-right main-font">1</span>--}}
-
-                    {{--</div>--}}
-                    {{--<div>--}}
-                        {{--<a class="btn btn-outline-success">В корзину</a>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-
 
             <div class="col-3 mb-4">
                 <div class="card shadow-sm px-4 pt-3 border">
@@ -152,4 +126,5 @@
             items: 1
         })
     </script>
+    <script></script>
 @endpush
