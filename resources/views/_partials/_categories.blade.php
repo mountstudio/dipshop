@@ -20,7 +20,10 @@
         </ul>
         <ul class="nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link text-dark" href="#">Корзина</a>
+                <a class="nav-link text-dark position-relative font-weight-light" href="#">
+                    <i class="fas fa-shopping-cart fa-lg"></i>
+                    <span class="badge badge-pill badge-dark position-absolute" style="top: 0; right: -7px;">1</span>
+                </a>
             </li>
         </ul>
     </div>
