@@ -113,6 +113,8 @@
 
         </div>
     </div>
+
+    @include('_partials._ad_blocks')
 @endsection
 
 @push('scripts')

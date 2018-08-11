@@ -21,3 +21,23 @@ body
 a.footer-link:hover {
     text-decoration: underline;
 }
+
+.ad-block {
+    min-height: 450px;
+    max-height: 450px;
+}
+
+.ad-block .ad-block-item {
+    min-height: 450px;
+    max-height: 450px;
+}
+
+.ad-block .ad-block-mini {
+    min-height: 225px;
+    max-height: 225px;
+}
+
+.ad-block .ad-block-right {
+    min-height: 450px;
+    max-height: 450px;
+}
