@@ -11,9 +11,13 @@ body
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #00000090;
+    background-color: #000000cc;
 }
 
 .btn-dip-shop {
     font-size: 30px!important;
+}
+
+a.footer-link:hover {
+    text-decoration: underline;
 }

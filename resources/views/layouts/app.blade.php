@@ -84,7 +84,72 @@
         @yield('content')
     </main>
 
-    <footer>
+    <footer class="py-5 position-relative" style="background-image: url('/images/pXdT4Eo.jpg'); background-size: cover; background-position: right;">
+        <div class="backdrop"></div>
+        <div class="container py-5">
+            <div class="row justify-content-between">
+                <div class="col-auto">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-light footer-link">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-light footer-link">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-light footer-link">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-light footer-link">About</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-auto">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-light footer-link">Main</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-light footer-link">Main</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-light footer-link">Main</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-light footer-link">Main</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-light footer-link">Main</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-auto">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-light footer-link">Main</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-light footer-link">Main</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-light footer-link">Main</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-light footer-link">Main</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-light footer-link">Main</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-light">Main</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-light footer-link">Main</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </footer>
 <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
