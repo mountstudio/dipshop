@@ -37,7 +37,7 @@
 
                     <div class="col-10">
                         <a href="" class="text-dark nav-link history-link">
-                            <div class="card shadow-sm border-right-0 border-bottom-0 border-top-0 border-danger">
+                            <div class="transition-500 card shadow-sm border-right-0 border-bottom-0 border-top-0 border-danger">
                                 <div class="card-body bg-light d-flex align-items-center">
                                     <div class="bg-white shadow-sm text-center py-3 px-4 mr-4">
                                         <p class="m-0">12</p>
@@ -56,7 +56,7 @@
 
                     <div class="col-10">
                         <a href="" class="text-dark nav-link history-link">
-                            <div class="card shadow-sm border-right-0 border-bottom-0 border-top-0 border-danger">
+                            <div class="transition-500 card shadow-sm border-right-0 border-bottom-0 border-top-0 border-danger">
                                 <div class="card-body bg-light d-flex align-items-center">
                                     <div class="bg-white shadow-sm text-center py-3 px-4 mr-4">
                                         <p class="m-0">12</p>
@@ -75,7 +75,7 @@
 
                     <div class="col-10">
                         <a href="" class="text-dark nav-link history-link">
-                            <div class="card shadow-sm border-right-0 border-bottom-0 border-top-0 border-danger">
+                            <div class="transition-500 card shadow-sm border-right-0 border-bottom-0 border-top-0 border-danger">
                                 <div class="card-body bg-light d-flex align-items-center">
                                     <div class="bg-white shadow-sm text-center py-3 px-4 mr-4">
                                         <p class="m-0">12</p>

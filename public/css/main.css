@@ -57,3 +57,35 @@ a.underline-link:hover {
 .h-25-vh {
     height: 25vh;
 }
+
+.transition-250 {
+    transition: .25s;
+}
+
+.transition-500 {
+    transition: .5s;
+}
+
+.transition-750 {
+    transition: .75s;
+}
+
+.transition-1000 {
+    transition: 1s;
+}
+
+.transition-1250 {
+    transition: 1.25s;
+}
+
+.transition-1500 {
+    transition: 1.5s;
+}
+
+.transition-1750 {
+    transition: 1.75s;
+}
+
+.transition-2000 {
+    transition: 2s;
+}
