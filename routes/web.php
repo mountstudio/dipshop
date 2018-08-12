@@ -22,6 +22,6 @@ Route::get('/home', function ()
     return view('welcome');
 });
 
-Route::get('datatable', 'DataTableController@datatable');
+Route::get('datatable', 'DatatablesController@datatable');
 
-Route::get('datatable/getdata', 'DataTableController@getUsers')->name('datatables.data');
+Route::get('datatable/getdata', 'DatatablesController@getUsers')->name('datatables.data');
