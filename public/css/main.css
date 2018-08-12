@@ -18,7 +18,7 @@ body
     font-size: 30px!important;
 }
 
-a.footer-link:hover {
+a.underline-link:hover {
     text-decoration: underline;
 }
 
@@ -40,4 +40,20 @@ a.footer-link:hover {
 .ad-block .ad-block-right {
     min-height: 450px;
     max-height: 450px;
+}
+
+.h-100-vh {
+    height: 100vh;
+}
+
+.h-75-vh {
+    height: 75vh;
+}
+
+.h-50-vh {
+    height: 50vh;
+}
+
+.h-25-vh {
+    height: 25vh;
 }

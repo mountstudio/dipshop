@@ -21,3 +21,5 @@ Route::get('/home', function ()
 {
     return view('welcome');
 });
+
+Route::get('/profile', 'UserController@profile')->name('profile');
