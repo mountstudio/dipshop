@@ -10,7 +10,7 @@
                 <div class="row justify-content-center h-100">
                     <div class="col-12 align-self-start">
                         <ul class="nav justify-content-center">
-                            <li class="nav-item"><a href="/" class="nav-link underline-link text-light text-capitalize">&larr; to main</a></li>
+                            <li class="nav-item"><a href="/" class="nav-link underline-link text-light text-capitalize"><i class="fas fa-arrow-left"></i> to main</a></li>
                             <li class="nav-item"><a href="#" class="nav-link underline-link text-light text-capitalize">transactions</a></li>
                             <li class="nav-item"><a href="#" class="nav-link underline-link text-light text-capitalize">main</a></li>
                             <li class="nav-item"><a href="#" class="nav-link underline-link text-light text-capitalize">main</a></li>
@@ -47,8 +47,8 @@
                                     <div>
                                         This is some text within a card body.
                                     </div>
-                                    <div class="ml-auto text-success">
-                                        $<span class="font-weight-bold h4">130</span>
+                                    <div class="ml-auto font-weight-bold text-success">
+                                        $<span class="h4">130</span>
                                     </div>
                                 </div>
                             </div>
@@ -66,8 +66,8 @@
                                     <div>
                                         This is some text within a card body.
                                     </div>
-                                    <div class="ml-auto text-success">
-                                        $<span class="font-weight-bold h4">130</span>
+                                    <div class="ml-auto font-weight-bold text-success">
+                                        $<span class="h4">130</span>
                                     </div>
                                 </div>
                             </div>
@@ -85,8 +85,8 @@
                                     <div>
                                         This is some text within a card body.
                                     </div>
-                                    <div class="ml-auto text-success">
-                                        $<span class="font-weight-bold h4">130</span>
+                                    <div class="ml-auto font-weight-bold text-success">
+                                        $<span class="h4">130</span>
                                     </div>
                                 </div>
                             </div>
