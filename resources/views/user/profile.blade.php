@@ -11,11 +11,14 @@
                     <div class="col-12 align-self-start">
                         <ul class="nav justify-content-center">
                             <li class="nav-item"><a href="/" class="nav-link underline-link text-light text-capitalize"><i class="fas fa-arrow-left"></i> to main</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link underline-link text-light text-capitalize">transactions</a></li>
+                            <li class="nav-item"><a href="{{ route('profile') }}" class="nav-link underline-link text-light text-capitalize">transactions</a></li>
                             <li class="nav-item"><a href="#" class="nav-link underline-link text-light text-capitalize">main</a></li>
                             <li class="nav-item"><a href="#" class="nav-link underline-link text-light text-capitalize">main</a></li>
                             <li class="nav-item"><a href="#" class="nav-link underline-link text-light text-capitalize">main</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link underline-link text-light text-capitalize">main</a></li>
+                            <li class="nav-item"><a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();" class="nav-link underline-link text-light text-capitalize">Logout</a></li>
+                            <form id="logout-form" class="d-none" action="{{ route('logout') }}" method="post">
+                                @csrf
+                            </form>
                         </ul>
                     </div>
                     <div class="col-auto align-self-center">
