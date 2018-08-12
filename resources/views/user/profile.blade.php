@@ -24,9 +24,8 @@
                     </div>
                     <div class="col-12 align-self-end">
                         <ul class="nav justify-content-center">
-                            <li class="nav-item"><a href="#" class="nav-link text-light">{{ $user->email }}</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link text-light">{{ $user->password }}</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link text-light">main</a></li>
+                            <li class="nav-item px-3 py-2 text-light">{{ $user->email }}</li>
+                            <li class="nav-item px-3 py-2 text-light">{{ $user->password }}</li>
                         </ul>
                     </div>
                 </div>
