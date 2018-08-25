@@ -26,3 +26,9 @@ Route::get('/profile', 'UserController@profile')->name('profile');
 
 Route::get('datatable', 'DatatablesController@datatable');
 Route::get('datatable/getdata', 'DatatablesController@getUsers')->name('datatables.data');
+
+Route::group(['middleware' => 'admin'], function () {
+    Route::get('/admin', function () {
+        return view('admin');
+    });
+});

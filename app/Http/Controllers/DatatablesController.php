@@ -22,6 +22,7 @@ class DatatablesController extends Controller
      * Process datatables ajax request.
      *
      * @return \Illuminate\Http\JsonResponse
+     * @throws \Exception
      */
     public function getUsers()
     {
