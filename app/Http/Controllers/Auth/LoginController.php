@@ -36,9 +36,6 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
-        if (\Auth::user() && \Auth::user()->admin === 1) {
-            $this->redirectTo = '/admin/options';
-        }
     }
 
     public function username()
