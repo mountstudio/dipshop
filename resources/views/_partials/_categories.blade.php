@@ -3,7 +3,7 @@
         <a class="mr-auto p-0" href="/"><img id="logo" src="/images/2.1.png" style="width:50px; height:auto;" alt=""></a>
         <ul class="nav justify-content-center">
             <li class="nav-item">
-                <a class="nav-link text-dark" href="#">Алкоголь</a>
+                <a class="nav-link text-dark" href="/alcohol">Алкоголь</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-dark" href="#">Сигареты</a>
