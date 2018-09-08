@@ -4,7 +4,7 @@
 
     <div class="row">
         <div class="col-12">
-            <table class="table table-bordered" id="products-table">
+            <table class="table table-bordered" id="types-table">
                 <thead>
                 <tr>
                     <th>Id</th>
@@ -29,15 +29,13 @@
 @push('scripts')
     <script>
         $(function() {
-            $('#products-table').DataTable({
+            $('#types-table').DataTable({
                 processing: true,
                 serverSide: true,
-                ajax: '{!! route('datatable.getproducts') !!}',
+                ajax: '{!! route('datatable.gettypes') !!}',
                 columns: [
                     { data: 'id', name: 'id' },
                     { data: 'name', name: 'name' },
-                    { data: 'price', name: 'price' },
-                    { data: 'type.name', name: 'type.name' },
                     { data: 'action', name: 'action', orderable: false, searchable: false }
                 ]
             });

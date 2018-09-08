@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Product;
 use App\User;
 use DataTables;
 use Illuminate\Http\Request;
@@ -28,6 +29,18 @@ class AdminController extends Controller
                         <a href="'.route('user.destroy', $user->id).'" class="btn btn-sm btn-danger"><i class="far fa-trash-alt"></i> Delete</a>';
             })
             ->removeColumn('password')
+            ->make(true);
+    }
+
+    public function getProducts()
+    {
+        $products = Product::with('type')->select('*');
+
+        return Datatables::eloquent($products)
+            ->addColumn('action', function ($model) {
+                return '<a href="'.route('product.edit', $model->id).'" class="btn btn-sm btn-primary"><i class="far fa-edit"></i> Edit</a>
+                        <a href="'.route('product.destroy', $model->id).'" data-id="'.$model->id.'"onclick="event.preventDefault();" data-toggle="modal" data-target="#delete-confirmation" class="btn btn-sm btn-danger"><i class="far fa-trash-alt"></i> Delete</a>';
+            })
             ->make(true);
     }
 }

@@ -1,6 +1,6 @@
-@extends('admin.index')
+@extends('layouts.app')
 
-@section('admin_content')
+@section('content')
 
 
 
