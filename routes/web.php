@@ -23,6 +23,7 @@ Route::get('/home', function ()
 });
 
 Route::get('/profile', 'UserController@profile')->name('profile');
+Route::get('/order', 'UserController@order')->name('order');
 
 Route::get('datatable', 'DatatablesController@datatable');
 Route::get('datatable/getdata', 'DatatablesController@getUsers')->name('datatables.data');
