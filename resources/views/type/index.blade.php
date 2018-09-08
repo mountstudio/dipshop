@@ -2,6 +2,12 @@
 
 @section('admin_content')
 
+    <div class="row mb-3 justify-content-end">
+        <div class="col-auto">
+            <a href="{{ route('type.create') }}" class="btn btn-success">Новый</a>
+        </div>
+    </div>
+
     <div class="row">
         <div class="col-12">
             <table class="table table-bordered" id="types-table">
@@ -9,8 +15,6 @@
                 <tr>
                     <th>Id</th>
                     <th>Name</th>
-                    <th>Price</th>
-                    <th>Type id</th>
                     <th>Actions</th>
                 </tr>
                 </thead>

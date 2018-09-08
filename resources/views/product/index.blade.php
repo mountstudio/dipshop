@@ -2,6 +2,12 @@
 
 @section('admin_content')
 
+    <div class="row mb-3 justify-content-end">
+        <div class="col-auto">
+            <a href="{{ route('product.create') }}" class="btn btn-success">Новый продукт</a>
+        </div>
+    </div>
+
     <div class="row">
         <div class="col-12">
             <table class="table table-bordered" id="products-table">

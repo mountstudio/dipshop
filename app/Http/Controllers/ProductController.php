@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ProductRequest;
 use App\Product;
+use App\Type;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -24,7 +26,9 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('product.create');
+        return view('product.create', [
+            'types' => Type::all(),
+        ]);
     }
 
     /**
@@ -33,9 +37,22 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ProductRequest $request)
     {
-        $product = new Product($request);
+        $validated = $request->validated();
+
+        $product = new Product($validated);
+
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $fileName = uniqid('product_').'.jpg';
+
+            \Image::make($file)
+                ->save(public_path('uploads/'.$fileName), 70);
+
+            $product->image = $fileName;
+        }
+
         $product->save();
 
         return redirect()->route('product.index');
@@ -64,6 +81,7 @@ class ProductController extends Controller
     {
         return view('product.edit', [
             'product' => $product,
+            'types' => Type::all(),
         ]);
     }
 
@@ -74,9 +92,26 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $product)
+    public function update(ProductRequest $request, Product $product)
     {
-        $product->fill($request);
+        $validated = $request->validated();
+
+        $product->fill($validated);
+
+        if ($request->hasFile('image')) {
+            if ($product->getOriginal('image') && is_file(public_path('uploads/'.$product->getOriginal('image')))) {
+                unlink(public_path('uploads/'.$product->getOriginal('image')));
+            }
+
+            $file = $request->file('image');
+            $fileName = uniqid('product_'.$product->id.'_').'.jpg';
+
+            \Image::make($file)
+                ->save(public_path('uploads/'.$fileName), 70);
+
+            $product->image = $fileName;
+        }
+
         $product->save();
 
         return redirect()->route('product.index');

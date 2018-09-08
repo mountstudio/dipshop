@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\TypeRequest;
 use App\Type;
 use Illuminate\Http\Request;
 
@@ -33,9 +34,11 @@ class TypeController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(TypeRequest $request)
     {
-        Type::create($request->all());
+        $validated = $request->validated();
+
+        Type::create($validated);
 
         return redirect()->route('type.index');
     }
@@ -73,9 +76,11 @@ class TypeController extends Controller
      * @param  \App\Type  $type
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Type $type)
+    public function update(TypeRequest $request, Type $type)
     {
-        $type->update($request->all());
+        $validated = $request->validated();
+
+        $type->update($validated);
 
         return redirect()->route('type.index');
     }

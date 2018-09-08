@@ -2,7 +2,7 @@
 
 @section('admin_content')
 
-    <form action="{{ route('product.update') }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('product.update', $product->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
         <div class="form-group">
@@ -13,6 +13,9 @@
 					<strong>{{ $errors->first('name') }}</strong>
 				</span>
             @endif
+        </div>
+        <div class="col-4">
+            <img src="{{ asset('uploads/'.$product->image) }}" class="img-fluid" alt="">
         </div>
         <div class="form-group">
             <label for="image_of_product">Картинка продукта</label>
@@ -40,7 +43,7 @@
             </div>
             <div class="form-group">
                 <label for="price_of_product">Цена</label>
-                <input type="number" class="form-control {{ $errors->has('price') ? 'is-invalid' : '' }}" value="{{ $product->price }}" id="price_of_product" placeholder="Цена">
+                <input name="price" type="number" class="form-control {{ $errors->has('price') ? 'is-invalid' : '' }}" value="{{ $product->price }}" id="price_of_product" placeholder="Цена">
                 @if($errors->has('price'))
                     <span class="invalid-feedback" role="alert">
 					<strong>{{ $errors->first('price') }}</strong>
@@ -48,7 +51,7 @@
                 @endif
             </div>
         </div>
-        <button type="submit" class="btn btn-primary">Создать</button>
+        <button type="submit" class="btn btn-primary">Обновить</button>
     </form>
 
 @endsection
