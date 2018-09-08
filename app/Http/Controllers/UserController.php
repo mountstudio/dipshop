@@ -18,4 +18,9 @@ class UserController extends Controller
             'user' => Auth::user(),
         ]);
     }
+    public function order()
+    {
+        return view('user.order');
+    }
+
 }

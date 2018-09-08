@@ -10,8 +10,7 @@
                 <div class="row justify-content-center h-100">
                     <div class="col-12 align-self-start">
                         <ul class="nav justify-content-center">
-                            <li class="nav-item"><a href="/" class="nav-link underline-link text-light text-capitalize"><i class="fas fa-arrow-left"></i> to main</a></li>
-                            <li class="nav-item"><a href="{{ route('profile') }}" class="nav-link underline-link text-light text-capitalize">transactions</a></li>
+                            <li class="nav-item"><a href="/" class="nav-link underline-link text-light text-capitalize"><i class="fas fa-arrow-left"></i> Главное меню</a></li>
                             <li class="nav-item"><a href="#" class="nav-link underline-link text-light text-capitalize">main</a></li>
                             <li class="nav-item"><a href="#" class="nav-link underline-link text-light text-capitalize">main</a></li>
                             <li class="nav-item"><a href="#" class="nav-link underline-link text-light text-capitalize">main</a></li>
@@ -27,30 +26,30 @@
                     </div>
                     <div class="col-12 align-self-end">
                         <ul class="nav justify-content-center">
-                            <li class="nav-item px-3 py-2 text-light">{{ $user->email }}</li>
+                            <li class="nav-item px-3 py-2 text-light">{{ $user->name }}</li>
                             <li class="nav-item px-3 py-2 text-light">{{ $user->password }}</li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="col-6 py-4">
-                <h2 class="text-center">Transactions</h2>
+                <h2 class="text-center">История заказов</h2>
 
                 <div class="row mt-5 justify-content-center">
 
                     <div class="col-10">
-                        <a href="" class="text-dark nav-link history-link">
+                        <a href="/order" class="text-dark nav-link history-link">
                             <div class="transition-500 card shadow-sm border-right-0 border-bottom-0 border-top-0 border-danger">
                                 <div class="card-body bg-light d-flex align-items-center">
                                     <div class="bg-white shadow-sm text-center py-3 px-4 mr-4">
                                         <p class="m-0">12</p>
-                                        <span>May</span>
+                                        <span>Сентябрь</span>
                                     </div>
                                     <div>
-                                        This is some text within a card body.
+                                        Информация о заказе.
                                     </div>
                                     <div class="ml-auto font-weight-bold text-success">
-                                        $<span class="h4">130</span>
+                                        $<span class="h4">1562</span>
                                     </div>
                                 </div>
                             </div>
@@ -58,18 +57,18 @@
                     </div>
 
                     <div class="col-10">
-                        <a href="" class="text-dark nav-link history-link">
+                        <a href="/order" class="text-dark nav-link history-link">
                             <div class="transition-500 card shadow-sm border-right-0 border-bottom-0 border-top-0 border-danger">
                                 <div class="card-body bg-light d-flex align-items-center">
                                     <div class="bg-white shadow-sm text-center py-3 px-4 mr-4">
-                                        <p class="m-0">12</p>
-                                        <span>May</span>
+                                        <p class="m-0">09</p>
+                                        <span>Август</span>
                                     </div>
                                     <div>
-                                        This is some text within a card body.
+                                        Информация о заказе.
                                     </div>
                                     <div class="ml-auto font-weight-bold text-success">
-                                        $<span class="h4">130</span>
+                                        $<span class="h4">750</span>
                                     </div>
                                 </div>
                             </div>
@@ -77,18 +76,18 @@
                     </div>
 
                     <div class="col-10">
-                        <a href="" class="text-dark nav-link history-link">
+                        <a href="/order" class="text-dark nav-link history-link">
                             <div class="transition-500 card shadow-sm border-right-0 border-bottom-0 border-top-0 border-danger">
                                 <div class="card-body bg-light d-flex align-items-center">
                                     <div class="bg-white shadow-sm text-center py-3 px-4 mr-4">
-                                        <p class="m-0">12</p>
-                                        <span>May</span>
+                                        <p class="m-0">01</p>
+                                        <span>Май</span>
                                     </div>
                                     <div>
-                                        This is some text within a card body.
+                                        Информация о заказе.
                                     </div>
                                     <div class="ml-auto font-weight-bold text-success">
-                                        $<span class="h4">130</span>
+                                        $<span class="h4">230</span>
                                     </div>
                                 </div>
                             </div>
