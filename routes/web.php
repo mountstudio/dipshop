@@ -41,3 +41,7 @@ Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function () {
 Route::get('datatable/getusers', 'AdminController@getUsers')->name('datatable.getusers');
 Route::get('datatable/getproducts', 'AdminController@getProducts')->name('datatable.getproducts');
 Route::get('datatable/gettypes', 'AdminController@getTypes')->name('datatable.gettypes');
+
+Route::get('/alcohol', function() {
+    return view('alcohol');
+});
