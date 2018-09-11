@@ -1,9 +1,11 @@
 <div class="container-fluid bg-white">
-    <div class="row owl-carousel owl-theme">
-        <img src="/images/big-banner.png" class="img-fluid" alt="">
-        <img src="/images/big-banner.png" class="img-fluid" alt="">
-        <img src="/images/big-banner.png" class="img-fluid" alt="">
-        <img src="/images/big-banner.png" class="img-fluid" alt="">
+    <div class="row">
+        <div class="col-12 p-0 owl-carousel owl-theme">
+            <img src="/images/big-banner.png" class="img-fluid" alt="">
+            <img src="/images/big-banner.png" class="img-fluid" alt="">
+            <img src="/images/big-banner.png" class="img-fluid" alt="">
+            <img src="/images/big-banner.png" class="img-fluid" alt="">
+        </div>
     </div>
 </div>
 
