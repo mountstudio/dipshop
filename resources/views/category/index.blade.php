@@ -4,7 +4,7 @@
 
     <div class="row mb-3 justify-content-end">
         <div class="col-auto">
-            <a href="{{ route('type.create') }}" class="btn btn-success">Новый</a>
+            <a href="{{ route('category.create') }}" class="btn btn-success">Новый</a>
         </div>
     </div>
 

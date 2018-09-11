@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\TypeRequest;
-use App\Type;
+use App\Http\Requests\CategoryRequest;
+use App\Category;
 use Illuminate\Http\Request;
 
-class TypeController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class TypeController extends Controller
      */
     public function index()
     {
-        return view('type.index');
+        return view('category.index');
     }
 
     /**
@@ -25,47 +25,47 @@ class TypeController extends Controller
      */
     public function create()
     {
-        return view('type.create');
+        return view('category.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param CategoryRequest $request
      * @return \Illuminate\Http\Response
      */
-    public function store(TypeRequest $request)
+    public function store(CategoryRequest $request)
     {
         $validated = $request->validated();
 
-        Type::create($validated);
+        Category::create($validated);
 
-        return redirect()->route('type.index');
+        return redirect()->route('category.index');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Type  $type
+     * @param  \App\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function show(Type $type)
+    public function show(Category $category)
     {
-        return view('type.show', [
-            'type' => $type,
+        return view('category.show', [
+            'category' => $category,
         ]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Type  $type
+     * @param  \App\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function edit(Type $type)
+    public function edit(Category $category)
     {
-        return view('type.edit', [
-            'type' => $type,
+        return view('category.edit', [
+            'category' => $category,
         ]);
     }
 
@@ -73,27 +73,28 @@ class TypeController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Type  $type
+     * @param  \App\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function update(TypeRequest $request, Type $type)
+    public function update(CategoryRequest $request, Category $category)
     {
         $validated = $request->validated();
 
-        $type->update($validated);
+        $category->update($validated);
 
-        return redirect()->route('type.index');
+        return redirect()->route('category.index');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Type  $type
+     * @param  \App\Category $category
      * @return \Illuminate\Http\Response
+     * @throws \Exception
      */
-    public function destroy(Type $type)
+    public function destroy(Category $category)
     {
-        $type->delete();
+        $category->delete();
 
         return redirect()->back();
     }

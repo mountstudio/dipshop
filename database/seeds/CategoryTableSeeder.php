@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class TypeTableSeeder extends Seeder
+class CategoryTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,13 +11,13 @@ class TypeTableSeeder extends Seeder
      */
     public function run()
     {
-        \App\Type::create([
+        \App\Category::create([
             'name' => 'Алкоголь',
         ]);
-        \App\Type::create([
+        \App\Category::create([
             'name' => 'Драгоценности',
         ]);
-        \App\Type::create([
+        \App\Category::create([
             'name' => 'Одежда',
         ]);
     }

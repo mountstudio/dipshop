@@ -28,16 +28,16 @@
         </div>
         <div class="form-row">
             <div class="form-group">
-                <label for="type_of_product">Тип продукта</label>
-                <select name="type_id" id="type_of_product" class="form-control {{ $errors->has('type_id') ? 'is-invalid' : '' }}">
+                <label for="category_of_product">Тип продукта</label>
+                <select name="category_id" id="category_of_product" class="form-control {{ $errors->has('category_id') ? 'is-invalid' : '' }}">
                     <option value="{{ null }}" disabled>Выберите тип продукта...</option>
-                    @foreach($types as $type)
-                        <option value="{{ $type->id }}" {{ $product->type->id === $type->id ? 'selected' : '' }}>{{ $type->name }}</option>
+                    @foreach($categories as $category)
+                        <option value="{{ $category->id }}" {{ $product->category->id === $category->id ? 'selected' : '' }}>{{ $category->name }}</option>
                     @endforeach
                 </select>
-                @if($errors->has('type_id'))
+                @if($errors->has('category_id'))
                     <span class="invalid-feedback" role="alert">
-						<strong>{{ $errors->first('type_id') }}</strong>
+						<strong>{{ $errors->first('category_id') }}</strong>
 					</span>
                 @endif
             </div>

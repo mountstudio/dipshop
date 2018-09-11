@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Product;
-use App\Type;
+use App\Category;
 use App\User;
 use DataTables;
 use Illuminate\Http\Request;
@@ -47,12 +47,12 @@ class AdminController extends Controller
 
     public function getTypes()
     {
-        $types = Type::select('*');
+        $categories = Category::select('*');
 
-        return Datatables::eloquent($types)
+        return Datatables::eloquent($categories)
             ->addColumn('action', function ($model) {
-                return '<a href="'.route('type.edit', $model->id).'" class="btn btn-sm btn-primary"><i class="far fa-edit"></i> Edit</a>
-                        <a href="'.route('type.destroy', $model->id).'" data-id="'.$model->id.'"onclick="event.preventDefault();" data-toggle="modal" data-target="#delete-confirmation" class="btn btn-sm btn-danger"><i class="far fa-trash-alt"></i> Delete</a>';
+                return '<a href="'.route('category.edit', $model->id).'" class="btn btn-sm btn-primary"><i class="far fa-edit"></i> Edit</a>
+                        <a href="'.route('category.destroy', $model->id).'" data-id="'.$model->id.'"onclick="event.preventDefault();" data-toggle="modal" data-target="#delete-confirmation" class="btn btn-sm btn-danger"><i class="far fa-trash-alt"></i> Delete</a>';
             })
             ->make(true);
     }

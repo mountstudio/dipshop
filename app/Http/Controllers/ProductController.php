@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ProductRequest;
 use App\Product;
-use App\Type;
+use App\Category;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -27,7 +27,7 @@ class ProductController extends Controller
     public function create()
     {
         return view('product.create', [
-            'types' => Type::all(),
+            'categories' => Category::all(),
         ]);
     }
 
@@ -81,7 +81,7 @@ class ProductController extends Controller
     {
         return view('product.edit', [
             'product' => $product,
-            'types' => Type::all(),
+            'categories' => Category::all(),
         ]);
     }
 
