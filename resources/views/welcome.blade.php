@@ -4,7 +4,9 @@
 {{--    @include('_partials._after_header')--}}
     @include('_partials._big_banner')
     @include('_partials._categories')
-    @include('_partials._banners')
+{{--    @include('_partials._banners')--}}
+    @include('_partials._ad_blocks')
+
     <hr>
     <div id="products" class="container my-5">
         <div class="row">
@@ -131,7 +133,6 @@
         </div>
     </div>
 
-    @include('_partials._ad_blocks')
 
 @endsection
 

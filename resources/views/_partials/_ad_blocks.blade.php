@@ -1,26 +1,21 @@
-<div class="container my-5">
-    <div class="row ad-block">
+<div class="container mt-3">
+    <div class="row ">
 
-        <div class="col-12 ad-block-item">
-            <div class="row ad-block-item">
-                <div class="col-6 p-0 ad-block-mini">
+        <div class="col-12">
+            <div class="row">
+                <div class="col-4">
                     <a href="">
-                        <img src="/images/pXdT4Eo.jpg" class="img-fluid ad-block-mini" alt="">
+                        <img src="{{ asset('images/ads/jimmy.jpg') }}" class="img-fluid" alt="">
                     </a>
                 </div>
-                <div class="col-6 p-0 ad-block-mini">
+                <div class="col-4">
                     <a href="">
-                        <img src="/images/pXdT4Eo.jpg" class="img-fluid ad-block-mini" alt="">
+                        <img src="{{ asset('images/ads/gucci.jpg') }}" class="img-fluid" alt="">
                     </a>
                 </div>
-                <div class="col-6 p-0 ad-block-mini">
+                <div class="col-4">
                     <a href="">
-                        <img src="/images/pXdT4Eo.jpg" class="img-fluid ad-block-mini" alt="">
-                    </a>
-                </div>
-                <div class="col-6 p-0 ad-block-mini">
-                    <a href="">
-                        <img src="/images/pXdT4Eo.jpg" class="img-fluid ad-block-mini" alt="">
+                        <img src="{{ asset('images/ads/armani.jpg') }}" class="img-fluid" alt="">
                     </a>
                 </div>
             </div>
