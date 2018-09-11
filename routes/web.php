@@ -45,4 +45,4 @@ Route::get('datatable/gettypes', 'AdminController@getTypes')->name('datatable.ge
 
 Route::get('/alcohol', function() {
     return view('alcohol');
-});
+})->name('alcohol');

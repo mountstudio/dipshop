@@ -137,13 +137,6 @@
 
 @push('scripts')
     <script>
-        $('.owl-carousel').owlCarousel({
-            loop:true,
-            autoplayTimeout: 1000,
-            nav:true,
-            dots: true,
-            items: 1
-        });
 
         $('.hover-shadow').hover(
             function (e) {

@@ -89,3 +89,27 @@ a.underline-link:hover {
 .transition-2000 {
     transition: 2s;
 }
+
+.owl-prev {
+    position: absolute;
+    margin-left: 5px;
+    top: 40%;
+    width: 50px;
+    height: 50px;
+    background-color: #000!important;
+    color: #fff!important;
+}
+
+.owl-next {
+    position: absolute;
+    right: 5px;
+    top: 40%;
+    width: 50px;
+    height: 50px;
+    background-color: #000!important;
+    color: #fff!important;
+}
+.owl-prev i, .owl-next i {
+    /*border-radius: 50%;*/
+
+}

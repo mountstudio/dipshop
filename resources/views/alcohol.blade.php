@@ -14,15 +14,3 @@
 	</div>    
 
 @endsection
-
-@push('scripts')
-    <script>
-        $('.owl-carousel').owlCarousel({
-            loop:true,
-            autoplayTimeout: 1000,
-            nav:false,
-            dots: true,
-            items: 1
-        })
-    </script>
-@endpush
