@@ -35,7 +35,7 @@ class AdminController extends Controller
 
     public function getProducts()
     {
-        $products = Product::with('type')->select('*');
+        $products = Product::with('category')->select('*');
 
         return Datatables::eloquent($products)
             ->addColumn('action', function ($model) {
