@@ -16,7 +16,7 @@
                     <th>Id</th>
                     <th>Name</th>
                     <th>Price</th>
-                    <th>Type id</th>
+                    <th>Category</th>
                     <th>Actions</th>
                 </tr>
                 </thead>
@@ -43,7 +43,7 @@
                     { data: 'id', name: 'id' },
                     { data: 'name', name: 'name' },
                     { data: 'price', name: 'price' },
-                    { data: 'type.name', name: 'type.name' },
+                    { data: 'category.name', name: 'category.name' },
                     { data: 'action', name: 'action', orderable: false, searchable: false }
                 ]
             });
