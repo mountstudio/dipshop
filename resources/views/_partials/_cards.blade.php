@@ -3,7 +3,7 @@
       <div class="card hover-shadow transition-1000 px-4 pt-3 border-0">
           <img class="card-img-top" src="/images/0_0_orig.png" alt="Card image cap">
           <div class="card-body d-flex px-0 pb-0">
-              <div class="text-capitalize mr-auto font-weight-bold">whiskey</div>
+              <div class="text-capitalize mr-auto font-weight-bold">виски</div>
               <div class="ml-auto text-muted">#21243</div>
           </div>
           <div class="card-body px-0 pb-0 pt-1 d-flex">
@@ -19,7 +19,7 @@
       <div class="card hover-shadow transition-1000 px-4 pt-3 border-0">
           <img class="card-img-top" src="/images/0_0_orig.png" alt="Card image cap">
           <div class="card-body d-flex px-0 pb-0">
-              <div class="text-capitalize mr-auto font-weight-bold">whiskey</div>
+              <div class="text-capitalize mr-auto font-weight-bold">виски</div>
               <div class="ml-auto text-muted">#21243</div>
           </div>
           <div class="card-body px-0 pb-0 pt-1 d-flex">
@@ -35,7 +35,7 @@
       <div class="card hover-shadow transition-1000 px-4 pt-3 border-0">
           <img class="card-img-top" src="/images/0_0_orig.png" alt="Card image cap">
           <div class="card-body d-flex px-0 pb-0">
-              <div class="text-capitalize mr-auto font-weight-bold">whiskey</div>
+              <div class="text-capitalize mr-auto font-weight-bold">виски</div>
               <div class="ml-auto text-muted">#21243</div>
           </div>
           <div class="card-body px-0 pb-0 pt-1 d-flex">
@@ -51,7 +51,7 @@
       <div class="card hover-shadow transition-1000 px-4 pt-3 border-0">
           <img class="card-img-top" src="/images/0_0_orig.png" alt="Card image cap">
           <div class="card-body d-flex px-0 pb-0">
-              <div class="text-capitalize mr-auto font-weight-bold">whiskey</div>
+              <div class="text-capitalize mr-auto font-weight-bold">виски</div>
               <div class="ml-auto text-muted">#21243</div>
           </div>
           <div class="card-body px-0 pb-0 pt-1 d-flex">
@@ -67,7 +67,7 @@
       <div class="card hover-shadow transition-1000 px-4 pt-3 border-0">
           <img class="card-img-top" src="/images/0_0_orig.png" alt="Card image cap">
           <div class="card-body d-flex px-0 pb-0">
-              <div class="text-capitalize mr-auto font-weight-bold">whiskey</div>
+              <div class="text-capitalize mr-auto font-weight-bold">виски</div>
               <div class="ml-auto text-muted">#21243</div>
           </div>
           <div class="card-body px-0 pb-0 pt-1 d-flex">
@@ -83,7 +83,7 @@
       <div class="card hover-shadow transition-1000 px-4 pt-3 border-0">
           <img class="card-img-top" src="/images/0_0_orig.png" alt="Card image cap">
           <div class="card-body d-flex px-0 pb-0">
-              <div class="text-capitalize mr-auto font-weight-bold">whiskey</div>
+              <div class="text-capitalize mr-auto font-weight-bold">виски</div>
               <div class="ml-auto text-muted">#21243</div>
           </div>
           <div class="card-body px-0 pb-0 pt-1 d-flex">
@@ -99,7 +99,7 @@
       <div class="card hover-shadow transition-1000 px-4 pt-3 border-0">
           <img class="card-img-top" src="/images/0_0_orig.png" alt="Card image cap">
           <div class="card-body d-flex px-0 pb-0">
-              <div class="text-capitalize mr-auto font-weight-bold">whiskey</div>
+              <div class="text-capitalize mr-auto font-weight-bold">виски</div>
               <div class="ml-auto text-muted">#21243</div>
           </div>
           <div class="card-body px-0 pb-0 pt-1 d-flex">
@@ -115,7 +115,7 @@
       <div class="card hover-shadow transition-1000 px-4 pt-3 border-0">
           <img class="card-img-top" src="/images/0_0_orig.png" alt="Card image cap">
           <div class="card-body d-flex px-0 pb-0">
-              <div class="text-capitalize mr-auto font-weight-bold">whiskey</div>
+              <div class="text-capitalize mr-auto font-weight-bold">виски</div>
               <div class="ml-auto text-muted">#21243</div>
           </div>
           <div class="card-body px-0 pb-0 pt-1 d-flex">
@@ -131,7 +131,7 @@
       <div class="card hover-shadow transition-1000 px-4 pt-3 border-0">
           <img class="card-img-top" src="/images/0_0_orig.png" alt="Card image cap">
           <div class="card-body d-flex px-0 pb-0">
-              <div class="text-capitalize mr-auto font-weight-bold">whiskey</div>
+              <div class="text-capitalize mr-auto font-weight-bold">виски</div>
               <div class="ml-auto text-muted">#21243</div>
           </div>
           <div class="card-body px-0 pb-0 pt-1 d-flex">
@@ -147,7 +147,7 @@
       <div class="card hover-shadow transition-1000 px-4 pt-3 border-0">
           <img class="card-img-top" src="/images/0_0_orig.png" alt="Card image cap">
           <div class="card-body d-flex px-0 pb-0">
-              <div class="text-capitalize mr-auto font-weight-bold">whiskey</div>
+              <div class="text-capitalize mr-auto font-weight-bold">виски</div>
               <div class="ml-auto text-muted">#21243</div>
           </div>
           <div class="card-body px-0 pb-0 pt-1 d-flex">
@@ -163,7 +163,7 @@
       <div class="card hover-shadow transition-1000 px-4 pt-3 border-0">
           <img class="card-img-top" src="/images/0_0_orig.png" alt="Card image cap">
           <div class="card-body d-flex px-0 pb-0">
-              <div class="text-capitalize mr-auto font-weight-bold">whiskey</div>
+              <div class="text-capitalize mr-auto font-weight-bold">виски</div>
               <div class="ml-auto text-muted">#21243</div>
           </div>
           <div class="card-body px-0 pb-0 pt-1 d-flex">
@@ -179,7 +179,7 @@
       <div class="card hover-shadow transition-1000 px-4 pt-3 border-0">
           <img class="card-img-top" src="/images/0_0_orig.png" alt="Card image cap">
           <div class="card-body d-flex px-0 pb-0">
-              <div class="text-capitalize mr-auto font-weight-bold">whiskey</div>
+              <div class="text-capitalize mr-auto font-weight-bold">виски</div>
               <div class="ml-auto text-muted">#21243</div>
           </div>
           <div class="card-body px-0 pb-0 pt-1 d-flex">

@@ -20,7 +20,7 @@
         </ul>
         <ul class="nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link text-dark position-relative font-weight-light" href="#">
+                <a class="nav-link text-dark position-relative font-weight-light disabled cart" href="#" data-toggle="tooltip" data-placement="bottom" title="Корзина временно не доступна">
                     <i class="fas fa-shopping-cart fa-lg"></i>
                     <span class="badge badge-pill badge-dark position-absolute" style="top: 0; right: -7px;">1</span>
                 </a>
@@ -28,3 +28,9 @@
         </ul>
     </div>
 </div>
+
+@push('scripts')
+    <script>
+        $('.cart').tooltip();
+    </script>
+@endpush
