@@ -71,6 +71,15 @@ class ProductController extends Controller
         ]);
     }
 
+    public function alcohols()
+    {
+        $alcohols = Product::all()->where('type_id', '=', 1);
+
+        return view('product.show.alcohols', [
+            'alcohols' => $alcohols,
+        ]);
+    }
+
     /**
      * Show the form for editing the specified resource.
      *

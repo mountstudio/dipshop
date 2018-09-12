@@ -43,6 +43,8 @@ Route::get('datatable/getusers', 'AdminController@getUsers')->name('datatable.ge
 Route::get('datatable/getproducts', 'AdminController@getProducts')->name('datatable.getproducts');
 Route::get('datatable/gettypes', 'AdminController@getTypes')->name('datatable.gettypes');
 
-Route::get('/alcohol', function() {
-    return view('alcohol');
-})->name('alcohol');
+// Route::get('/alcohol', function() {
+//     return view('alcohol');
+// })->name('alcohol');
+
+Route::get('/alcohols', 'ProductController@alcohols')->name('alcohol');
