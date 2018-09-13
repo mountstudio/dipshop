@@ -12,4 +12,9 @@ class Product extends Model
     {
         return $this->belongsTo('App\Category');
     }
+
+    public function properties()
+    {
+        return $this->hasMany('App\ProductProp');
+    }
 }
