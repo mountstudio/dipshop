@@ -9,7 +9,7 @@
 
     <hr>
     <div id="products" class="container my-5">
-        @include('_partials._cards')
+        @include('product._list')
     </div>
 
 

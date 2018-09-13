@@ -73,7 +73,7 @@ class ProductController extends Controller
 
     public function alcohols()
     {
-        $alcohols = Product::all()->where('type_id', '=', 1);
+        $alcohols = Product::all()->where('category_id', '=', 1);
 
         return view('product.show.alcohols', [
             'alcohols' => $alcohols,
