@@ -41,9 +41,9 @@
 			  						custom-select 
 			  						my-1 mr-sm-2" 
 					>
-				    <option value="vodka" selected="">Vodka</option>
-				    <option value="wine">Wine</option>
-				    <option value="whiskey">Whiskey</option>
+				    <option value="1" selected="">Vodka</option>
+				    <option value="2">Wine</option>
+				    <option value="3">Whiskey</option>
 				  </select>
 				<div class="dropdown dropdown-filter">
 				  	<div class="btn bg-white dropdown-toggle">
