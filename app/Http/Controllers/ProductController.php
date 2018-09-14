@@ -6,6 +6,7 @@ use App\Http\Requests\ProductRequest;
 use App\Product;
 use App\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
@@ -77,6 +78,18 @@ class ProductController extends Controller
 
         return view('product.show.alcohols', [
             'alcohols' => $alcohols,
+        ]);
+    }
+
+
+    public function sort(Request $request)
+    {
+        $asc = Product::all()->sortBy($request->param);
+        $desc = Product::all()->sortByDesc($request->param);
+        $products = $request->sort == 'asc' ? $asc : $desc; 
+
+         return view('product.show.alcohols', [
+            'alcohols' => $products,
         ]);
     }
 

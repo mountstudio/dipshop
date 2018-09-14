@@ -45,4 +45,5 @@ Route::get('datatable/gettypes', 'AdminController@getTypes')->name('datatable.ge
 //     return view('alcohol');
 // })->name('alcohol');
 
+Route::post('/product/sort', 'ProductController@sort')->name('product');
 Route::get('/alcohols', 'ProductController@alcohols')->name('alcohol');

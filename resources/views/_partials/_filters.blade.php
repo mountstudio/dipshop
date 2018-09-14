@@ -4,108 +4,92 @@
 		<h5 class="mt-4 pt-2">Filter by: </h5>
 	</div>
 	<div class="col">
-		<div class="d-flex align-items-baseline pl-3">
-			{{-- Price --}}
-		  	<div id="price-wall-content">
-		  		<div class="row align-items-center">
-		  			<div class="col-1">Price: </div>
-		  			<div class="input-group-sm col-3">
-						<input type="text" class="form-control" aria-label="min" aria-describedby="inputGroup-sizing-sm" placeholder="min">	
+		<form action="/product/sort" method="POST">
+			{{ csrf_field() }}
+			<div class="d-flex align-items-baseline">
+			  	<select
+			  		id="sortParam"
+			  		name="param" 
+			  		class=" form-control 
+			  						form-control-sm 
+			  						col-2 ml-3 
+			  						custom-select 
+			  						my-1 mr-sm-2" 
+					>
+				    <option value="price" selected>Price</option>
+				    <option value="order">Order</option>
+				    <option value="newest">Newest</option>
+				  </select>
+				  <div class="custom-control custom-radio custom-control-inline">
+					  <input type="radio" name="sort" value="asc" id="customRadioInline1"  class="custom-control-input">
+					  <label class="custom-control-label" for="customRadioInline1">Asc</label>
 					</div>
-					<span>
-						-
-					</span>
-					<div class="input-group-sm col-3">
-						<input type="text" class="form-control" aria-label="max" aria-describedby="inputGroup-sizing-sm" placeholder="max">
-			  		</div>
-		  		</div>
-		 	</div>
+					<div class="custom-control custom-radio custom-control-inline">
+					  <input type="radio" name="sort" value="desc" id="customRadioInline2"  class="custom-control-input">
+					  <label class="custom-control-label" for="customRadioInline2">Desc</label>
+					</div>
 
-		 	{{-- Sort button group --}}
-		 	<div class="btn-group btn-group-sm" role="group">
-		 		<button type="button" class="btn btn-outline-dark">
-		 			Order &nbsp; <i class="fas fa-sort-down"></i>
-		 		</button>
-		 		<button type="button" class="btn btn-outline-dark">
-		 			Newest &nbsp; <i class="fas fa-sort-down"></i>
-		 		</button>
-		 		<button type="button" class="btn btn-outline-dark">
-		 			Price &nbsp; <i class="fas fa-sort"></i>
-		 		</button>
-		 	</div>
-		</div>
-		<div class="d-flex my-3">
-			<!-- Example single danger button -->
-			<div class="dropdown dropdown-filter">
-			  	<div class="btn bg-white dropdown-toggle">
-			    Category
-			  	</div>
-			  	<div class="dropdown-menu pl-1" style="min-width: 2rem">
-			  		<div class="dropdown-item custom-control custom-checkbox">
-					  	<input type="checkbox" class="custom-control-input" id="customCheck1">
-						<label class="custom-control-label" for="customCheck1">Vodka</label>
-					</div>
-					<div class="dropdown-item custom-control custom-checkbox">
-					  	<input type="checkbox" class="custom-control-input" id="customCheck2">
-						<label class="custom-control-label" for="customCheck2">Whiskey</label>
-					</div>
-					<div class="dropdown-item custom-control custom-checkbox">
-					  	<input type="checkbox" class="custom-control-input" id="customCheck3">
-						<label class="custom-control-label" for="customCheck3">Wine</label>
-					</div>
-			  	</div>
 			</div>
-			<div class="dropdown dropdown-filter">
-			  	<div class="btn bg-white dropdown-toggle">
-			    Grade
-			  	</div>
-			  	<div class="dropdown-menu pl-1" style="min-width: 2rem">
-			  		<div class="dropdown-item custom-control custom-checkbox">
-					  	<input type="checkbox" class="custom-control-input" id="gradeCheck1">
-						<label class="custom-control-label" for="gradeCheck1">5%</label>
-					</div>
-					<div class="dropdown-item custom-control custom-checkbox">
-					  	<input type="checkbox" class="custom-control-input" id="gradeCheck2">
-						<label class="custom-control-label" for="gradeCheck2">6%</label>
-					</div>
-					<div class="dropdown-item custom-control custom-checkbox">
-					  	<input type="checkbox" class="custom-control-input" id="gradeCheck3">
-						<label class="custom-control-label" for="gradeCheck3">10%</label>
-					</div>
-					<div class="dropdown-item custom-control custom-checkbox">
-					  	<input type="checkbox" class="custom-control-input" id="gradeCheck4">
-						<label class="custom-control-label" for="gradeCheck4">15%</label>
-					</div>
-			  	</div>
+			<div class="d-flex my-3">
+				<!-- Example single danger button -->
+				<select
+			  		id="kind"
+			  		name="kind" 
+			  		class=" form-control 
+			  						form-control-sm 
+			  						col-2 ml-3 
+			  						custom-select 
+			  						my-1 mr-sm-2" 
+					>
+				    <option value="vodka" selected="">Vodka</option>
+				    <option value="wine">Wine</option>
+				    <option value="whiskey">Whiskey</option>
+				  </select>
+				<div class="dropdown dropdown-filter">
+				  	<div class="btn bg-white dropdown-toggle">
+				    Grade
+				  	</div>
+				  	<div class="dropdown-menu pl-1" style="min-width: 2rem">
+				  		<div class="dropdown-item custom-control custom-checkbox">
+						  	<input type="checkbox" name="grade5" class="custom-control-input" id="gradeCheck1">
+							<label class="custom-control-label" for="gradeCheck1">5%</label>
+						</div>
+						<div class="dropdown-item custom-control custom-checkbox">
+						  	<input type="checkbox" name="grade6" class="custom-control-input" id="gradeCheck2">
+							<label class="custom-control-label" for="gradeCheck2">6%</label>
+						</div>
+						<div class="dropdown-item custom-control custom-checkbox">
+						  	<input type="checkbox" name="grade10" class="custom-control-input" id="gradeCheck3">
+							<label class="custom-control-label" for="gradeCheck3">10%</label>
+						</div>
+						<div class="dropdown-item custom-control custom-checkbox">
+						  	<input type="checkbox" name="grade15" class="custom-control-input" id="gradeCheck4">
+							<label class="custom-control-label" for="gradeCheck4">15%</label>
+						</div>
+				  	</div>
+				</div>
+				<div class="dropdown dropdown-filter">
+				  	<div class="btn bg-white dropdown-toggle">
+				    Maturation
+				  	</div>
+				  	<div class="dropdown-menu pl-1" style="min-width: 2rem">
+				  		<div class="dropdown-item custom-control custom-checkbox">
+						  	<input type="checkbox" name="maturation5" class="custom-control-input" id="maturaionCheck1">
+								<label class="custom-control-label" for="maturaionCheck1">5 years</label>
+							</div>
+							<div class="dropdown-item custom-control custom-checkbox">
+							  	<input type="checkbox" name="maturation10" class="custom-control-input" id="maturaionCheck2">
+								<label class="custom-control-label" for="maturaionCheck2">10 years</label>
+							</div>
+							<div class="dropdown-item custom-control custom-checkbox">
+							  	<input type="checkbox" name="maturation20" class="custom-control-input" id="maturaionCheck3">
+								<label class="custom-control-label" for="maturaionCheck3">20 years</label>
+							</div>
+				  	</div>
+				</div>
 			</div>
-			<div class="dropdown dropdown-filter">
-			  	<div class="btn bg-white dropdown-toggle">
-			    Maturation
-			  	</div>
-			  	<div class="dropdown-menu pl-1" style="min-width: 2rem">
-			  		<div class="dropdown-item custom-control custom-checkbox">
-					  	<input type="checkbox" class="custom-control-input" id="maturaionCheck1">
-						<label class="custom-control-label" for="maturaionCheck1">5 years</label>
-					</div>
-					<div class="dropdown-item custom-control custom-checkbox">
-					  	<input type="checkbox" class="custom-control-input" id="maturaionCheck2">
-						<label class="custom-control-label" for="maturaionCheck2">10 years</label>
-					</div>
-					<div class="dropdown-item custom-control custom-checkbox">
-					  	<input type="checkbox" class="custom-control-input" id="maturaionCheck3">
-						<label class="custom-control-label" for="maturaionCheck3">20 years</label>
-					</div>
-					<div class="dropdown-item custom-control custom-checkbox">
-					  	<input type="checkbox" class="custom-control-input" id="maturaionCheck4">
-						<label class="custom-control-label" for="maturaionCheck4">80 years</label>
-					</div>
-					<div class="dropdown-item custom-control custom-checkbox">
-					  	<input type="checkbox" class="custom-control-input" id="maturaionCheck5">
-						<label class="custom-control-label" for="maturaionCheck5">100 years</label>
-					</div>
-			  	</div>
-			</div>
-		</div>
+			<button type="submit" class="btn btn-dark">Accept</button>
+		</form>
 	</div>
 </div>
 
