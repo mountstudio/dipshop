@@ -14,6 +14,15 @@
 				</span>
             @endif
         </div>
+        <div class="form-group">
+            <label for="parent_id">Родительская категория</label>
+            <select name="parent_id" id="parent_id" class="form-control">
+                <option value="{{ null }}">Выберите родительскую категорию...</option>
+                @foreach($categories as $category)
+                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                @endforeach
+            </select>
+        </div>
         <button type="submit" class="btn btn-primary">Обновить</button>
     </form>
 
