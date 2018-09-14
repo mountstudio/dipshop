@@ -101,4 +101,12 @@ class CategoryController extends Controller
 
         return redirect()->back();
     }
+
+    public function getChildren(Request $request, $id)
+    {
+        $category = Category::find($id);
+        $children = $category->children;
+
+        return response()->json(['children' => $children]);
+    }
 }

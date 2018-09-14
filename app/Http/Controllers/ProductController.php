@@ -28,7 +28,7 @@ class ProductController extends Controller
     public function create()
     {
         return view('product.create', [
-            'categories' => Category::all(),
+            'categories' => Category::all()->where('parent_id', '=', null),
         ]);
     }
 
@@ -107,7 +107,7 @@ class ProductController extends Controller
     {
         return view('product.edit', [
             'product' => $product,
-            'categories' => Category::all(),
+            'categories' => Category::all()->where('parent_id', '=', null),
         ]);
     }
 

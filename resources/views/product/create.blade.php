@@ -23,7 +23,7 @@
 				</span>
 			@endif
 		</div>
-	  	<div class="form-row">
+	  	<div class="form-row" id="categories">
 			<div class="form-group">
 				<label for="category_of_product">Тип продукта</label>
 				<select name="category_id" id="category_of_product" class="form-control {{ $errors->has('category_id') ? 'is-invalid' : '' }}">
@@ -38,17 +38,41 @@
 					</span>
 				@endif
 			</div>
-			<div class="form-group">
-				<label for="price_of_product">Цена</label>
-				<input name="price" type="number" class="form-control {{ $errors->has('price') ? 'is-invalid' : '' }}" value="{{ old('price') }}" id="price_of_product" placeholder="Цена">
-				@if($errors->has('price'))
-					<span class="invalid-feedback" role="alert">
+
+		</div>
+		<div class="form-group">
+			<label for="price_of_product">Цена</label>
+			<input name="price" type="number" class="form-control {{ $errors->has('price') ? 'is-invalid' : '' }}" value="{{ old('price') }}" id="price_of_product" placeholder="Цена">
+			@if($errors->has('price'))
+				<span class="invalid-feedback" role="alert">
 					<strong>{{ $errors->first('price') }}</strong>
 				</span>
-				@endif
-			</div>
+			@endif
 		</div>
 	  	<button type="submit" class="btn btn-primary">Создать</button>
 	</form>
 
 @endsection
+
+@push('scripts')
+	<script>
+		$('#category_of_product').change(function (e) {
+		    $.ajax({
+				url: '/getchildren/' + $(this).val(),
+				success: function (res) {
+				    appendCategories($(res.children));
+                },
+				error: function (res) {
+					console.log('error');
+                }
+			});
+        });
+
+		function appendCategories(cats) {
+		    console.log(cats);
+		    for (var i = 0; i < cats.length; i++) {
+		        console.log(cats[i].id);
+			}
+        }
+	</script>
+@endpush
