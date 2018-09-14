@@ -49,6 +49,9 @@ class ProductController extends Controller
             $fileName = uniqid('product_').'.jpg';
 
             \Image::make($file)
+                ->resize(700, 700, function ($constraint) {
+                    $constraint->aspectRatio();
+                })
                 ->save(public_path('uploads/'.$fileName), 70);
 
             $product->image = $fileName;
@@ -129,6 +132,9 @@ class ProductController extends Controller
             $fileName = uniqid('product_'.$product->id.'_').'.jpg';
 
             \Image::make($file)
+                ->resize(700, 700, function ($constraint) {
+                    $constraint->aspectRatio();
+                })
                 ->save(public_path('uploads/'.$fileName), 70);
 
             $product->image = $fileName;

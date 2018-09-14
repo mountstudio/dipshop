@@ -22,4 +22,9 @@ class Category extends Model
     {
         return $this->hasMany('App\Category', 'parent_id');
     }
+
+    public function properties()
+    {
+        return $this->hasMany('App\CategoryProp');
+    }
 }
