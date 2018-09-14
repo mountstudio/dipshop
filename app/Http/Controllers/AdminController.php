@@ -47,7 +47,7 @@ class AdminController extends Controller
 
     public function getTypes()
     {
-        $categories = Category::select('*');
+        $categories = Category::with('parent')->select('*');
 
         return Datatables::eloquent($categories)
             ->addColumn('action', function ($model) {

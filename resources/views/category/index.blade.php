@@ -15,6 +15,7 @@
                 <tr>
                     <th>Id</th>
                     <th>Name</th>
+                    <th>Parent</th>
                     <th>Actions</th>
                 </tr>
                 </thead>
@@ -40,6 +41,7 @@
                 columns: [
                     { data: 'id', name: 'id' },
                     { data: 'name', name: 'name' },
+                    { data: 'parent.name', name: 'parent.name' },
                     { data: 'action', name: 'action', orderable: false, searchable: false }
                 ]
             });

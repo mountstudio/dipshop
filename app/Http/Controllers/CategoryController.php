@@ -26,7 +26,7 @@ class CategoryController extends Controller
     public function create()
     {
         return view('category.create', [
-            'categories' => Category::all(),
+            'categories' => Category::all()->where('parent_id', '=', null),
         ]);
     }
 
@@ -68,7 +68,7 @@ class CategoryController extends Controller
     {
         return view('category.edit', [
             'category' => $category,
-            'categories' => Category::all(),
+            'categories' => Category::all()->where('parent_id', '=', null),
         ]);
     }
 
