@@ -38,6 +38,15 @@
 					</span>
 				@endif
 			</div>
+			<div id="hidden-select" class="form-group mx-4 d-none">
+				<label for="child-category">Категория продукта</label>
+				<select id="child-category" class="form-control {{ $errors->has('child-category') ? 'is-invalid' : '' }}"></select>
+				@if($errors->has('child-category'))
+					<span class="invalid-feedback" role="alert">
+						<strong>{{ $errors->first('child-category') }}</strong>
+					</span>
+				@endif
+			</div>
 
 		</div>
 		<div class="form-group">
@@ -69,10 +78,14 @@
         });
 
 		function appendCategories(cats) {
-		    console.log(cats);
+				$('#hidden-select').removeClass('d-none')
 		    for (var i = 0; i < cats.length; i++) {
-		        console.log(cats[i].id);
-			}
-        }
+	        $('#child-category').append(
+		    		'<option name="child-category" class="form-control" value="' + cats[i].id + '">' + 
+		    			cats[i].name + 
+		    		'</option>'
+	    		)
+				}
+    }
 	</script>
 @endpush
