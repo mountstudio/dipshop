@@ -77,11 +77,16 @@ class ProductController extends Controller
 
     public function alcohols()
     {
-        $alcohols = Product::all()->where('category_id', '=', 1);
+        $products = collect()->merge(Product::all()->where('category_id', '=', 1));
+
         $categories = Category::find(1)->children;
 
+        foreach ($categories as $category) {
+            $products = collect()->merge(Product::all()->where('category_id', '=', $category->id));
+        }
+
         return view('product.show.alcohols', [
-            'alcohols' => $alcohols,
+            'products' => $products,
             'categories' => $categories,
         ]);
     }

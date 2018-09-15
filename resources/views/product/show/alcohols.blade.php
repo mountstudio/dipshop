@@ -10,7 +10,7 @@
 	</div>
 			
 	<div class="container py-4">
-		@include('product._list', ['products' => $alcohols])
+		@include('product._list')
 	</div>    
 
 @endsection

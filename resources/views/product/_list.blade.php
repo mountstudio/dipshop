@@ -17,4 +17,18 @@
             </div>
         </div>
     @endforeach
-  </div>
+</div>
+
+@push('scripts')
+    <script>
+
+        $('.hover-shadow').hover(
+            function (e) {
+                $(this).addClass('shadow-lg');
+            },
+            function (e) {
+                $(this).removeClass('shadow-lg');
+            }
+        );
+    </script>
+@endpush
