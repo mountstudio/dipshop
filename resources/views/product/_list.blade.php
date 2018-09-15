@@ -12,7 +12,7 @@
                     <div class="card-title ml-auto font-weight-bold">${{ $product->price }}</div>
                 </div>
                 <div class="card-body px-0  text-center">
-                    <a href="#" class="btn btn-success shadow-lg font-weight-light">В корзину</a>
+                    <p class="btn btn-success shadow-lg font-weight-light cart"  data-toggle="tooltip" data-placement="bottom" title="Корзина временно не доступна">В корзину</p>
                 </div>
             </div>
         </div>
