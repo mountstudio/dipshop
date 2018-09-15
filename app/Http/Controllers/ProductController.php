@@ -82,7 +82,7 @@ class ProductController extends Controller
         $categories = Category::find(1)->children;
 
         foreach ($categories as $category) {
-            $products = collect()->merge(Product::all()->where('category_id', '=', $category->id));
+            $products = $products->merge(Product::all()->where('category_id', '=', $category->id));
         }
 
         return view('product.show.alcohols', [
