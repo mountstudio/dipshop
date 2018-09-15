@@ -102,7 +102,7 @@ class ProductController extends Controller
         $categories = Category::find(1)->children;
 
         return view('product.show.alcohols', [
-            'alcohols' => $products,
+            'products' => $products,
             'categories' => $categories,
         ]);
     }
