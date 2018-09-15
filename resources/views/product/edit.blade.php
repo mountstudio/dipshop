@@ -53,7 +53,7 @@
         </div>
         <div class="form-group">
             <label for="price_of_product">Цена</label>
-            <input name="price" type="number" class="form-control {{ $errors->has('price') ? 'is-invalid' : '' }}" value="{{ $product->price }}" id="price_of_product" placeholder="Цена">
+            <input name="price" type="text" class="form-control {{ $errors->has('price') ? 'is-invalid' : '' }}" value="{{ $product->price }}" id="price_of_product" placeholder="Цена">
             @if($errors->has('price'))
                 <span class="invalid-feedback" role="alert">
 					<strong>{{ $errors->first('price') }}</strong>
