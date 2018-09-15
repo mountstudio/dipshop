@@ -1,21 +1,21 @@
-<div class="shadow-sm sticky-top bg-white border-top border-bottom py-2">
+<div class="shadow-sm sticky-top bg-light border-top border-bottom py-2">
     <div class="container d-flex align-items-center">
         <a class="mr-auto p-0" href="/"><img id="logo" src="/images/2.1.png" style="width:50px; height:auto;" alt=""></a>
         <ul class="nav justify-content-center">
             <li class="nav-item">
-                <a class="nav-link text-dark" href="{{ route('alcohol') }}">Алкоголь</a>
+                <a class="nav-link font-weight-bold text-dark" href="{{ route('alcohol') }}">Алкоголь</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark" href="#">Сигареты</a>
+                <a class="nav-link font-weight-bold text-dark" href="#">Сигареты</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark" href="#">Драгоценности</a>
+                <a class="nav-link font-weight-bold text-dark" href="#">Драгоценности</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark" href="#">Подарки</a>
+                <a class="nav-link font-weight-bold text-dark" href="#">Подарки</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark" href="#">Аксессуары</a>
+                <a class="nav-link font-weight-bold text-dark" href="#">Аксессуары</a>
             </li>
         </ul>
         <ul class="nav ml-auto">
