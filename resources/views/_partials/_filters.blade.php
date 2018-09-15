@@ -40,11 +40,7 @@
 			  						col-2 ml-3 
 			  						custom-select 
 			  						my-1 mr-sm-2" 
-					>
-				    <option value="1" selected="">Vodka</option>
-				    <option value="2">Wine</option>
-				    <option value="3">Whiskey</option>
-				  </select>
+					></select>
 				<div class="dropdown dropdown-filter">
 				  	<div class="btn bg-white dropdown-toggle">
 				    Grade
@@ -95,11 +91,33 @@
 
 @push('scripts')
     <script>
-        $('.dropdown-filter').hover(
-        	function() {
-        		$(this).toggleClass('show')
-        		$(this).find('.dropdown-menu').toggleClass('show')
-        	}
-    	)
+      $('.dropdown-filter').hover(
+        function() {
+      		$(this).toggleClass('show')
+      		$(this).find('.dropdown-menu').toggleClass('show')
+        }
+    	);
+
+    	 // $(document).ready(function (e) {
+      //       $.ajax({
+      //           url: '/getchildren/' + {{ $product->category->id }},
+      //           success: function (res) {
+      //               appendCategories($(res.children));
+      //           },
+      //           error: function (res) {
+      //               console.log('error');
+      //           }
+      //       });
+      //   });
+
+      //   function appendCategories(cats) {
+      //       for (var i = 0; i < cats.length; i++) {
+      //           $('#kind').append(
+      //               '<option name="child-category" class="form-control" value="' + cats[i].id + '">' + 
+      //                   cats[i].name + 
+      //               '</option>'
+      //           )
+      //       }
+      //   }
     </script>
 @endpush

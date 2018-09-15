@@ -26,7 +26,7 @@
 	  	<div class="form-row" id="categories">
 			<div class="form-group">
 				<label for="category_of_product">Тип продукта</label>
-				<select name="category_id" id="category_of_product" class="form-control {{ $errors->has('category_id') ? 'is-invalid' : '' }}">
+				<select id="category_of_product" class="form-control {{ $errors->has('category_id') ? 'is-invalid' : '' }}">
 					<option value="{{ null }}" {{ old('category_id') ? '' : 'selected' }} disabled>Выберите тип продукта...</option>
 					@foreach($categories as $category)
 						<option value="{{ $category->id }}" {{ old('category_id') == $category->id ? 'selected' : '' }}>{{ $category->name }}</option>
@@ -40,7 +40,7 @@
 			</div>
 			<div id="hidden-select" class="form-group mx-4 d-none">
 				<label for="child-category">Категория продукта</label>
-				<select id="child-category" class="form-control {{ $errors->has('child-category') ? 'is-invalid' : '' }}"></select>
+				<select name="category_id" id="child-category" class="form-control {{ $errors->has('child-category') ? 'is-invalid' : '' }}"></select>
 				@if($errors->has('child-category'))
 					<span class="invalid-feedback" role="alert">
 						<strong>{{ $errors->first('child-category') }}</strong>
