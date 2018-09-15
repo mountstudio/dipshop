@@ -78,22 +78,27 @@ class ProductController extends Controller
     public function alcohols()
     {
         $alcohols = Product::all()->where('category_id', '=', 1);
+        $categories = Category::find(1)->children;
 
         return view('product.show.alcohols', [
             'alcohols' => $alcohols,
+            'categories' => $categories,
         ]);
     }
 
 
     public function sort(Request $request)
     {
-
         $products = $request->sort == 'asc' 
             ? Product::all()->sortBy($request->param) 
             : Product::all()->sortByDesc($request->param);
         $products = $products->where('category_id', '=', $request->kind);
-         return view('product.show.alcohols', [
+
+        $categories = Category::find(1)->children;
+
+        return view('product.show.alcohols', [
             'alcohols' => $products,
+            'categories' => $categories,
         ]);
     }
 
