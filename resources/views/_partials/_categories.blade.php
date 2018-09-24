@@ -1,4 +1,4 @@
-<div class="shadow-sm sticky-top bg-light border-top border-bottom py-2">
+<div class="shadow-sm sticky-top bg-light border-top border-bottom pb-2 pt-4">
     <div class="container d-flex align-items-center">
         <a class="mr-auto p-0" href="/"><img id="logo" src="/images/2.1.png" style="width:50px; height:auto;" alt=""></a>
         <ul class="nav justify-content-center">
