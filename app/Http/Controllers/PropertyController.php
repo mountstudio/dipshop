@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PropertyRequest;
 use App\Property;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,7 @@ class PropertyController extends Controller
      */
     public function index()
     {
-        //
+        return view('property.index');
     }
 
     /**
@@ -24,7 +25,9 @@ class PropertyController extends Controller
      */
     public function create()
     {
-        //
+        return view('property.create', [
+            'properties' => Property::all(),
+        ]);
     }
 
     /**
@@ -33,9 +36,13 @@ class PropertyController extends Controller
      * @param CategoryRequest $request
      * @return \Illuminate\Http\Response
      */
-    public function store()
+    public function store(PropertyRequest $request)
     {
-        //
+        $validated = $request->validated();
+
+        Property::create($validated);
+
+        return redirect()->route('property.index');
     }
 
     /**

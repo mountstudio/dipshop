@@ -5,6 +5,9 @@
     <li class="nav-item py-1 border-bottom {{ Request::is('admin/category') ? 'bg-secondary' : '' }}">
         <a class="nav-link {{ Request::is('admin/category') ? 'text-light' : 'text-dark' }}" href="{{ route('category.index') }}">Categories</a>
     </li>
+    <li class="nav-item py-1 border-bottom {{ Request::is('admin/property') ? 'bg-secondary' : '' }}">
+        <a class="nav-link {{ Request::is('admin/property') ? 'text-light' : 'text-dark' }}" href="{{ route('property.index') }}">Properties</a>
+    </li>
     <li class="nav-item py-1 border-bottom {{ Request::is('admin/product') ? 'bg-secondary' : '' }}">
         <a class="nav-link {{ Request::is('admin/product') ? 'text-light' : 'text-dark' }}" href="{{ route('product.index') }}">Products</a>
     </li>

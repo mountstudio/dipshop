@@ -33,13 +33,15 @@ Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function () {
     Route::get('options', 'AdminController@options')->name('options');
 
     Route::resource('user', 'UserController');
-    Route::resource('category', 'CategoryController');
     Route::resource('product', 'ProductController');
+    Route::resource('category', 'CategoryController');
+    Route::resource('property', 'PropertyController');
 });
 
 Route::get('datatable/getusers', 'AdminController@getUsers')->name('datatable.getusers');
 Route::get('datatable/getproducts', 'AdminController@getProducts')->name('datatable.getproducts');
 Route::get('datatable/gettypes', 'AdminController@getTypes')->name('datatable.gettypes');
+Route::get('datatable/getproperties', 'AdminController@getProperties')->name('datatable.getproperties');
 
 // Route::get('/alcohol', function() {
 //     return view('alcohol');
