@@ -25,9 +25,7 @@ class PropertyController extends Controller
      */
     public function create()
     {
-        return view('property.create', [
-            'properties' => Property::all(),
-        ]);
+        return view('property.create');
     }
 
     /**
