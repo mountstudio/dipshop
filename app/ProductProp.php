@@ -10,4 +10,9 @@ class ProductProp extends Model
     {
         return $this->belongsTo('App\Product');
     }
+
+    public function property()
+    {
+    	return $this->belongsTo('App\Property');
+    } 
 }

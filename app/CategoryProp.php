@@ -10,4 +10,9 @@ class CategoryProp extends Model
     {
         return $this->belongsTo('App\Category');
     }
+
+    public function property()
+    {
+        return $this->belongsTo('App\Property');
+    }
 }
