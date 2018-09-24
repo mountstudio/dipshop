@@ -9,7 +9,7 @@
                 </div>
                 <div class="card-body px-0 pb-0 pt-1 d-flex">
                     <div class="card-title mr-auto" style="min-height: 46px;">{{ $product->name }}</div>
-                    <div class="card-title ml-auto font-weight-bold">${{ $product->price }}</div>
+                    <div class="card-title ml-auto font-weight-bold text-right" style="min-width: 40px;">{{ $product->price }} &euro;</div>
                 </div>
                 <div class="card-body px-0  text-center">
                     <p class="btn btn-success shadow-lg font-weight-light cart"  data-toggle="tooltip" data-placement="bottom" title="Корзина временно не доступна">В корзину</p>
