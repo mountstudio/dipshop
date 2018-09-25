@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\Http\Requests\PropertyRequest;
 use App\Property;
 use Illuminate\Http\Request;
@@ -25,20 +26,29 @@ class PropertyController extends Controller
      */
     public function create()
     {
-        return view('property.create');
+        $categories = Category::all();
+        return view('property.create', [
+            'categories' => $categories,
+        ]);
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param CategoryRequest $request
+     * @param PropertyRequest $request
      * @return \Illuminate\Http\Response
      */
     public function store(PropertyRequest $request)
     {
         $validated = $request->validated();
 
-        Property::create($validated);
+        $property = new Property($validated);
+
+        $property
+            ->fill(['slug' => str_slug($validated['name'], '-')])
+            ->save();
+
+        $property->categories()->attach($request->category);
 
         return redirect()->route('property.index');
     }
@@ -46,7 +56,7 @@ class PropertyController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Category  $category
+     * @param  \App\Property  $property
      * @return \Illuminate\Http\Response
      */
     public function show()
@@ -57,7 +67,7 @@ class PropertyController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Category  $category
+     * @param  \App\Property  $property
      * @return \Illuminate\Http\Response
      */
     public function edit()
@@ -69,7 +79,7 @@ class PropertyController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Category  $category
+     * @param  \App\Property  $property
      * @return \Illuminate\Http\Response
      */
     public function update()
@@ -80,7 +90,7 @@ class PropertyController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Category $category
+     * @param  \App\Property $property
      * @return \Illuminate\Http\Response
      * @throws \Exception
      */

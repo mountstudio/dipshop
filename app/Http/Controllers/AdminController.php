@@ -60,7 +60,7 @@ class AdminController extends Controller
 
     public function getProperties()
     {
-        $properties = Property::all();
+        $properties = Property::query();
 
         return Datatables::eloquent($properties)
             ->addColumn('action', function ($model) {

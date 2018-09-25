@@ -15,6 +15,7 @@
                 <tr>
                     <th>Id</th>
                     <th>Name</th>
+                    <th>Action</th>
                 </tr>
                 </thead>
             </table>

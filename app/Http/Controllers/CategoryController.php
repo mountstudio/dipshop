@@ -40,7 +40,7 @@ class CategoryController extends Controller
     {
         $validated = $request->validated();
 
-        Category::create($validated);
+        Category::create($validated)->fill(['slug' => str_slug($request->name)])->save();
 
         return redirect()->route('category.index');
     }
@@ -83,7 +83,7 @@ class CategoryController extends Controller
     {
         $validated = $request->validated();
 
-        $category->update($validated);
+        $category->fill(['slug' => str_slug($request->name)])->fill($validated)->save();
 
         return redirect()->route('category.index');
     }

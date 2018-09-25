@@ -25,6 +25,6 @@ class Category extends Model
 
     public function properties()
     {
-        return $this->hasMany('App\CategoryProp');
+        return $this->belongsToMany('App\Property');
     }
 }

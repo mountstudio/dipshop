@@ -13,6 +13,13 @@
 				</span>
             @endif
         </div>
+        <div class="form-group">
+            <select name="category" id="category_property" class="form-control">
+                @foreach($categories as $category)
+                    <option value="{{ $category->id }}">{{ $category->name  }}</option>
+                @endforeach
+            </select>
+        </div>
         <button type="submit" class="btn btn-primary">Создать</button>
     </form>
 

@@ -6,13 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Property extends Model
 {
-    public function category_property() 
+	protected $guarded = [];
+
+    public function categories()
     {
-    	return $this->hasMany('App\CategoryProp');
+    	return $this->belongsToMany('App\Category');
     }
 
-    public function product_property() 
+    public function products()
     {
-    	return $this->hasMany('App\ProductProp');
+    	return $this->belongsToMany('App\Product');
     }
 }

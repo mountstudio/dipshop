@@ -47,8 +47,12 @@
 					</span>
                 @endif
             </div>
+        </div>
+
+        <div id="product-properties" class="form-group">
 
         </div>
+
         <div class="form-group">
             <label for="price_of_product">Цена</label>
             <input name="price" type="text" class="form-control {{ $errors->has('price') ? 'is-invalid' : '' }}" value="{{ old('price') }}" id="price_of_product" placeholder="Цена">
