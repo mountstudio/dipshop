@@ -100,4 +100,12 @@ class PropertyController extends Controller
 
         return redirect()->back();
     }
+
+    public function getPropertiesByCategory(int $id)
+    {
+        $category = Category::find($id);
+        $properties = $category->properties;
+
+        return response()->json(['properties' => $properties]);
+    }
 }

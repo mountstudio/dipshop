@@ -51,4 +51,5 @@ Route::post('/product/sort', 'ProductController@sort')->name('product');
 Route::get('/alcohols', 'ProductController@alcohols')->name('alcohol');
 
 
-Route::get('getchildren/{id}', 'CategoryController@getChildren')->name('getchildren');
+Route::get('/getchildren/{id}', 'CategoryController@getChildren')->name('getchildren');
+Route::get('/getproperties/{id}', 'PropertyController@getPropertiesByCategory')->name('getproperties');

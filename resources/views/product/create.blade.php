@@ -49,8 +49,12 @@
             </div>
         </div>
 
-        <div id="product-properties" class="form-group">
-
+        <div id="product-properties" class="">
+            <fieldset class="p-2 border">
+                <legend class="w-25">Свойства продукта:</legend>
+                <div id="parentProperties"></div>
+                <div id="childProperties"></div>
+            </fieldset>
         </div>
 
         <div class="form-group">

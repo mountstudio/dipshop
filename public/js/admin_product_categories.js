@@ -1,4 +1,5 @@
 var parentSelect = $('#category_of_product');
+var childSelect = $('#child-category');
 
 $.ajax({
     url: '/getchildren/' + parentSelect.val(),
@@ -10,6 +11,19 @@ $.ajax({
     }
 });
 
+function ajaxForProps(item, type)
+{
+    $.ajax({
+        url: '/getproperties/' + item.val(),
+        success: function (res) {
+            appendProperties($(res.properties), type);
+        },
+        error: function () {
+            console.log('error');
+        }
+    });
+}
+
 parentSelect.change(function (e) {
     $.ajax({
         url: '/getchildren/' + $(this).val(),
@@ -20,11 +34,15 @@ parentSelect.change(function (e) {
             console.log('error');
         }
     });
+    ajaxForProps($(this), 'parent');
+});
+
+childSelect.change(function (e) {
+    ajaxForProps($(this), 'child');
 });
 
 function appendCategories(cats) {
     var hiddenSelect = $('#hidden-select');
-    var childSelect = $('#child-category');
 
     if(cats.length !== 0) {
         parentSelect.removeAttr('name');
@@ -44,4 +62,22 @@ function appendCategories(cats) {
         childSelect.removeAttr('name');
         parentSelect.attr('name', 'category_id');
     }
+}
+
+function appendProperties(props, type) {
+    var formGroup = $('<div class="form-group"></div>');
+
+    var typeProperty = $('#' + type + 'Properties');
+
+    typeProperty.empty();
+
+    for (var i = 0; i < props.length; i++) {
+        formGroup.append(
+            '<label for="' + props[i].id + '">' + props[i].name + '</label>' +
+            '<input type="hidden" value="' + props[i].id + '" name="propertyIds[]">' +
+            '<input type="text" id="' + props[i].id + '" class="col-6 form-control" name="properties[]">'
+        );
+    }
+
+    typeProperty.append(formGroup);
 }
