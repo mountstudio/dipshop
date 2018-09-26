@@ -15,6 +15,6 @@ class Product extends Model
 
     public function properties()
     {
-        return $this->belongsToMany('App\Product');
+        return $this->belongsToMany('App\Property');
     }
 }

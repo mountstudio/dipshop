@@ -6,7 +6,6 @@ use App\Http\Requests\ProductRequest;
 use App\Product;
 use App\Category;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
@@ -40,7 +39,6 @@ class ProductController extends Controller
      */
     public function store(ProductRequest $request)
     {
-        dd($request);
         $validated = $request->validated();
 
         $product = new Product($validated);
@@ -57,8 +55,11 @@ class ProductController extends Controller
 
             $product->image = $fileName;
         }
-
         $product->save();
+
+        for ($i = 0; $i < count($request->properties); $i++) {
+            $product->properties()->attach($request->propertyIds[$i], ['value' => $request->properties[$i]]);
+        }
 
         return redirect()->route('product.index');
     }
@@ -153,6 +154,10 @@ class ProductController extends Controller
         }
 
         $product->save();
+
+        for ($i = 0; $i < count($request->properties); $i++) {
+            $product->properties()->attach($request->propertyIds[$i], ['value' => $request->properties[$i]]);
+        }
 
         return redirect()->route('product.index');
     }

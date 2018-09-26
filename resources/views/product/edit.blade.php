@@ -51,6 +51,15 @@
                 @endif
             </div>
         </div>
+
+        <div id="product-properties" class="">
+            <fieldset class="p-2 border">
+                <legend class="w-25">Свойства продукта:</legend>
+                <div id="parentProperties"></div>
+                <div id="childProperties"></div>
+            </fieldset>
+        </div>
+
         <div class="form-group">
             <label for="price_of_product">Цена</label>
             <input name="price" type="text" class="form-control {{ $errors->has('price') ? 'is-invalid' : '' }}" value="{{ $product->price }}" id="price_of_product" placeholder="Цена">
