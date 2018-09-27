@@ -43,6 +43,8 @@ class ProductController extends Controller
 
         $product = new Product($validated);
 
+        $product->slug = str_slug($product->name);
+
         if ($request->hasFile('image')) {
             $file = $request->file('image');
             $fileName = uniqid('product_').'.jpg';
@@ -55,10 +57,13 @@ class ProductController extends Controller
 
             $product->image = $fileName;
         }
+
         $product->save();
 
-        for ($i = 0; $i < count($request->properties); $i++) {
-            $product->properties()->attach($request->propertyIds[$i], ['value' => $request->properties[$i]]);
+        if ($request->properties) {
+            for ($i = 0; $i < count($request->properties); $i++) {
+                $product->properties()->attach($request->propertyIds[$i], ['value' => $request->properties[$i]]);
+            }
         }
 
         return redirect()->route('product.index');
@@ -153,10 +158,14 @@ class ProductController extends Controller
             $product->image = $fileName;
         }
 
+        $product->slug = str_slug($product->name);
+
         $product->save();
 
-        for ($i = 0; $i < count($request->properties); $i++) {
-            $product->properties()->attach($request->propertyIds[$i], ['value' => $request->properties[$i]]);
+        if ($request->properties) {
+            for ($i = 0; $i < count($request->properties); $i++) {
+                $product->properties()->attach($request->propertyIds[$i], ['value' => $request->properties[$i]]);
+            }
         }
 
         return redirect()->route('product.index');
