@@ -93,7 +93,7 @@
         <div class="container py-4">
             <div class="row justify-content-center">
                 <div class="col-auto px-3 py-2 transition-500 hover-shadow">
-                    <a href="http://mount.kg" target="_blank" class="text-light btn">
+                    <a href="http://mount.kg" target="_blank" class="text-light small btn">
                         Made with <span class="text-danger">&hearts;</span> by Mount
                     </a>
                 </div>

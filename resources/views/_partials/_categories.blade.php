@@ -6,7 +6,7 @@
                 <a class="nav-link font-weight-bold text-light" href="{{ route('alcohol') }}">Алкоголь</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link font-weight-bold text-light" href="#">Сигареты</a>
+                <a class="nav-link font-weight-bold text-light" href="{{ route('cigaretes') }}">Сигареты</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link font-weight-bold text-light" href="#">Драгоценности</a>

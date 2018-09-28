@@ -93,15 +93,20 @@ class ProductController extends Controller
         }
 
         return view('product.show.alcohols', [
-            'products' => $products,
+            'products' => $products->paginate(12),
             'categories' => $categories,
         ]);
+    }
+
+    public function cigaretes()
+    {
+        return view('product.show.cigaretes');
     }
 
 
     public function sort(Request $request)
     {
-        $products = $request->sort == 'asc' 
+        $products = $request->sort == 'asc'
             ? Product::all()->sortBy($request->param) 
             : Product::all()->sortByDesc($request->param);
         $products = $products->where('category_id', '=', $request->kind);
@@ -109,7 +114,7 @@ class ProductController extends Controller
         $categories = Category::find(1)->children;
 
         return view('product.show.alcohols', [
-            'products' => $products,
+            'products' => $products->paginate(12),
             'categories' => $categories,
         ]);
     }

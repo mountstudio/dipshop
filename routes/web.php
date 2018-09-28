@@ -47,8 +47,9 @@ Route::get('datatable/getproperties', 'AdminController@getProperties')->name('da
 //     return view('alcohol');
 // })->name('alcohol');
 
-Route::post('/product/sort', 'ProductController@sort')->name('product');
+Route::get('/product/sort', 'ProductController@sort')->name('product');
 Route::get('/alcohols', 'ProductController@alcohols')->name('alcohol');
+Route::get('/cigaretes', 'ProductController@cigaretes')->name('cigaretes');
 
 
 Route::get('/getchildren/{id}', 'CategoryController@getChildren')->name('getchildren');

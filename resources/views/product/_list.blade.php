@@ -17,5 +17,11 @@
             </div>
         </div>
     @endforeach
+
+
+</div>
+
+<div class="row">
+    {{ $products->appends(request()->query())->links() }}
 </div>
 
