@@ -50,6 +50,10 @@ Route::get('datatable/getproperties', 'AdminController@getProperties')->name('da
 Route::get('/product/sort', 'ProductController@sort')->name('product');
 Route::get('/alcohols', 'ProductController@alcohols')->name('alcohol');
 Route::get('/cigaretes', 'ProductController@cigaretes')->name('cigaretes');
+Route::get('/jewelry', 'ProductController@jewelry')->name('jewelry');
+Route::get('/accessories', 'ProductController@accessories')->name('accessories');
+Route::get('/coffee', 'ProductController@coffee')->name('coffee');
+Route::get('/perfume', 'ProductController@perfume')->name('perfume');
 
 
 Route::get('/getchildren/{id}', 'CategoryController@getChildren')->name('getchildren');

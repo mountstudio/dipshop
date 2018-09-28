@@ -91,5 +91,15 @@ a.underline-link:hover {
 }
 .owl-prev i, .owl-next i {
     /*border-radius: 50%;*/
+}
 
+.category_logo {
+    display: block;
+    margin: auto;
+}
+
+svg {
+    width: 30px;
+    height: 30px;
+    fill: #fff;
 }

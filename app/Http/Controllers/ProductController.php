@@ -103,6 +103,25 @@ class ProductController extends Controller
         return view('product.show.cigaretes');
     }
 
+    public function jewelry()
+    {
+        return view('product.show.jewelry');
+    }
+
+    public function accessories()
+    {
+        return view('product.show.accessories');
+    }
+
+    public function coffee()
+    {
+        return view('product.show.coffee');
+    }
+
+    public function perfume()
+    {
+        return view('product.show.perfume');
+    }
 
     public function sort(Request $request)
     {

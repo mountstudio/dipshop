@@ -21,7 +21,9 @@
 
 </div>
 
-<div class="row">
-    {{ $products->appends(request()->query())->links() }}
-</div>
+@if($products instanceof \Illuminate\Pagination\LengthAwarePaginator)
+    <div class="row">
+        {{ $products->appends(request()->query())->links() }}
+    </div>
+@endif
 
