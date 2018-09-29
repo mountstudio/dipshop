@@ -6,37 +6,37 @@
             <li class="nav-item">
                 <a class="nav-link pt-0 font-weight-bold text-light" href="{{ route('alcohol') }}">
                     <img src="{{ asset('images/icons/wine.svg') }}" class="svg category_logo" width="30" height="30">
-                    <p>{{__('main.alcohol')}}</p>
+                    <p class="m-0">{{__('main.alcohol')}}</p>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link pt-0 font-weight-bold text-light" href="{{ route('cigaretes') }}">
                     <img src="{{ asset('images/icons/pipe.svg') }}" class="svg category_logo" width="30" height="30">
-                    <p>{{__('main.tobacco')}}</p>
+                    <p class="m-0">{{__('main.tobacco')}}</p>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link pt-0 font-weight-bold text-light" href="{{ route('jewelry') }}">
                     <img src="{{ asset('images/icons/diamond.svg') }}" class="svg category_logo" width="30" height="30">
-                    <p>{{__('main.jewelry')}}</p>
+                    <p class="m-0">{{__('main.jewelry')}}</p>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link pt-0 font-weight-bold text-light" href="{{ route('perfume') }}">
                     <img src="{{ asset('images/icons/perfume.svg') }}" class="svg category_logo" width="30" height="30">
-                    <p>{{__('main.perfumery')}}</p>
+                    <p class="m-0">{{__('main.perfumery')}}</p>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link pt-0 font-weight-bold text-light" href="{{ route('coffee') }}">
                     <img src="{{ asset('images/icons/coffee-bean.svg') }}" class="svg category_logo" width="30" height="30">
-                    <p>{{__('main.coffee')}}</p>
+                    <p class="m-0">{{__('main.coffee')}}</p>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link pt-0 font-weight-bold text-light" href="{{ route('accessories') }}">
                     <img src="{{ asset('images/icons/wristwatch.svg') }}" class="svg category_logo" width="30" height="30">
-                    <p>{{__('main.accessories')}}</p>
+                    <p class="m-0">{{__('main.accessories')}}</p>
                 </a>
             </li>
         </ul>
