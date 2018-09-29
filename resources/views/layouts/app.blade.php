@@ -23,7 +23,7 @@
 <body>
     @include('_partials._header_contacts')
     <header class="">
-        <nav class="navbar font-weight-normal shadow-sm navbar-expand-md navbar-light bg-white pt-4">
+        <nav class="navbar font-weight-normal shadow-sm navbar-expand-md navbar-light bg-white pt-5">
             <div class="container">
                 <a class="navbar-brand p-0" href="/"><img id="logo" src="/images/2.1.png" style="width:100px; height:auto;" alt=""></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
