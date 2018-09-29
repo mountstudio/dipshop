@@ -1,4 +1,4 @@
-<div class="shadow-sm sticky-top bg-dark border-top border-bottom pb-2 pt-5">
+<div class="shadow-sm sticky-top bg-dark shadow pb-2 pt-5">
     <div class="container d-flex align-items-center">
         <a class="mr-auto p-0" href="/"></a>
 
