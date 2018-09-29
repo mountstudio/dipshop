@@ -28,8 +28,10 @@
                 </a>
             </li>
             <li class="nav-item">
-                <img src="{{ asset('images/icons/coffee-bean.svg') }}" class="svg category_logo" width="30" height="30">
-                <a class="nav-link font-weight-bold text-light" href="{{ route('coffee') }}">Кофе</a>
+                <a class="nav-link font-weight-bold text-light" href="{{ route('coffee') }}">
+                    <img src="{{ asset('images/icons/coffee-bean.svg') }}" class="svg category_logo" width="30" height="30">
+                    <p>Кофе</p>
+                </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link font-weight-bold text-light" href="{{ route('accessories') }}">
