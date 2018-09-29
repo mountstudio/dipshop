@@ -1,10 +1,12 @@
-<div class="container-fluid bg-white">
+<div class="container-fluid position-relative bg-white">
+    <div class="backdrop"></div>
     <div class="row">
         <div class="col-12 p-0 owl-carousel owl-theme">
-            <img src="/images/big-banner.png" class="img-fluid" alt="">
-            <img src="/images/big-banner.png" class="img-fluid" alt="">
-            <img src="/images/big-banner.png" class="img-fluid" alt="">
-            <img src="/images/big-banner.png" class="img-fluid" alt="">
+            <img src="/images/mini-images/1.jpg" class="img-fluid" alt="">
+            <img src="/images/mini-images/2.jpg" class="img-fluid" alt="">
+            <img src="/images/mini-images/3.jpg" class="img-fluid" alt="">
+            <img src="/images/mini-images/4.jpg" class="img-fluid" alt="">
+            <img src="/images/mini-images/5.jpg" class="img-fluid" alt="">
         </div>
     </div>
 </div>

@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <div class="row text-light align-items-center justify-content-center position-relative" style="background-image: url('/images/wall.jpg'); background-position: center; background-size: cover; background-attachment: fixed; height: 85vh;">
+    <div class="row text-light align-items-center justify-content-center position-relative" style="background-image: url('/images/wall4.jpg'); background-position: center; background-size: cover; background-attachment: fixed; height: 85vh;">
         <div class="backdrop"></div>
         <div class="col-12">
             <h2 class="display-1 font-weight-bold text-uppercase text-center position-relative">Магазин беспошлиной<br>торговли</h2>
