@@ -1,7 +1,7 @@
 <div class="row">
     @foreach($products as $product)
         <div class="col-3 mb-4">
-            <div class="card hover-shadow transition-500 border pt-3">
+            <div class="card hover-shadow transition-500 border pt-3" style="border: 3px solid #dee2e6 !important;">
                 <img class="card-img-top px-1" src="{{ asset('uploads/'.$product->image) }}" alt="Card image cap">
                 <div class="card-body d-flex px-2 pb-1">
                     <div class="text-capitalize mr-auto font-weight-bold">{{ $product->category->name }}</div>

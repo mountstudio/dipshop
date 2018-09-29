@@ -17,7 +17,7 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link font-weight-bold text-light" href="{{ route('jewelry') }}">
-                    <img src="{{ asset('images/icons/wine.svg') }}" class="svg category_logo" width="30" height="30">
+                    <img src="{{ asset('images/icons/diamond.svg') }}" class="svg category_logo" width="30" height="30">
                     <p>Драгоценности</p>
                 </a>
             </li>
