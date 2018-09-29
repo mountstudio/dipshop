@@ -9,6 +9,7 @@ return [
     'signin' => 'Anmelden',
     'signout' => 'Ausloggen',
     'register' => 'Registrieren',
+    'h1' => 'DESSELINE SHOP HANDEL',
 
     //Categories menu
     'alcohol' => 'Alkohol',

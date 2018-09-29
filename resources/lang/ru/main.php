@@ -9,6 +9,7 @@ return [
     'signin' => 'Вход',
     'signout' => 'Выход',
     'register' => 'Регистрация',
+    'h1' => 'МАГАЗИН БЕСПОШЛИНОЙ ТОРГОВЛИ',
 
     //Categories menu
     'alcohol' => 'Алкоголь',
