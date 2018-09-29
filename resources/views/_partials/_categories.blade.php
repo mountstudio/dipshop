@@ -1,42 +1,66 @@
-<div class="shadow-sm sticky-top bg-dark border-top border-bottom pb-2 pt-5">
+<div class="shadow-sm sticky-top bg-dark shadow pt-5">
     <div class="container d-flex align-items-center">
         <a class="mr-auto p-0" href="/"></a>
 
         <ul class="nav justify-content-center">
             <li class="nav-item">
-                <a class="nav-link font-weight-bold text-light" href="{{ route('alcohol') }}">
+                <a class="nav-link pt-0 font-weight-bold text-light" href="{{ route('alcohol') }}">
                     <img src="{{ asset('images/icons/wine.svg') }}" class="svg category_logo" width="30" height="30">
+<<<<<<< HEAD
                     <p>{{__('main.alcohol')}}</p>
+=======
+                    <p class="mb-0">Алкоголь</p>
+>>>>>>> origin/Tilek
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link font-weight-bold text-light" href="{{ route('cigaretes') }}">
+                <a class="nav-link pt-0 font-weight-bold text-light" href="{{ route('cigaretes') }}">
                     <img src="{{ asset('images/icons/pipe.svg') }}" class="svg category_logo" width="30" height="30">
+<<<<<<< HEAD
                     <p>{{__('main.tobacco')}}</p>
+=======
+                    <p class="mb-0">Сигареты</p>
+>>>>>>> origin/Tilek
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link font-weight-bold text-light" href="{{ route('jewelry') }}">
+                <a class="nav-link pt-0 font-weight-bold text-light" href="{{ route('jewelry') }}">
                     <img src="{{ asset('images/icons/diamond.svg') }}" class="svg category_logo" width="30" height="30">
+<<<<<<< HEAD
                     <p>{{__('main.jewelry')}}</p>
+=======
+                    <p class="mb-0">Драгоценности</p>
+>>>>>>> origin/Tilek
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link font-weight-bold text-light" href="{{ route('perfume') }}">
+                <a class="nav-link pt-0 font-weight-bold text-light" href="{{ route('perfume') }}">
                     <img src="{{ asset('images/icons/perfume.svg') }}" class="svg category_logo" width="30" height="30">
+<<<<<<< HEAD
                     <p>{{__('main.perfumery')}}</p>
+=======
+                    <p class="mb-0">Парфюмерия</p>
+>>>>>>> origin/Tilek
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link font-weight-bold text-light" href="{{ route('coffee') }}">
+                <a class="nav-link pt-0 font-weight-bold text-light" href="{{ route('coffee') }}">
                     <img src="{{ asset('images/icons/coffee-bean.svg') }}" class="svg category_logo" width="30" height="30">
+<<<<<<< HEAD
                     <p>{{__('main.coffee')}}</p>
+=======
+                    <p class="mb-0">Кофе</p>
+>>>>>>> origin/Tilek
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link font-weight-bold text-light" href="{{ route('accessories') }}">
+                <a class="nav-link pt-0 font-weight-bold text-light" href="{{ route('accessories') }}">
                     <img src="{{ asset('images/icons/wristwatch.svg') }}" class="svg category_logo" width="30" height="30">
+<<<<<<< HEAD
                     <p>{{__('main.accessories')}}</p>
+=======
+                    <p class="mb-0">Аксессуары</p>
+>>>>>>> origin/Tilek
                 </a>
             </li>
         </ul>
