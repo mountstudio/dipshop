@@ -8,7 +8,7 @@
             {{--<p class="h5 font-weight-light font-italic text-capitalize">Extra 75% off on watches</p>--}}
         {{--</div>--}}
         <div class="col-12 text-center">
-            <a href="#products" class="px-5 text-dark btn btn-dip-shop btn-light position-relative">Shop</a>
+            <a href="#products" class="px-5 text-dark btn btn-dip-shop btn-light position-relative">{{__('main.shopbtn')}}</a>
         </div>
     </div>
 </div>

@@ -10,6 +10,7 @@ return [
     'signout' => 'Sign out',
     'register' => 'Register',
     'h1' => 'DESSELINE SHOP TRADE',
+    'shopbtn' => 'SHOP',
 
     //Categories menu
     'alcohol' => 'Alcohol',
@@ -18,6 +19,10 @@ return [
     'perfumery' => 'Perfumery',
     'coffee' => 'Coffee',
     'accessories' => 'Accessories',
+
+    //cart
+    'addtocart' => 'Add to cart',
+    'cartnotwork' => 'Shopping cart temporarily unavailable',
 
     //dev
     'devpagetitle' => 'Section temporarily unavailable',

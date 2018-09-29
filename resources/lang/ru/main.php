@@ -10,6 +10,7 @@ return [
     'signout' => 'Выход',
     'register' => 'Регистрация',
     'h1' => 'МАГАЗИН БЕСПОШЛИНОЙ ТОРГОВЛИ',
+    'shopbtn' => 'Каталог',
 
     //Categories menu
     'alcohol' => 'Алкоголь',
@@ -18,6 +19,10 @@ return [
     'perfumery' => 'Парфюмерия',
     'coffee' => 'Кофе',
     'accessories' => 'Аксессуары',
+
+    //cart
+    'addtocart' => 'В корзину',
+    'cartnotwork' => 'Корзина временно не доступна',
 
     //dev
     'devpagetitle' => 'Раздел временно недоступен',
