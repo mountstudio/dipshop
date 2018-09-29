@@ -88,13 +88,19 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                {{strtoupper(App::getLocale())}}
+                                <img src="/images/flags/{{App::getLocale()}}.svg"/> {{strtoupper(App::getLocale())}}
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="{{ route('set.language', 'en') }}">EN</a>
-                                <a class="dropdown-item" href="{{ route('set.language', 'ru') }}">RU</a>
-                                <a class="dropdown-item" href="{{ route('set.language', 'de') }}">DE</a>
+                                <a class="dropdown-item" href="{{ route('set.language', 'en') }}">
+                                    <img src="/images/flags/en.svg"/> EN
+                                </a>
+                                <a class="dropdown-item" href="{{ route('set.language', 'ru') }}">
+                                    <img src="/images/flags/ru.svg"/> RU
+                                </a>
+                                <a class="dropdown-item" href="{{ route('set.language', 'de') }}">
+                                    <img src="/images/flags/de.svg"/> DE
+                                </a>
                             </div>
                         </li>
                     </ul>
