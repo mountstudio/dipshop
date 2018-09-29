@@ -16,7 +16,11 @@ return [
     'jewelry' => 'Jewelry',
     'perfumery' => 'Perfumery',
     'coffee' => 'Coffee',
-    'accessories' => 'Accessories'
+    'accessories' => 'Accessories',
+
+    //dev
+    'devpagetitle' => 'Section temporarily unavailable',
+    'devpagetext' => 'At the drafting stage',
 
 
 ];

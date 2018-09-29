@@ -16,5 +16,9 @@ return [
     'jewelry' => 'Schmuck',
     'perfumery' => 'Parfümerie',
     'coffee' => 'Kaffee',
-    'accessories' => 'Zubehör'
+    'accessories' => 'Zubehör',
+
+    //dev
+    'devpagetitle' => 'Abschnitt vorübergehend nicht verfügbar',
+    'devpagetext' => 'In der Entwurfsphase',
 ];

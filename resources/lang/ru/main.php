@@ -16,5 +16,9 @@ return [
     'jewelry' => 'Драгоценности',
     'perfumery' => 'Парфюмерия',
     'coffee' => 'Кофе',
-    'accessories' => 'Аксессуары'
+    'accessories' => 'Аксессуары',
+
+    //dev
+    'devpagetitle' => 'Раздел временно недоступен',
+    'devpagetext' => 'На стадии разработки',
 ];
