@@ -31,29 +31,31 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
+
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
-                            <a href="" class="nav-link">Главная</a>
+                            <a href="" class="nav-link">{{ __('main.main') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">О проекте</a>
+                            <a href="" class="nav-link">{{ __('main.about')  }}</a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">Контакты</a>
+                            <a href="" class="nav-link">{{ __('main.contacts')  }}</a>
                         </li>
                     </ul>
+
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav">
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Вход') }}</a>
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('main.signin') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Регистрация') }}</a>
+                                <a class="nav-link" href="{{ route('register') }}">{{ __('main.register') }}</a>
                             </li>
                         @else
                             <li class="nav-item dropdown">
@@ -69,7 +71,7 @@
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                          document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        {{ __('main.signout') }}
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -79,6 +81,22 @@
                             </li>
                         @endguest
 
+                    </ul>
+
+                    <!-- Language switcher -->
+                    <ul class="nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                {{strtoupper(App::getLocale())}}
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="{{ route('set.language', 'en') }}">EN</a>
+                                <a class="dropdown-item" href="{{ route('set.language', 'ru') }}">RU</a>
+                                <a class="dropdown-item" href="{{ route('set.language', 'de') }}">DE</a>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
