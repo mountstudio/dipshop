@@ -13,4 +13,9 @@ class MainController extends Controller
             'products' => Product::all()->random(12),
         ]);
     }
+
+    public function home()
+    {
+        return view('home');
+    }
 }

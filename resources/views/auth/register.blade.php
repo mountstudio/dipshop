@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container-fluid">
-        <div class="row justify-content-end" style="background-image: url('/images/wall.jpg'); background-position: center; background-size: cover;">
+        <div class="row justify-content-end" style="background-image: url('/images/wall1.jpg'); background-position: center; background-size: cover;">
 
             <div class="col-4" style="background-color: #fffffff0;">
                 <div class="d-flex align-items-center justify-content-center text-dark font-weight-bold" style="height: 100vh;">

@@ -11,14 +11,13 @@
 |
 */
 
-Route::get('/', 'MainController@index')->name('welcome');
+Route::get('/', 'MainController@home');
+
+
 
 Auth::routes();
 
-Route::get('/home', function ()
-{
-    return view('welcome');
-});
+
 
 Route::get('/profile', 'UserController@profile')->name('profile');
 Route::get('/order', 'UserController@order')->name('order');
@@ -46,16 +45,17 @@ Route::get('datatable/getproperties', 'AdminController@getProperties')->name('da
 // Route::get('/alcohol', function() {
 //     return view('alcohol');
 // })->name('alcohol');
+Route::group(['middleware' => 'admin'], function () {
+    Route::get('/home', 'MainController@index')->name('welcome');
+});
 
-Route::get('/product/sort', 'ProductController@sort')->name('product');
-Route::get('/alcohols', 'ProductController@alcohols')->name('alcohol');
-Route::get('/cigaretes', 'ProductController@cigaretes')->name('cigaretes');
-Route::get('/jewelry', 'ProductController@jewelry')->name('jewelry');
-Route::get('/accessories', 'ProductController@accessories')->name('accessories');
-Route::get('/coffee', 'ProductController@coffee')->name('coffee');
-Route::get('/perfume', 'ProductController@perfume')->name('perfume');
-
-
+    Route::get('/product/sort', 'ProductController@sort')->name('product');
+    Route::get('/alcohols', 'ProductController@alcohols')->name('alcohol');
+    Route::get('/cigaretes', 'ProductController@cigaretes')->name('cigaretes');
+    Route::get('/jewelry', 'ProductController@jewelry')->name('jewelry');
+    Route::get('/accessories', 'ProductController@accessories')->name('accessories');
+    Route::get('/coffee', 'ProductController@coffee')->name('coffee');
+    Route::get('/perfume', 'ProductController@perfume')->name('perfume');
 Route::get('/getchildren/{id}', 'CategoryController@getChildren')->name('getchildren');
 Route::get('/getproperties/{id}', 'PropertyController@getPropertiesByCategory')->name('getproperties');
 

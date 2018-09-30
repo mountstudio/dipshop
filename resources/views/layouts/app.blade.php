@@ -25,7 +25,7 @@
     <header class="">
         <nav class="navbar font-weight-normal shadow-sm navbar-expand-md navbar-light bg-white pt-5">
             <div class="container">
-                <a class="navbar-brand p-0" href="/"><img id="logo" src="/images/2.1.png" style="width:100px; height:auto;" alt=""></a>
+                <a class="navbar-brand p-0" href="/home"><img id="logo" src="/images/2.1.png" style="width:100px; height:auto;" alt=""></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
