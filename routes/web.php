@@ -45,9 +45,7 @@ Route::get('datatable/getproperties', 'AdminController@getProperties')->name('da
 // Route::get('/alcohol', function() {
 //     return view('alcohol');
 // })->name('alcohol');
-Route::group(['middleware' => 'admin'], function () {
-    Route::get('/home', 'MainController@index')->name('welcome');
-});
+    Route::get('/home', 'HomeController@index')->name('welcome');
 
     Route::get('/product/sort', 'ProductController@sort')->name('product');
     Route::get('/alcohols', 'ProductController@alcohols')->name('alcohol');
