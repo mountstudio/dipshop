@@ -2,6 +2,9 @@
 
 return [
 
+    //head contact
+    'address' => 'Пр. Чынгыза Айтматова, 299/1',
+
     //Menu
     'main' => 'Главная',
     'about' => 'О проекте',

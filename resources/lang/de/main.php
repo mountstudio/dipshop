@@ -2,6 +2,9 @@
 
 return [
 
+    //head contact
+    'address' => '299/1 Chingiz Aitmatov Ave.',
+
     //Menu
     'main' => 'Hauptseite',
     'about' => 'Über uns',

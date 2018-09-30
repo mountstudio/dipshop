@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row justify-content-end">
             <div class="col-4 text-left">
-                <p class="py-2" style="font-size: 16px;">299/1 Chingiz Aitmatov Ave.</p>
+                <p class="py-2" style="font-size: 16px;">{{__('main.address')}}</p>
             </div>
             <div class="col-8 text-right d-flex justify-content-end">
                 <a href="mailto:dipmarket@1961.kg" class="py-2 mx-2 text-light" style="font-size: 16px;">dipmarket@1961.kg</a>

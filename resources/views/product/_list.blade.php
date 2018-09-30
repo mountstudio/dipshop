@@ -11,7 +11,7 @@
                     <div class="card-title ml-auto font-weight-bold text-right" style="min-width: 70px;"><span class="h4">{{ number_format($product->price, 2) }}</span> &euro;</div>
                 </div>
                 <div class="card-body px-0 pb-0 pt-2 text-center">
-                    <p class="btn btn-success shadow-lg font-weight-light cart mb-3"  data-toggle="tooltip" data-placement="bottom" title="{{__('main.')}}">{{__('main.addtocart')}}</p>
+                    <p class="btn btn-success shadow-lg font-weight-light cart mb-3"  data-toggle="tooltip" data-placement="bottom" title="{{__('main.cartnotwork')}}">{{__('main.addtocart')}}</p>
                 </div>
             </div>
         </div>
