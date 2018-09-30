@@ -9,6 +9,8 @@ return [
     'signin' => 'Вход',
     'signout' => 'Выход',
     'register' => 'Регистрация',
+    'h1' => 'МАГАЗИН БЕСПОШЛИНОЙ ТОРГОВЛИ',
+    'shopbtn' => 'Каталог',
 
     //Categories menu
     'alcohol' => 'Алкоголь',
@@ -16,5 +18,13 @@ return [
     'jewelry' => 'Драгоценности',
     'perfumery' => 'Парфюмерия',
     'coffee' => 'Кофе',
-    'accessories' => 'Аксессуары'
+    'accessories' => 'Аксессуары',
+
+    //cart
+    'addtocart' => 'В корзину',
+    'cartnotwork' => 'Корзина временно не доступна',
+
+    //dev
+    'devpagetitle' => 'Раздел временно недоступен',
+    'devpagetext' => 'На стадии разработки',
 ];
