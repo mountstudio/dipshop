@@ -15,14 +15,6 @@ return [
     'h1' => 'МАГАЗИН БЕСПОШЛИНОЙ ТОРГОВЛИ',
     'shopbtn' => 'Каталог',
 
-    //Categories menu
-    'alcohol' => 'Алкоголь',
-    'tobacco' => 'Табачные изделия',
-    'jewelry' => 'Драгоценности',
-    'perfumery' => 'Парфюмерия',
-    'coffee' => 'Кофе',
-    'accessories' => 'Аксессуары',
-
     //cart
     'addtocart' => 'В корзину',
     'cartnotwork' => 'Корзина временно не доступна',

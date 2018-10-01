@@ -15,14 +15,6 @@ return [
     'h1' => 'DESSELINE SHOP TRADE',
     'shopbtn' => 'SHOP',
 
-    //Categories menu
-    'alcohol' => 'Alcohol',
-    'tobacco' => 'Tobacco',
-    'jewelry' => 'Jewelry',
-    'perfumery' => 'Perfumery',
-    'coffee' => 'Coffee',
-    'accessories' => 'Accessories',
-
     //cart
     'addtocart' => 'Add to cart',
     'cartnotwork' => 'Shopping cart temporarily unavailable',

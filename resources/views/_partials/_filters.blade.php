@@ -26,7 +26,7 @@
                 <!-- Example single danger button -->
                 <select id="kind" name="kind" class=" form-control form-control-sm col-2 ml-3 custom-select my-1 mr-sm-2">
                     @foreach($categories as $category)
-                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                        <option value="{{ $category->id }}">{{ __('categories.'.$category->slug) }}</option>
                     @endforeach
                 </select>
                 {{--<div class="dropdown dropdown-filter">--}}

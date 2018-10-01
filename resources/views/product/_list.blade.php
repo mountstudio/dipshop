@@ -4,7 +4,7 @@
             <div class="card hover-shadow transition-500 border pt-3" style="border: 3px solid #dee2e6 !important;">
                 <img class="card-img-top px-1" src="{{ asset('uploads/'.$product->image) }}" alt="Card image cap">
                 <div class="card-body d-flex px-2 pb-1">
-                    <div class="text-capitalize mr-auto font-weight-bold">{{ $product->category->name }}</div>
+                    <div class="text-capitalize mr-auto font-weight-bold">{{ __('categories.'.$product->category->slug) }}</div>
                 </div>
                 <div class="card-body px-2 pb-0 pt-1 d-flex">
                     <div class="card-title h5 mr-auto" style="min-height: 64px;">{{ $product->name }}</div>
