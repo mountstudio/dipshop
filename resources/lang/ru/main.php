@@ -2,6 +2,9 @@
 
 return [
 
+    //head contact
+    'address' => 'Пр. Чынгыза Айтматова, 299/1',
+
     //Menu
     'main' => 'Главная',
     'about' => 'О проекте',
@@ -11,14 +14,6 @@ return [
     'register' => 'Регистрация',
     'h1' => 'МАГАЗИН БЕСПОШЛИНОЙ ТОРГОВЛИ',
     'shopbtn' => 'Каталог',
-
-    //Categories menu
-    'alcohol' => 'Алкоголь',
-    'tobacco' => 'Табачные изделия',
-    'jewelry' => 'Драгоценности',
-    'perfumery' => 'Парфюмерия',
-    'coffee' => 'Кофе',
-    'accessories' => 'Аксессуары',
 
     //cart
     'addtocart' => 'В корзину',

@@ -1,32 +1,24 @@
 <div class="row">
     <div class="col-2 border-right border-light">
-        <h5>Sort by: </h5>
-        <h5 class="mt-4 pt-2">Filter by: </h5>
+        <h5>{{__('filter.sortby')}}: </h5>
+        <h5 class="mt-4 pt-2">{{__('filter.filter')}}: </h5>
     </div>
     <div class="col">
         <form action="/product/sort" method="GET">
             <div class="d-flex align-items-baseline">
                 {{--<input type="text" readonly class="form-control-plaintext w-25" id="sortParam" name="param" value="price">--}}
-                <select
-                        id="sortParam"
-                        name="param"
-                        class=" form-control
-			  						form-control-sm
-			  						col-2 ml-3
-			  						custom-select
-			  						my-1 mr-sm-2"
-                >
-                    <option value="price" selected>Price</option>
+                <select id="sortParam" name="param"  class=" form-control form-control-sm col-2 ml-3 custom-select my-1 mr-sm-2" >
+                    <option value="price" selected>{{__('filter.price')}}</option>
                     {{--<option value="order">Order</option>--}}
                     {{--<option value="newest">Newest</option>--}}
                 </select>
                 <div class="custom-control custom-radio custom-control-inline">
                     <input type="radio" name="sort" value="asc" id="customRadioInline1" checked class="custom-control-input">
-                    <label class="custom-control-label" for="customRadioInline1">Asc</label>
+                    <label class="custom-control-label" for="customRadioInline1"><i class="fas fa-sort-amount-up"></i></label>
                 </div>
                 <div class="custom-control custom-radio custom-control-inline">
                     <input type="radio" name="sort" value="desc" id="customRadioInline2" class="custom-control-input">
-                    <label class="custom-control-label" for="customRadioInline2">Desc</label>
+                    <label class="custom-control-label" for="customRadioInline2"><i class="fas fa-sort-amount-down"></i></label>
                 </div>
 
             </div>
@@ -34,7 +26,7 @@
                 <!-- Example single danger button -->
                 <select id="kind" name="kind" class=" form-control form-control-sm col-2 ml-3 custom-select my-1 mr-sm-2">
                     @foreach($categories as $category)
-                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                        <option value="{{ $category->id }}">{{ __('categories.'.$category->slug) }}</option>
                     @endforeach
                 </select>
                 {{--<div class="dropdown dropdown-filter">--}}
@@ -82,7 +74,7 @@
                     {{--</div>--}}
                 {{--</div>--}}
             </div>
-            <button type="submit" class="btn btn-dark">Accept</button>
+            <button type="submit" class="btn btn-dark">{{__('filter.accept')}}</button>
         </form>
     </div>
 </div>

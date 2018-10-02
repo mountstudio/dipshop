@@ -2,6 +2,9 @@
 
 return [
 
+    //head contact
+    'address' => '299/1 Chingiz Aitmatov Ave.',
+
     //Menu
     'main' => 'Main',
     'about' => 'About',
@@ -11,14 +14,6 @@ return [
     'register' => 'Register',
     'h1' => 'DESSELINE SHOP TRADE',
     'shopbtn' => 'SHOP',
-
-    //Categories menu
-    'alcohol' => 'Alcohol',
-    'tobacco' => 'Tobacco',
-    'jewelry' => 'Jewelry',
-    'perfumery' => 'Perfumery',
-    'coffee' => 'Coffee',
-    'accessories' => 'Accessories',
 
     //cart
     'addtocart' => 'Add to cart',

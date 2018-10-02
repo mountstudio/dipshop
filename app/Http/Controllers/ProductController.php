@@ -93,7 +93,7 @@ class ProductController extends Controller
         }
 
         return view('product.show.alcohols', [
-            'products' => $products->paginate(12),
+            'products' => $products->paginate(20),
             'categories' => $categories,
         ]);
     }
