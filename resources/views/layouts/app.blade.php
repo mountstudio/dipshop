@@ -195,11 +195,11 @@
             var scroll;
             $(window).scroll(function() {
                 scroll = $(window).scrollTop();
-                if (scroll > 100) {
+                if (scroll > 230) {
                     $('#logo').css('width', 60);
 
                 }
-                else if (scroll <= 100) {
+                else if (scroll <= 350) {
                     $('#logo').css('width', 120);
                 }
             });
