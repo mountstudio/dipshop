@@ -89,11 +89,11 @@ class ProductController extends Controller
 
         $product = Product::find($request->product_id);
 
-        $cart = new Cart($oldCart[0]);
+        $cart = new Cart($oldCart);
         $cart->add($product, $product->id);
 
         \Session::remove('cart');
-        \Session::push('cart', $cart);
+        \Session::put('cart', $cart);
 
         return response()->json(['cart' => $cart]);
     }
@@ -104,11 +104,11 @@ class ProductController extends Controller
 
         $product = Product::find($request->product_id);
 
-        $cart = new Cart($oldCart[0]);
+        $cart = new Cart($oldCart);
         $cart->remove($product, $product->id);
 
         \Session::remove('cart');
-        \Session::push('cart', $cart);
+        \Session::put('cart', $cart);
 
         return response()->json(['cart' => $cart]);
     }
@@ -119,11 +119,11 @@ class ProductController extends Controller
 
         $product = Product::find($request->product_id);
 
-        $cart = new Cart($oldCart[0]);
+        $cart = new Cart($oldCart);
         $cart->delete($product, $product->id);
 
         \Session::remove('cart');
-        \Session::push('cart', $cart);
+        \Session::put('cart', $cart);
 
         return response()->json(['cart' => $cart]);
     }
