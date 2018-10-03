@@ -21,4 +21,6 @@ return [
     'liker'         => 'Liquor',
     'prochie'       => 'Andere',
     'pivo'          => 'Bier',
+    'discount'      => 'Rabatt',
+    'gift'          => 'Geschenk',
 ];

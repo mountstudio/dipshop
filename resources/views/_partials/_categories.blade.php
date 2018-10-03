@@ -6,6 +6,12 @@
 
         <ul class="nav justify-content-center">
             <li class="nav-item">
+                <a class="nav-link  font-weight-bold text-light" href="{{ route('jewelry') }}">
+                    <img src="{{ asset('images/icons/discount.svg') }}" class="svg category_logo" width="30" height="30">
+                    <p class="m-0">{{__('categories.discount')}}</p>
+                </a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link  font-weight-bold text-light" href="{{ route('alcohol') }}">
                     <img src="{{ asset('images/icons/wine.svg') }}" class="svg category_logo" width="30" height="30">
                     <p class="m-0">{{__('categories.alkogol')}}</p>
@@ -39,6 +45,12 @@
                 <a class="nav-link  font-weight-bold text-light" href="{{ route('accessories') }}">
                     <img src="{{ asset('images/icons/wristwatch.svg') }}" class="svg category_logo" width="30" height="30">
                     <p class="m-0">{{__('categories.accessories')}}</p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link  font-weight-bold text-light" href="{{ route('accessories') }}">
+                    <img src="{{ asset('images/icons/gift.svg') }}" class="svg category_logo" width="30" height="30">
+                    <p class="m-0">{{__('categories.gift')}}</p>
                 </a>
             </li>
         </ul>

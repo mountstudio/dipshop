@@ -12,7 +12,7 @@ return [
     //Child categories
     'vino'          => 'Wine',
     'konyak'        => 'Cognac',
-    'vodka'         => 'vodka',
+    'vodka'         => 'Vodka',
     'vino-igristoe' => 'Sparkling wine',
     'vermut'        => 'Vermouth',
     'viski'         => 'Whiskey',
@@ -20,5 +20,7 @@ return [
     'dzhin'         => 'Gin',
     'liker'         => 'Liquor',
     'prochie'       => 'Others',
-    'pivo'          => 'Beer'
+    'pivo'          => 'Beer',
+    'discount'      => 'Discount',
+    'gift'          => 'Gift',
 ];
