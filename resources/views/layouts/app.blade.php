@@ -197,9 +197,10 @@
                 scroll = $(window).scrollTop();
                 if (scroll > 100) {
                     $('#logo').css('width', 60);
+
                 }
                 else if (scroll <= 100) {
-                    $('#logo').css('width', 100);
+                    $('#logo').css('width', 120);
                 }
             });
         });

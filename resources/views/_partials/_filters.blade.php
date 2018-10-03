@@ -7,6 +7,11 @@
         <form action="/product/sort" method="GET">
             <div class="d-flex align-items-baseline">
                 {{--<input type="text" readonly class="form-control-plaintext w-25" id="sortParam" name="param" value="price">--}}
+                <select id="perPage" name="perPage"  class=" form-control form-control-sm col-2 ml-3 custom-select my-1 mr-sm-2" >
+                    <option value="20" selected>20</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                </select>
                 <select id="sortParam" name="param"  class=" form-control form-control-sm col-2 ml-3 custom-select my-1 mr-sm-2" >
                     <option value="price" selected>{{__('filter.price')}}</option>
                     {{--<option value="order">Order</option>--}}

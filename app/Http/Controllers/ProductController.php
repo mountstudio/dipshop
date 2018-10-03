@@ -133,7 +133,7 @@ class ProductController extends Controller
         $categories = Category::find(1)->children;
 
         return view('product.show.alcohols', [
-            'products' => $products->paginate(12),
+            'products' => $products->paginate($request->perPage),
             'categories' => $categories,
         ]);
     }
