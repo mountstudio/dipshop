@@ -58,3 +58,5 @@ Route::get('/getchildren/{id}', 'CategoryController@getChildren')->name('getchil
 Route::get('/getproperties/{id}', 'PropertyController@getPropertiesByCategory')->name('getproperties');
 
 Route::get('/set-language/{lang}', 'LanguagesController@set')->name('set.language');
+
+Route::post('/add-to-cart', 'ProductController@addToCart');

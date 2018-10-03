@@ -89,8 +89,8 @@ class ProductController extends Controller
 
         $product = Product::find($request->product_id);
 
-        $cart = new Cart($oldCart);
-        $cart->add($product, $product->id, $request->qty);
+        $cart = new Cart($oldCart[0]);
+        $cart->add($product, $product->id);
 
         \Session::remove('cart');
         \Session::push('cart', $cart);
@@ -104,7 +104,7 @@ class ProductController extends Controller
 
         $product = Product::find($request->product_id);
 
-        $cart = new Cart($oldCart);
+        $cart = new Cart($oldCart[0]);
         $cart->remove($product, $product->id);
 
         \Session::remove('cart');
@@ -119,7 +119,7 @@ class ProductController extends Controller
 
         $product = Product::find($request->product_id);
 
-        $cart = new Cart($oldCart);
+        $cart = new Cart($oldCart[0]);
         $cart->delete($product, $product->id);
 
         \Session::remove('cart');
