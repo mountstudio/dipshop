@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Cart;
 use App\Http\Requests\ProductRequest;
 use App\Product;
 use App\Category;
@@ -80,6 +81,51 @@ class ProductController extends Controller
         return view('product.show', [
             'product' => $product,
         ]);
+    }
+
+    public function addToCart(Request $request)
+    {
+        $oldCart = \Session::has('cart') ? \Session::get('cart') : null;
+
+        $product = Product::find($request->product_id);
+
+        $cart = new Cart($oldCart);
+        $cart->add($product, $product->id, $request->qty);
+
+        \Session::remove('cart');
+        \Session::push('cart', $cart);
+
+        return response()->json(['cart' => $cart]);
+    }
+
+    public function removeFromCart(Request $request)
+    {
+        $oldCart = \Session::has('cart') ? \Session::get('cart') : null;
+
+        $product = Product::find($request->product_id);
+
+        $cart = new Cart($oldCart);
+        $cart->remove($product, $product->id);
+
+        \Session::remove('cart');
+        \Session::push('cart', $cart);
+
+        return response()->json(['cart' => $cart]);
+    }
+
+    public function deleteFromCart(Request $request)
+    {
+        $oldCart = \Session::has('cart') ? \Session::get('cart') : null;
+
+        $product = Product::find($request->product_id);
+
+        $cart = new Cart($oldCart);
+        $cart->delete($product, $product->id);
+
+        \Session::remove('cart');
+        \Session::push('cart', $cart);
+
+        return response()->json(['cart' => $cart]);
     }
 
     public function alcohols()
