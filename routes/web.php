@@ -60,3 +60,6 @@ Route::get('/getproperties/{id}', 'PropertyController@getPropertiesByCategory')-
 Route::get('/set-language/{lang}', 'LanguagesController@set')->name('set.language');
 
 Route::post('/add-to-cart', 'ProductController@addToCart');
+
+//Search
+Route::get('/search', 'MainController@search');
