@@ -1,8 +1,9 @@
 <div class="container my-5">
-    <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" id="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    <div class="col-12">
+        <form class="my-2 w-50 my-lg-0 ml-auto mr-auto">
+            <input class="form-control mr-sm-2" type="search" id="search" placeholder="Search..." aria-label="Search">
+        </form>
+    </div>
 </div>
 
 <div class="container">
