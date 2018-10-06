@@ -18,6 +18,7 @@
                     </li>
                 </ul>
 
+                @include('_partials._search')
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav">

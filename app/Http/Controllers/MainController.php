@@ -27,10 +27,8 @@ class MainController extends Controller
 
         if($products->count()) {
             HtmlContainer::fillSearchHtml($result, $products);
-            $result .= '<div class="col-12 d-flex justify-content-center">' .
-                '<div class="col-auto text-center">' .
-                '<a href="#" class="btn btn-primary">More...</a>' .
-                '</div>' .
+            $result .= '<div class="col-12 p-0">' .
+                '<a href="#" class="btn btn-sm btn-primary w-100 px-5">More...</a>' .
                 '</div>';
         }
 

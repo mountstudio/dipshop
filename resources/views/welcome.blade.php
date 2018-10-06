@@ -6,7 +6,6 @@
     @include('_partials._categories')
 {{--    @include('_partials._banners')--}}
     @include('_partials._ad_blocks')
-    @include('_partials._search')
     <hr>
     <div id="products" class="container my-5">
         @include('product._list')
