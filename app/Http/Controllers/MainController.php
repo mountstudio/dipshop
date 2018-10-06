@@ -25,16 +25,15 @@ class MainController extends Controller
         $result = '';
         $products = Product::searchProductsLimit($request->search);
 
-        if($products) {
+        if($products->count()) {
             HtmlContainer::fillSearchHtml($result, $products);
+            $result .= '<div class="col-12 d-flex justify-content-center">' .
+                '<div class="col-auto text-center">' .
+                '<a href="#" class="btn btn-primary">More...</a>' .
+                '</div>' .
+                '</div>';
         }
 
-        $result .= '<div class="col-12 d-flex justify-content-center">' .
-                        '<div class="col-auto text-center">' .
-                            '<a href="#" class="btn btn-primary">More...</a>' .
-                        '</div>' .
-                    '</div>';
-
-        return \response()->json($result);
+        return response()->json($result);
     }
 }
