@@ -18,7 +18,7 @@ Route::get('/', 'MainController@home');
 Auth::routes();
 
 
-
+Route::get('/productshow/{id}', 'ProductController@product');
 Route::get('/profile', 'UserController@profile')->name('profile');
 Route::get('/order', 'UserController@order')->name('order');
 
@@ -54,6 +54,7 @@ Route::get('datatable/getproperties', 'AdminController@getProperties')->name('da
     Route::get('/accessories', 'ProductController@accessories')->name('accessories');
     Route::get('/coffee', 'ProductController@coffee')->name('coffee');
     Route::get('/perfume', 'ProductController@perfume')->name('perfume');
+
 Route::get('/getchildren/{id}', 'CategoryController@getChildren')->name('getchildren');
 Route::get('/getproperties/{id}', 'PropertyController@getPropertiesByCategory')->name('getproperties');
 

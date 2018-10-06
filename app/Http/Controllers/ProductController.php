@@ -205,6 +205,17 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
+
+    public function product($id)
+    {
+        $product = Product::find($id);
+
+        return view('product', ['product' => $product]);
+    }
+
+
+
+
     public function update(ProductRequest $request, Product $product)
     {
         $validated = $request->validated();

@@ -1,6 +1,8 @@
 <div class="row">
     @foreach($products as $product)
+
         <div style="min-width: 220px" class="col-2 mb-4">
+            <a class="text-dark" href="/productshow/{{$product->id}}" style="text-decoration: none;">
             <div class="card hover-shadow transition-500 border pt-3" style="border: 3px solid #dee2e6 !important;">
                 <img class="card-img-top px-1" src="{{ asset('uploads/'.$product->image) }}" alt="Card image cap">
                 <div class="card-body d-flex px-2 pb-1">
@@ -14,7 +16,9 @@
                     <p class="btn btn-success shadow-lg font-weight-light cart mb-3 to_cart" data-id="{{ $product->id }}"  data-toggle="tooltip" data-placement="bottom" title="{{__('main.cartnotwork')}}">{{__('main.addtocart')}}</p>
                 </div>
             </div>
+            </a>
         </div>
+
     @endforeach
 </div>
 
