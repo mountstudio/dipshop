@@ -62,4 +62,4 @@ Route::get('/set-language/{lang}', 'LanguagesController@set')->name('set.languag
 Route::post('/add-to-cart', 'ProductController@addToCart');
 
 //Search
-Route::get('/search', 'MainController@search');
+Route::get('/search', 'MainController@search')->name('search');

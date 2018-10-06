@@ -7,22 +7,27 @@
 </div>
 
 <div class="container">
-    <div class="row" id="search-resalts"></div>
+    <div class="row" id="search-results"></div>
 </div>
 
 @push('scripts')
-    <script> type="text/javascript"
+    <script type="text/javascript">
         $('#search').on('keyup', function(){
-           $value = $(this).val();
-           $.ajax({
-               type : 'get',
-               url  : '{{ URL::to('search')  }}',
-               data : {'search': $value},
-               success : function(data) {
-                   console.log(data);
-                   $('#search-resalts').html(data)
-               }
-           })
+            let container = $('#search-results');
+            let value = $(this).val();
+
+            if (value !== '') {
+                $.ajax({
+                    type: 'get',
+                    url: '{{ route('search')  }}',
+                    data: {'search': value},
+                    success: function (data) {
+                        container.html(data);
+                    }
+                })
+            } else {
+                container.empty();
+            }
         });
     </script>
 @endpush
