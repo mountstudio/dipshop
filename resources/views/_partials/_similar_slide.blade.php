@@ -1,14 +1,14 @@
 <div class="container-fluid position-relative bg-white">
     <div class="row">
-        <div id="similar-carousel" class="col-12 p-0 owl-carousel owl-theme">
-            @include('product._list', ['products' => $similars])
+        <div id="similar-carousel" class="col-12 p-0 owl-carousel similar-carousel owl-theme">
+            @include('product._list')
         </div>
     </div>
 </div>
 
 @push('scripts')
 <script>
-    $('#similar-carousel').owlCarousel({
+    $('.similar-carousel').owlCarousel({
         loop:true,
         autoplayTimeout:1000,
         margin: 10,

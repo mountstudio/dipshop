@@ -9,19 +9,36 @@
                 <img class="my-foto img-fluid px-1" src="{{ asset('uploads/'.$product->image) }}" alt="Card image cap">
             </div>
             <div class="col">
-                <div class="row justify-content-center mb-4">
-                    <h2 class="">{{ $product->name }}</h2>
-                </div>
-                <div class="row mb-3">
-                    <div class="col-auto text-capitalize font-weight-bold">{{ __('categories.'.$product->category->slug) }}</div>
-                </div>
-                <div class="row">
-                    <div class="col-auto font-weight-bold">
-                        <span class="h2">{{ number_format($product->price, 2) }}</span> &euro;
+                <div class="row h-100">
+                    <div class="col-12 mb-4">
+                        <h2 class="text-center h1">{{ $product->name }}</h2>
                     </div>
-                </div>
-                <div class="text-center position-absolute" style="bottom: 0; right: 0; left: 0;">
-                    <p class="btn btn-success shadow-lg font-weight-light cart mb-3 to_cart" data-id="{{ $product->id }}"  data-toggle="tooltip" data-placement="bottom" title="{{__('main.cartnotwork')}}">{{__('main.addtocart')}}</p>
+                    <div class="col-12">
+                        <div class="row">
+                            @foreach($product->properties as $property)
+                                <div class="col-6 pl-4">
+                                    <p class="mb-0">{{ $property->name }}</p>
+                                </div>
+                                <div class="col-6 text-right pr-4">
+                                    <p class="mb-0 font-weight-bold">{{ $property->pivot->value }}</p>
+                                </div>
+                                <div class="col-12">
+                                    <hr class="p-0 m-0 mb-2" style="border: 0; border-top: 2px solid rgba(0, 0, 0, 0.5);">
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+                    <div class="col-12 mb-3 align-self-end">
+                        <div class="row justify-content-around align-items-center">
+                            <div class="col-auto text-capitalize font-weight-bold h3">{{ __('categories.'.$product->category->slug) }}</div>
+                            <div class="col-auto">
+                                <span class="h2 font-weight-bold">{{ number_format($product->price, 2) }}</span> <span class="currency h5">&euro;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 text-center align-self-end">
+                        <p class="btn btn-success shadow-lg font-weight-light cart mb-3 to_cart" data-id="{{ $product->id }}"  data-toggle="tooltip" data-placement="bottom" title="{{__('main.cartnotwork')}}">{{__('main.addtocart')}}</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -30,16 +47,14 @@
     <div>
         <hr>
         <h3 class="text-center">{{ __('main.similar') }}</h3>
-            @include('_partials._similar_slide')
+            @include('_partials._similar_slide', ['products' => $similars])
 
     </div>
 
     <div>
         <hr>
         <h3 class="text-center">{{ __('main.others') }}</h3>
-        <div id="products" class="container my-5">
-            @include('product.index')
-        </div>
+            @include('_partials._similar_slide', ['products' => $products])
     </div>
 
 
