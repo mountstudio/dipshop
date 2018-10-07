@@ -5,10 +5,8 @@
     @include('_partials._categories')
 
     <div class="container py-5">
-        <h3 class="text-center">{{ __('main.search-results') }} ({{ $count  }})</h3>
-       <div class="row">
-           @include('product._list')
-       </div>
+       <h3 class="text-center">{{ __('main.search-results') }} ({{ $products->count()  }})</h3>
+        @include('product.index')
     </div>
 
     <div>
@@ -16,6 +14,5 @@
         <h3 class="text-center">{{ __('main.others') }}</h3>
         @include('_partials._similar_slide', ['products' => $products])
     </div>
-
 
 @endsection

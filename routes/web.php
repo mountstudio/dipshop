@@ -72,4 +72,3 @@ Route::resource('category', 'CategoryController')->only([
 
 //Search
 Route::get('/search', 'MainController@search')->name('search');
-Route::get('/search/{value}', 'MainController@moreResults')->name('more');

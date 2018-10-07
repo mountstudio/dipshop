@@ -1,4 +1,4 @@
-<div class="d-flex  flex-row h-50">
+<div class="d-flex flex-row h-50" style="width:200px; justify-content: flex-end;">
     <span id="search-box" class="collapse input-group-sm">
         <input class="form-control d-inline-flex" style="height: calc(1.68125rem + 5px);" type="search" id="search" placeholder="Search..." aria-label="Search">
     </span>
@@ -10,16 +10,10 @@
     </div>
 </div>
 
-
-{{--<div class="container">--}}
-    {{--<div class="row" id="search-results"></div>--}}
-{{--</div>--}}
-
 @push('scripts')
     <script type="text/javascript">
         let result = $('#result');
         $('#search').on('keyup', function(){
-            // let container = $('#search-results');
             let value = $(this).val();
 
             if (value !== '') {
@@ -33,12 +27,12 @@
                     }
                 })
             } else {
-                // container.empty();
                 result.empty();
             }
         });
         $('#search-box').on('hide.bs.collapse', function () {
             result.empty();
+            $('#search').val('');
         });
 
     </script>
