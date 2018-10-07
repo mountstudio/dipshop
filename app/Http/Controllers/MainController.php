@@ -22,16 +22,34 @@ class MainController extends Controller
 
     public function search(Request $request)
     {
-        $result = '';
-        $products = Product::searchProductsLimit($request->search);
+//        if ($request->ajax()) {
+            $result = '';
+            $products = Product::searchProductsLimit($request->search);
 
-        if($products->count()) {
-            HtmlContainer::fillSearchHtml($result, $products);
-            $result .= '<div class="col-12 p-0">' .
-                '<a href="#" class="btn btn-sm btn-dark rounded-bottom border-top-0 w-100 px-5">More...</a>' .
-                '</div>';
-        }
+            if($products->count()) {
+                HtmlContainer::fillSearchHtml($result, $products);
+                $result .= '<div class="col-12 p-0">' .
+                    '<a href="/search/'.$request->search.'" class="btn btn-sm btn-dark rounded-bottom border-top-0 w-100 px-5">More...</a>' .
+                    '</div>';
+            }
 
-        return response()->json($result);
+            return response()->json($result);
+//        } else {
+//            dd($request->search);
+//            return view('product._search_results', [
+//                'products' => Product::searchProducts($request->search),
+//            ]);
+//        }
+
+    }
+
+    public function moreResults($value)
+    {
+        $products = Product::searchProducts($value);
+        $count = $products->count();
+        return view('product._search_results', [
+            'products' => $products,
+            'count'    => $count,
+        ]);
     }
 }

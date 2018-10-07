@@ -26,4 +26,5 @@ return [
     //titles
     'others'            => 'Ondere',
     'similar'           => 'Ähnlich',
+    'search-results'    => 'Suchergebnisse',
 ];
