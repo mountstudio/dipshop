@@ -8,7 +8,7 @@
     @include('_partials._ad_blocks')
     <hr>
     <div id="products" class="container my-5">
-        @include('product._list')
+        @include('product.index')
     </div>
 
 

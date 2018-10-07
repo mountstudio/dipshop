@@ -1,7 +1,7 @@
 <div class="container-fluid position-relative bg-white">
     <div class="backdrop"></div>
     <div class="row">
-        <div class="col-12 p-0 owl-carousel owl-theme">
+        <div id="offers" class="col-12 p-0 owl-carousel owl-theme">
             <img src="/images/mini-images/1.jpg" class="img-fluid" alt="">
             <img src="/images/mini-images/2.jpg" class="img-fluid" alt="">
             <img src="/images/mini-images/3.jpg" class="img-fluid" alt="">
@@ -13,7 +13,7 @@
 
 @push('scripts')
     <script>
-        $('.owl-carousel').owlCarousel({
+        $('#offers').owlCarousel({
             loop:true,
             autoplayTimeout: 1000,
             nav:true,

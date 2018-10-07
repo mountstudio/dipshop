@@ -17,7 +17,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return view('product.index');
+        return view('product.admin');
     }
 
     /**
@@ -35,7 +35,7 @@ class ProductController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param ProductRequest $request
      * @return \Illuminate\Http\Response
      */
     public function store(ProductRequest $request)
@@ -80,6 +80,8 @@ class ProductController extends Controller
     {
         return view('product.show', [
             'product' => $product,
+            'products' => Product::all()->random(10),
+            'similars' => Product::all()->where('category_id', '=', $product->category->id )->random(5),
         ]);
     }
 
@@ -87,7 +89,7 @@ class ProductController extends Controller
     {
         $oldCart = \Session::has('cart') ? \Session::get('cart') : null;
 
-        $product = Product::find($request->product_id);
+        $product = (new Product)->find($request->product_id);
 
         $cart = new Cart($oldCart);
         $cart->add($product, $product->id);
@@ -102,7 +104,7 @@ class ProductController extends Controller
     {
         $oldCart = \Session::has('cart') ? \Session::get('cart') : null;
 
-        $product = Product::find($request->product_id);
+        $product = (new Product)->find($request->product_id);
 
         $cart = new Cart($oldCart);
         $cart->remove($product, $product->id);
@@ -117,7 +119,7 @@ class ProductController extends Controller
     {
         $oldCart = \Session::has('cart') ? \Session::get('cart') : null;
 
-        $product = Product::find($request->product_id);
+        $product = (new Product)->find($request->product_id);
 
         $cart = new Cart($oldCart);
         $cart->delete($product, $product->id);
@@ -132,7 +134,7 @@ class ProductController extends Controller
     {
         $products = collect()->merge(Product::all()->where('category_id', '=', 1));
 
-        $categories = Category::find(1)->children;
+        $categories = (new Category)->find(1)->children;
 
         foreach ($categories as $category) {
             $products = $products->merge(Product::all()->where('category_id', '=', $category->id));
@@ -176,7 +178,7 @@ class ProductController extends Controller
             : Product::all()->sortByDesc($request->param);
         $products = $products->where('category_id', '=', $request->kind);
 
-        $categories = Category::find(1)->children;
+        $categories = (new Category)->find(1)->children;
 
         return view('product.show.alcohols', [
             'products' => $products->paginate($request->perPage),
@@ -201,26 +203,10 @@ class ProductController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Product  $product
+     * @param ProductRequest $request
+     * @param  \App\Product $product
      * @return \Illuminate\Http\Response
      */
-
-    public function product($id)
-    {
-        $product = Product::find($id);
-
-        return view('product', [
-            'product'   => $product,
-            'products'  => Product::all()->random(10),
-            'similars' => Product::all()->where('category_id', '=', $product->category->id )
-                                         ->random(5),
-            ]);
-    }
-
-
-
-
     public function update(ProductRequest $request, Product $product)
     {
         $validated = $request->validated();
@@ -260,8 +246,9 @@ class ProductController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Product  $product
+     * @param  \App\Product $product
      * @return \Illuminate\Http\Response
+     * @throws \Exception
      */
     public function destroy(Product $product)
     {

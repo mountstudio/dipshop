@@ -186,11 +186,9 @@
             {{--</div>--}}
         </div>
     </footer>
-<script src="{{ asset('js/app.js') }}"></script>
-    <script src="{{ asset('js/jquery-1.8.2.min.js') }}"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('js/smooth-scroll.js') }}"></script>
-    <script src="{{ asset('js/zoomsl-3.0.min.js') }}"></script>
 
 {{--<script src="{{ asset('js/classie.js') }}" defer></script>--}}
     <script>
@@ -208,8 +206,6 @@
             });
         });
     </script>
-
-    <script src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
 
     <script>
 

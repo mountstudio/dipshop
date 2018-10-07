@@ -32,8 +32,12 @@ Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function () {
     Route::get('options', 'AdminController@options')->name('options');
 
     Route::resource('user', 'UserController');
-    Route::resource('product', 'ProductController');
-    Route::resource('category', 'CategoryController');
+    Route::resource('product', 'ProductController')->except([
+        'show'
+    ]);
+    Route::resource('category', 'CategoryController')->except([
+        'show'
+    ]);
     Route::resource('property', 'PropertyController');
 });
 
@@ -42,18 +46,15 @@ Route::get('datatable/getproducts', 'AdminController@getProducts')->name('datata
 Route::get('datatable/gettypes', 'AdminController@getTypes')->name('datatable.gettypes');
 Route::get('datatable/getproperties', 'AdminController@getProperties')->name('datatable.getproperties');
 
-// Route::get('/alcohol', function() {
-//     return view('alcohol');
-// })->name('alcohol');
-    Route::get('/home', 'HomeController@index')->name('welcome');
+Route::get('/home', 'HomeController@index')->name('welcome');
 
-    Route::get('/product/sort', 'ProductController@sort')->name('product');
-    Route::get('/alcohols', 'ProductController@alcohols')->name('alcohol');
-    Route::get('/cigaretes', 'ProductController@cigaretes')->name('cigaretes');
-    Route::get('/jewelry', 'ProductController@jewelry')->name('jewelry');
-    Route::get('/accessories', 'ProductController@accessories')->name('accessories');
-    Route::get('/coffee', 'ProductController@coffee')->name('coffee');
-    Route::get('/perfume', 'ProductController@perfume')->name('perfume');
+Route::get('/product/sort', 'ProductController@sort')->name('product');
+Route::get('/alcohols', 'ProductController@alcohols')->name('alcohol');
+Route::get('/cigaretes', 'ProductController@cigaretes')->name('cigaretes');
+Route::get('/jewelry', 'ProductController@jewelry')->name('jewelry');
+Route::get('/accessories', 'ProductController@accessories')->name('accessories');
+Route::get('/coffee', 'ProductController@coffee')->name('coffee');
+Route::get('/perfume', 'ProductController@perfume')->name('perfume');
 
 Route::get('/getchildren/{id}', 'CategoryController@getChildren')->name('getchildren');
 Route::get('/getproperties/{id}', 'PropertyController@getPropertiesByCategory')->name('getproperties');
@@ -61,6 +62,13 @@ Route::get('/getproperties/{id}', 'PropertyController@getPropertiesByCategory')-
 Route::get('/set-language/{lang}', 'LanguagesController@set')->name('set.language');
 
 Route::post('/add-to-cart', 'ProductController@addToCart');
+
+Route::resource('product', 'ProductController')->only([
+    'show',
+]);
+Route::resource('category', 'CategoryController')->only([
+    'show',
+]);
 
 //Search
 Route::get('/search', 'MainController@search')->name('search');

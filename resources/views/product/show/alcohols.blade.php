@@ -10,7 +10,7 @@
 	</div>
 			
 	<div class="container py-4">
-		@include('product._list')
+		@include('product.index')
 	</div>    
 
 @endsection
