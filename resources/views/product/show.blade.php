@@ -37,7 +37,7 @@
                         </div>
                     </div>
                     <div class="col-12 text-center align-self-end">
-                        <p class="btn btn-success shadow-lg font-weight-light cart mb-3 to_cart" data-id="{{ $product->id }}"  data-toggle="tooltip" data-placement="bottom" title="{{__('main.cartnotwork')}}">{{__('main.addtocart')}}</p>
+                        @include('_partials.buttons._add_to_cart', ['product' => $product])
                     </div>
                 </div>
             </div>

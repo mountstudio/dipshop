@@ -12,7 +12,7 @@
                 <div class="card-title h6 mr-auto" style="min-height: 64px;">{{ $product->name }}</div>
             </div>
             <div class="card-body px-0 pb-0 pt-2 text-center">
-                <p class="btn btn-success shadow-lg font-weight-light cart mb-3 to_cart" data-id="{{ $product->id }}"  data-toggle="tooltip" data-placement="bottom" title="{{__('main.cartnotwork')}}">{{__('main.addtocart')}}</p>
+                @include('_partials.buttons._add_to_cart', ['product' => $product])
             </div>
         </div>
         </a>

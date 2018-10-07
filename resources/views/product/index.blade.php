@@ -8,8 +8,3 @@
     </div>
 @endif
 
-@push('scripts')
-
-    <script src="{{ asset('js/cart.js') }}"></script>
-
-@endpush
