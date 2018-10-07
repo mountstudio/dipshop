@@ -6,7 +6,7 @@
     <div class="container py-5">
         <div class="row">
             <div class="col-5 card pt-3">
-                <img class="my-foto img-fluid px-1" src="{{ asset('uploads/'.$product->image) }}" alt="Card image cap">
+                <img class="my-foto img-fluid px-1" src="{{ asset('uploads/large/'.$product->image) }}" alt="Card image cap">
             </div>
             <div class="col">
                 <div class="row h-100">
@@ -37,7 +37,7 @@
                         </div>
                     </div>
                     <div class="col-12 text-center align-self-end">
-                        <p class="btn btn-success shadow-lg font-weight-light cart mb-3 to_cart" data-id="{{ $product->id }}"  data-toggle="tooltip" data-placement="bottom" title="{{__('main.cartnotwork')}}">{{__('main.addtocart')}}</p>
+                        @include('_partials.buttons._add_to_cart', ['product' => $product])
                     </div>
                 </div>
             </div>

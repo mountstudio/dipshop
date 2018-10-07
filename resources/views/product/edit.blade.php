@@ -2,7 +2,7 @@
 
 @section('admin_content')
 
-    <form action="{{ route('product.update', $product->id) }}" method="POST" enctype="multipart/form-data">
+    <form id="edit-product" data-category="{{ $product->category->id }}" data-id="{{ $product->id }}" action="{{ route('product.update', $product->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
         <div class="form-group">
@@ -15,7 +15,7 @@
             @endif
         </div>
         <div class="col-4">
-            <img src="{{ asset('uploads/'.$product->image) }}" class="img-fluid" alt="">
+            <img src="{{ asset('uploads/small/'.$product->image) }}" class="img-fluid" alt="">
         </div>
         <div class="form-group">
             <label for="image_of_product">Картинка продукта</label>

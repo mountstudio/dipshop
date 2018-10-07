@@ -41,18 +41,25 @@ childSelect.change(function (e) {
     ajaxForProps($(this), 'child');
 });
 
+function selectedOption(id, product_id) {
+    return parseInt(product_id) === parseInt(id) ? 'selected' : '';
+}
+
 function appendCategories(cats) {
-    var hiddenSelect = $('#hidden-select');
+    let hiddenSelect = $('#hidden-select');
 
     if(cats.length !== 0) {
+        let id = $('form#edit-product').data('category');
+
         parentSelect.removeAttr('name');
         childSelect.attr('name', 'category_id');
         hiddenSelect.removeClass('d-none');
 
         childSelect.empty();
-        for (var i = 0; i < cats.length; i++) {
+        for (let i = 0; i < cats.length; i++) {
+            console.log(id);
             childSelect.append(
-                '<option name="child-category" class="form-control" value="' + cats[i].id + '">' +
+                '<option name="child-category" class="form-control" value="' + cats[i].id + '" ' + selectedOption(cats[i].id, id) + '>' +
                 cats[i].name +
                 '</option>'
             )

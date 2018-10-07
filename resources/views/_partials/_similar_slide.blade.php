@@ -6,10 +6,11 @@
     </div>
 </div>
 
-@push('scripts')
+@prepend('scripts')
 <script>
     $('.similar-carousel').owlCarousel({
-        loop:true,
+        loop: true,
+        rewind: true,
         autoplayTimeout:1000,
         margin: 10,
         nav:true,
@@ -28,4 +29,4 @@
         }
     });
 </script>
-@endpush
+@endprepend
