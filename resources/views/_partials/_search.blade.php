@@ -2,7 +2,7 @@
     <span id="search-box" class="collapse input-group-sm">
         <input class="form-control d-inline-flex" style="height: calc(1.68125rem + 5px);" type="search" id="search" placeholder="Search..." aria-label="Search">
     </span>
-    <button class="btn btn-primary btn-sm mt-1 ml-2 align-top" type="button" data-toggle="collapse" data-target="#search-box" aria-expanded="false" aria-controls="search-box">
+    <button class="btn btn-outline-light border-0 btn-sm mt-1 ml-2 align-top" type="button" data-toggle="collapse" data-target="#search-box" aria-expanded="false" aria-controls="search-box">
         <i class="fas fa-search"></i>
     </button>
     <div class="position-absolute" style="top: 33px" id="result">
