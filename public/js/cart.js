@@ -22,8 +22,12 @@ $('.to_cart').click(function (e) {
         type: 'POST',
         success: function (res) {
             console.log(res);
-            successSpan.fadeIn(0).delay(5000).fadeOut(0);
-            toCartSpan.fadeOut(0).delay(5001).fadeIn(0);
+            successSpan.fadeIn(0, function () {
+                btn.addClass('px-5');
+            }).delay(5000).fadeOut(0, function () {
+                btn.removeClass('px-5');
+            });
+            toCartSpan.fadeOut(0).delay(5000).fadeIn(0);
         },
         error: function () {
             console.log('error');
