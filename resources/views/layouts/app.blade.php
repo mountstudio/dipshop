@@ -218,7 +218,17 @@
             }
         );
     </script>
-@stack('scripts')
 
+
+
+@stack('scripts')
+    <script src="{{ asset('js/cart.js') }}"></script>
+
+    {{--<script>--}}
+        {{--$('.to_cart').each(function (key, item) {--}}
+            {{--let btn = $(item);--}}
+            {{--register(btn)--}}
+        {{--});--}}
+    {{--</script>--}}
 </body>
 </html>
