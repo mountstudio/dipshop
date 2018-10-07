@@ -2,7 +2,7 @@
 
 @section('admin_content')
 
-    <form id="edit-product" data-id="{{ $product->id }}" action="{{ route('product.update', $product->id) }}" method="POST" enctype="multipart/form-data">
+    <form id="edit-product" data-category="{{ $product->category->id }}" data-id="{{ $product->id }}" action="{{ route('product.update', $product->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
         <div class="form-group">

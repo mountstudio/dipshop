@@ -46,9 +46,11 @@ class ProductController extends Controller
 
         $product->slug = str_slug($product->name);
 
+        dd($product->slug);
+
         if ($request->hasFile('image')) {
             $file = $request->file('image');
-            $fileName = uniqid('product_').'.jpg';
+            $fileName = uniqid('product_'.$product->slug.'_').'.jpg';
 
             \Image::make($file)
                 ->resize(null, 300, function ($constraint) {
@@ -224,7 +226,7 @@ class ProductController extends Controller
             }
 
             $file = $request->file('image');
-            $fileName = uniqid('product_'.$product->id.'_').'.jpg';
+            $fileName = uniqid('product_'.$product->slug.'_').'.jpg';
 
             \Image::make($file)
                 ->resize(null, 300, function ($constraint) {

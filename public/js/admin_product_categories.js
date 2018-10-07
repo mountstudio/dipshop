@@ -49,7 +49,7 @@ function appendCategories(cats) {
     let hiddenSelect = $('#hidden-select');
 
     if(cats.length !== 0) {
-        let id = $('form#edit-product').data('id');
+        let id = $('form#edit-product').data('category');
 
         parentSelect.removeAttr('name');
         childSelect.attr('name', 'category_id');
