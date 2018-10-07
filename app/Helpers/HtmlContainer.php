@@ -20,7 +20,7 @@ class HtmlContainer
     public static function fillSearchHtml(&$result, $vars = null)
     {
         foreach ($vars as $var) {
-            $result .= '<a href="#" style="text-decoration: none">'.
+            $result .= '<a href="/productshow/' . $var->id . '" style="text-decoration: none">'.
             '<div class="d-flex flex-row bg-light py-1 px-2 border-bottom border-dark text-dark">'.
             '<div class="d-inline-block">'.
             '<img width="60" height="80" src="' . asset('uploads/' . $var->image) . '" alt="">'.

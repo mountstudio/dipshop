@@ -210,7 +210,12 @@ class ProductController extends Controller
     {
         $product = Product::find($id);
 
-        return view('product', ['product' => $product]);
+        return view('product', [
+            'product'   => $product,
+            'products'  => Product::all()->random(10),
+            'similars' => Product::all()->where('category_id', '=', $product->category->id )
+                                         ->random(5),
+            ]);
     }
 
 

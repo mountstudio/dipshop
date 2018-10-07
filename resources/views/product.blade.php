@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
+    @include('_partials._banners')
+    @include('_partials._categories')
     <div class="container py-5">
         <div class="row">
             <div class="col-6 card pt-3">
@@ -18,6 +20,23 @@
                     <p class="btn btn-success shadow-lg font-weight-light cart mb-3 to_cart" data-id="{{ $product->id }}"  data-toggle="tooltip" data-placement="bottom" title="{{__('main.cartnotwork')}}">{{__('main.addtocart')}}</p>
                     </div>
             </div>
+        </div>
+    </div>
+
+    <div>
+        <hr>
+        <h3 class="text-center">{{ __('main.similar') }}</h3>
+        <div id="similar" class="container my-5">
+            @include('_partials._similar_slide')
+        </div>
+
+    </div>
+
+    <div>
+        <hr>
+        <h3 class="text-center">{{ __('main.others') }}</h3>
+        <div id="products" class="container my-5">
+            @include('product._list')
         </div>
     </div>
 
