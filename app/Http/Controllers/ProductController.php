@@ -54,7 +54,9 @@ class ProductController extends Controller
                 ->resize(null, 300, function ($constraint) {
                     $constraint->aspectRatio();
                 })
-                ->save(public_path('uploads/'.$fileName), 70);
+                ->save(public_path('uploads/small/'.$fileName), 70);
+            \Image::make($file)
+                ->save(public_path('uploads/large/'.$fileName), 80);
 
             $product->image = $fileName;
         }
@@ -214,8 +216,11 @@ class ProductController extends Controller
         $product->fill($validated);
 
         if ($request->hasFile('image')) {
-            if ($product->getOriginal('image') && is_file(public_path('uploads/'.$product->getOriginal('image')))) {
-                unlink(public_path('uploads/'.$product->getOriginal('image')));
+            if ($product->getOriginal('image') && is_file(public_path('uploads/small/'.$product->getOriginal('image')))) {
+                unlink(public_path('uploads/small/'.$product->getOriginal('image')));
+            }
+            if ($product->getOriginal('image') && is_file(public_path('uploads/large/'.$product->getOriginal('image')))) {
+                unlink(public_path('uploads/large/'.$product->getOriginal('image')));
             }
 
             $file = $request->file('image');
@@ -225,7 +230,9 @@ class ProductController extends Controller
                 ->resize(null, 300, function ($constraint) {
                     $constraint->aspectRatio();
                 })
-                ->save(public_path('uploads/'.$fileName), 70);
+                ->save(public_path('uploads/small/'.$fileName), 70);
+            \Image::make($file)
+                ->save(public_path('uploads/large/'.$fileName), 80);
 
             $product->image = $fileName;
         }

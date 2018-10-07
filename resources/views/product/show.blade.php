@@ -6,7 +6,7 @@
     <div class="container py-5">
         <div class="row">
             <div class="col-5 card pt-3">
-                <img class="my-foto img-fluid px-1" src="{{ asset('uploads/'.$product->image) }}" alt="Card image cap">
+                <img class="my-foto img-fluid px-1" src="{{ asset('uploads/large/'.$product->image) }}" alt="Card image cap">
             </div>
             <div class="col">
                 <div class="row h-100">

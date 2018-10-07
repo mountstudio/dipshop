@@ -104,7 +104,9 @@ class CategoryController extends Controller
 
     public function getChildren(Request $request, $id)
     {
-        $category = Category::find($id);
+        $result = '';
+
+        $category = (new Category)->find($id);
         $children = $category->children;
 
         return response()->json(['children' => $children]);

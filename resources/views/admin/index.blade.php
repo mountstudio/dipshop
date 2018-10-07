@@ -5,7 +5,7 @@
     <div class="container-fluid">
         <div class="row">
 
-            <div class="col-2 pl-0">
+            <div class="col-2 px-0 shadow-sm" style="background-image: url('/images/wall5.jpg'); background-position: center;">
                 @include('_partials._admin_sidebar')
             </div>
 
