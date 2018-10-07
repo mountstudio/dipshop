@@ -56,9 +56,12 @@ class ProductController extends Controller
                 ->resize(null, 300, function ($constraint) {
                     $constraint->aspectRatio();
                 })
-                ->save(public_path('uploads/small/'.$fileName), 70);
+                ->save(public_path('uploads/small/'.$fileName), 40);
             \Image::make($file)
-                ->save(public_path('uploads/large/'.$fileName), 80);
+                ->resize(null, 1500, function ($constraint) {
+                    $constraint->aspectRatio();
+                })
+                ->save(public_path('uploads/large/'.$fileName), 40);
 
             $product->image = $fileName;
         }
@@ -232,9 +235,12 @@ class ProductController extends Controller
                 ->resize(null, 300, function ($constraint) {
                     $constraint->aspectRatio();
                 })
-                ->save(public_path('uploads/small/'.$fileName), 70);
+                ->save(public_path('uploads/small/'.$fileName), 40);
             \Image::make($file)
-                ->save(public_path('uploads/large/'.$fileName), 80);
+                ->resize(null, 1500, function ($constraint) {
+                    $constraint->aspectRatio();
+                })
+                ->save(public_path('uploads/large/'.$fileName), 40);
 
             $product->image = $fileName;
         }
