@@ -8,7 +8,7 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="nav mx-auto">
                     <li class="nav-item">
-                        <a href="" class="nav-link text-light">{{ __('main.main') }}</a>
+                        <a href="/home" class="nav-link text-light">{{ __('main.main') }}</a>
                     </li>
                     <li class="nav-item">
                         <a href="" class="nav-link text-light">{{ __('main.about')  }}</a>
