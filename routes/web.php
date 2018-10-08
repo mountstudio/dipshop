@@ -61,7 +61,7 @@ Route::get('/getproperties/{id}', 'PropertyController@getPropertiesByCategory')-
 
 Route::get('/set-language/{lang}', 'LanguagesController@set')->name('set.language');
 
-Route::post('/add-to-cart', 'CartController@addToCart');
+Route::post('/add-to-cart', 'ProductController@addToCart');
 
 Route::resource('product', 'ProductController')->only([
     'show',

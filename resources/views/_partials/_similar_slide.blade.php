@@ -11,10 +11,7 @@
     $('.similar-carousel').owlCarousel({
         loop: true,
         rewind: true,
-        autoplay:true,
         autoplayTimeout:1000,
-        autoplayHoverPause:true,
-        stagePadding: 50,
         margin: 10,
         nav:true,
         dots:false,
