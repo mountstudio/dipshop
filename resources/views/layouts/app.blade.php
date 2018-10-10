@@ -193,15 +193,16 @@
 {{--<script src="{{ asset('js/classie.js') }}" defer></script>--}}
     <script>
         $(function () {
-            var scroll;
+            let scroll;
+            let logo = $('#logo');
             $(window).scroll(function() {
                 scroll = $(window).scrollTop();
                 if (scroll > 230) {
-                    $('#logo').css('width', 60);
+                    logo.css('width', 60);
 
                 }
                 else if (scroll <= 350) {
-                    $('#logo').css('width', 120);
+                    logo.css('width', 120);
                 }
             });
         });

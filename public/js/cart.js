@@ -1,3 +1,15 @@
+$.ajax({
+    url: '/get-cart',
+    type: 'GET',
+    success: function (res) {
+        console.log(res);
+        updateHtml(res);
+    },
+    error: function () {
+        console.log('error');
+    }
+});
+
 $('.to_cart').click(function (e) {
     e.preventDefault();
 
@@ -41,6 +53,8 @@ $('.to_cart').click(function (e) {
 });
 
 function updateHtml(res) {
-    $('#cart-qty').html(res.cart.totalQty);
+    if (res.cart !== null) {
+        $('#cart-qty').html(res.cart.totalQty);
+    }
     $('#cart-result').html(res.result);
 }

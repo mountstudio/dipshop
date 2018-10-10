@@ -42,7 +42,7 @@ class HtmlContainer
                 if ($i == 5) {
                     return false;
                 }
-                $result .= '<div class="d-flex flex-row bg-light py-1 px-2 border-bottom border-dark text-dark">' .
+                $result .= '<div class="dropdown-item d-flex flex-row bg-light py-1 px-2 border-bottom border-dark text-dark">' .
                     '<div class="d-inline-block">' .
                     '<img width="60" height="60" src="' . asset('uploads/small/' . $item['item']->image) . '" alt="">' .
                     '</div>' .
@@ -53,6 +53,8 @@ class HtmlContainer
                     '</div>';
                 $i++;
             }
+        } else {
+            $result .= '<div class="dropdown-item"><p class="m-0 p-0">'. __('cart.empty') .'</p></div>';
         }
     }
 }

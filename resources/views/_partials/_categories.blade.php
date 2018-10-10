@@ -55,7 +55,7 @@
             </li>
         </ul>
         <ul class="nav ml-auto">
-            <li class="nav-item">
+            <li class="nav-item dropdown">
                 @include('_partials._cart')
             </li>
         </ul>

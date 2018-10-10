@@ -122,6 +122,10 @@ a.underline-link:hover {
     margin: auto;
 }
 
+#cart-result.dropdown-menu.show {
+    left: -100px!important;
+}
+
 svg {
     width: 30px;
     height: 30px;

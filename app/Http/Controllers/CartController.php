@@ -11,16 +11,13 @@ class CartController extends Controller
 {
     public function getCart()
     {
-        $oldCart = \Session::get('cart') ? \Session::get('cart') : null;
-
-        $cart = new Cart($oldCart);
-
+        $oldCart = \Session::has('cart') ? \Session::get('cart') : null;
         $result = '';
 
-        HtmlContainer::fillCartInfo($result, $cart);
+        HtmlContainer::fillCartInfo($result, $oldCart);
 
         return response()->json([
-            'cart' => $cart,
+            'cart' => $oldCart,
             'result' => $result,
         ]);
     }
