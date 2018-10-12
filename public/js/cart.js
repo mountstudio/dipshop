@@ -1,3 +1,15 @@
+$.ajax({
+    url: '/get-cart',
+    type: 'GET',
+    success: function (res) {
+        console.log(res);
+        updateHtml(res);
+    },
+    error: function () {
+        console.log('error');
+    }
+});
+
 $('.to_cart').click(function (e) {
     e.preventDefault();
 
@@ -22,15 +34,27 @@ $('.to_cart').click(function (e) {
         type: 'POST',
         success: function (res) {
             console.log(res);
-            successSpan.fadeIn(0, function () {
-                btn.addClass('px-5');
-            }).delay(5000).fadeOut(0, function () {
-                btn.removeClass('px-5');
-            });
-            toCartSpan.fadeOut(0).delay(5000).fadeIn(0);
+            updateHtml(res);
+            updateBtns();
         },
         error: function () {
             console.log('error');
         }
     });
+
+    function updateBtns() {
+        successSpan.fadeIn(0, function () {
+            btn.addClass('px-5');
+        }).delay(5000).fadeOut(0, function () {
+            btn.removeClass('px-5');
+        });
+        toCartSpan.fadeOut(0).delay(5000).fadeIn(0);
+    }
 });
+
+function updateHtml(res) {
+    if (res.cart !== null) {
+        $('#cart-qty').html(res.cart.totalQty);
+    }
+    $('#cart-result').html(res.result);
+}
