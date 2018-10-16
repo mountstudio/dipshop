@@ -3,7 +3,7 @@
 return [
     //Categories menu Parent
     'alcohol'       => 'Alkohol',
-    'tobacco'       => 'Tabak',
+    'sigarety'       => 'Tabak',
     'jewelry'       => 'Schmuck',
     'perfumery'     => 'Parfümerie',
     'coffee'        => 'Kaffee',

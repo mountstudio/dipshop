@@ -1,7 +1,7 @@
 <div class="shadow-sm sticky-top bg-dark shadow pt-5">
     <div class="container d-flex align-items-center">
         <a class="mr-auto p-0" href="/">
-            <img id="logo" class="m-2 transition-500" src="/images/2.5.png" style="width:120px; height:auto;" alt="">
+            <img id="logo" class="m-2 transition-500" src="/images/logo1.png" style="width:120px; height:auto;" alt="">
         </a>
 
         <ul class="nav justify-content-center">
@@ -20,7 +20,7 @@
             <li class="nav-item">
                 <a class="nav-link  font-weight-bold text-light" href="{{ route('cigaretes') }}">
                     <img src="{{ asset('images/icons/pipe.svg') }}" class="svg category_logo" width="30" height="30">
-                    <p class="m-0">{{__('categories.tobacco')}}</p>
+                    <p class="m-0">{{__('categories.sigarety')}}</p>
                 </a>
             </li>
             <li class="nav-item">

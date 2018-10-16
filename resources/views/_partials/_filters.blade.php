@@ -1,10 +1,13 @@
 <div class="row">
     <div class="col-2 border-right border-light">
         <h5>{{__('filter.sortby')}}: </h5>
-        <h5 class="mt-4 pt-2">{{__('filter.filter')}}: </h5>
+        @if($categories->count())
+            <h5 class="mt-4 pt-2">{{__('filter.filter')}}: </h5>
+        @endif
     </div>
     <div class="col">
         <form action="/product/sort" method="GET">
+            <input type="hidden" name="mainCatId" value="{{ $mainCatId }}">
             <div class="d-flex align-items-baseline">
                 {{--<input type="text" readonly class="form-control-plaintext w-25" id="sortParam" name="param" value="price">--}}
                 <select id="perPage" name="perPage"  class=" form-control form-control-sm col-2 ml-3 custom-select my-1 mr-sm-2" >
@@ -29,11 +32,13 @@
             </div>
             <div class="d-flex my-3">
                 <!-- Example single danger button -->
-                <select id="kind" name="kind" class=" form-control form-control-sm col-2 ml-3 custom-select my-1 mr-sm-2">
-                    @foreach($categories as $category)
-                        <option value="{{ $category->id }}">{{ __('categories.'.$category->slug) }}</option>
-                    @endforeach
-                </select>
+                @if($categories->count())
+                    <select id="kind" name="kind" class=" form-control form-control-sm col-2 ml-3 custom-select my-1 mr-sm-2">
+                        @foreach($categories as $category)
+                            <option value="{{ $category->id }}">{{ __('categories.'.$category->slug) }}</option>
+                        @endforeach
+                    </select>
+                @endif
                 {{--<div class="dropdown dropdown-filter">--}}
                     {{--<div class="btn bg-white dropdown-toggle">--}}
                         {{--Grade--}}

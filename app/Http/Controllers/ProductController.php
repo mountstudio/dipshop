@@ -46,8 +46,6 @@ class ProductController extends Controller
 
         $product->slug = str_slug($product->name);
 
-        dd($product->slug);
-
         if ($request->hasFile('image')) {
             $file = $request->file('image');
             $fileName = uniqid('product_'.$product->slug.'_').'.jpg';
@@ -150,12 +148,25 @@ class ProductController extends Controller
         return view('product.show.alcohols', [
             'products' => $products->paginate(20),
             'categories' => $categories,
+            'mainCatId' => 1,
         ]);
     }
 
     public function cigaretes()
     {
-        return view('product.show.cigaretes');
+        $products = collect()->merge(Product::all()->where('category_id', '=', 13));
+
+        $categories = (new Category)->find(13)->children;
+
+        foreach ($categories as $category) {
+            $products = $products->merge(Product::all()->where('category_id', '=', $category->id));
+        }
+
+        return view('product.show.alcohols', [
+            'products' => $products->paginate(20),
+            'categories' => $categories,
+            'mainCatId' => 13,
+        ]);
     }
 
     public function jewelry()
@@ -183,13 +194,14 @@ class ProductController extends Controller
         $products = $request->sort == 'asc'
             ? Product::all()->sortBy($request->param) 
             : Product::all()->sortByDesc($request->param);
-        $products = $products->where('category_id', '=', $request->kind);
+        $products = $products->where('category_id', '=', $request->kind ? $request->kind : $request->mainCatId);
 
-        $categories = (new Category)->find(1)->children;
+        $categories = (new Category)->find($request->mainCatId)->children;
 
         return view('product.show.alcohols', [
             'products' => $products->paginate($request->perPage),
             'categories' => $categories,
+            'mainCatId' => $request->mainCatId,
         ]);
     }
 

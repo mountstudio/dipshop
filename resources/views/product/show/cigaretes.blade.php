@@ -2,16 +2,15 @@
 
 @section('content')
 
-    @include('_partials._banners')
-    @include('_partials._categories')
+  @include('_partials._banners')
+    @include('_partials._categories') 
 
-    <div class="container py-5 my-5">
-        <div class="row justify-content-center">
-            <h2 class="h1">{{__('main.devpagetitle')}}</h2>
-        </div>
-        <div class="row justify-content-center">
-            <p class="font-weight-normal h2">{{__('main.devpagetext')}}</p>
-        </div>
+    <div class="container w-100 py-5 border-bottom">
+        @include('_partials._filters')
     </div>
+            
+    <div class="container py-4">
+        @include('product.index')
+    </div>    
 
 @endsection
