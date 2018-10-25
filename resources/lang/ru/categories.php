@@ -2,8 +2,8 @@
 
 return [
     //Categories menu Parent
-    'alcohol'       => 'Алкоголь',
-    'sigarety'      => 'Табак',
+    'alkogol'       => 'Алкоголь',
+    'tobacco'      => 'Табак',
     'jewelry'       => 'Драгоценности',
     'perfumery'     => 'Парфюмерия',
     'coffee'        => 'Кофе',

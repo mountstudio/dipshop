@@ -2,8 +2,8 @@
 
 return [
     //Categories menu Parent
-    'alcohol'       => 'Alkohol',
-    'sigarety'       => 'Tabak',
+    'alkogol'       => 'Alkohol',
+    'tobacco'       => 'Tabak',
     'jewelry'       => 'Schmuck',
     'perfumery'     => 'Parfümerie',
     'coffee'        => 'Kaffee',
