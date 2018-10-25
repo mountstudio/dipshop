@@ -2,7 +2,6 @@ $.ajax({
     url: '/get-cart',
     type: 'GET',
     success: function (res) {
-        console.log(res);
         updateHtml(res);
     },
     error: function () {
@@ -12,10 +11,7 @@ $.ajax({
 
 $('.to_cart').click(function (e) {
     e.preventDefault();
-
     let btn = $(e.currentTarget);
-
-    console.log(btn);
 
     let successSpan = btn.find('.success-cart-span');
     let toCartSpan = btn.find('.to-cart-span');
@@ -33,7 +29,6 @@ $('.to_cart').click(function (e) {
         },
         type: 'POST',
         success: function (res) {
-            console.log(res);
             updateHtml(res);
             updateBtns();
         },
