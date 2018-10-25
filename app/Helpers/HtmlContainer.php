@@ -67,11 +67,11 @@ class HtmlContainer
             $result .= '<table class="table table-bordered mb-0">
                         <thead>
                         <tr>
-                            <th scope="col">№</th>
-                            <th scope="col">Image</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Price</th>
-                            <th scope="col">Actions</th>
+                            <th class="text-center" scope="col">№</th>
+                            <th class="text-center" scope="col">Image</th>
+                            <th class="text-center" scope="col">Name</th>
+                            <th class="text-center" scope="col">Price</th>
+                            <th class="text-center" scope="col">Actions</th>
                         </tr>
                         </thead>
                         <tbody>';
@@ -89,15 +89,17 @@ class HtmlContainer
 
                 $result .= '<tr>
                             <th scope="row">'. ($i + 1) .'</th>
-                            <td><img width="60" height="60" src="' . asset('uploads/small/' . $item['item']->image) .'"/></td>
-                            <td>' . $item['item']->name . ' <br><b>' . __('categories.' . $item['item']->category->slug) . '</b></td>
-                            <td>
-                            <a href="/remove-from-cart' . $item['item']->id . '" class="p-2 font-weight-bold bg-danger text-light">-</a>
-                            <span class="mx-1">'. $item['qty'] . '</span> 
-                            <p class="btn btn-success shadow-lg font-weight-light cart mb-3 to_cart" data-id="'. $item['item']->id .'"  data-toggle="tooltip" data-placement="bottom" title="+"><span class="to-cart-span">+</span><span class="success-cart-span" style="display:none;"><i class="fas fa-check"></i></span></p>
-                            x ' . number_format($item['item']->price, 2) . '&euro;
+                            <td class="p-2"><img class="img-fluid" width="70" height="70" src="' . asset('uploads/small/' . $item['item']->image) .'"/></td>
+                            <td class="align-middle">' . $item['item']->name . ' <br><b>' . __('categories.' . $item['item']->category->slug) . '</b></td>
+                            <td class="align-middle">
+                            <div class="d-flex align-items-center">
+                            <p class="btn btn-danger m-0 font-weight-bold from_cart" data-id="'. $item['item']->id .'">-</p>
+                            <span class="mx-1 font-weight-bold text-center" style="min-width: 13px;">'. $item['qty'] . '</span> 
+                            <p class="btn btn-success m-0 font-weight-bold to_cart" data-id="'. $item['item']->id .'">+</p>
+                            <span class="font-weight-bold ml-1">&nbsp;x &nbsp;' . number_format($item['item']->price, 2) . '&euro;</span>
+                            </div>
                             </td>
-                            <td>Delete</td>
+                            <td class="align-middle">Delete</td>
                         </tr>';
 
                 $i++;
