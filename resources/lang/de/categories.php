@@ -22,5 +22,5 @@ return [
     'prochie'       => 'Andere',
     'pivo'          => 'Bier',
     'discount'      => 'Rabatt',
-    'gift'          => 'Geschenk',
+    'gift'          => 'Sets',
 ];
