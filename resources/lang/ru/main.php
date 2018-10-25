@@ -20,8 +20,8 @@ return [
     'cartnotwork'   => 'Корзина временно не доступна',
 
     //dev
-    'devpagetitle'  => 'Раздел временно недоступен',
-    'devpagetext'   => 'На стадии разработки',
+    'devpagetitle'  => 'Ждем вас в 2019 году!',
+    'devpagetext'   => '',
 
     //titles
     'others'        => 'Другие',

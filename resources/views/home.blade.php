@@ -59,20 +59,20 @@
 <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
 <script src="{{ asset('js/smooth-scroll.js') }}"></script>
 {{--<script src="{{ asset('js/classie.js') }}" defer></script>--}}
-<script>
-    $(function () {
-        var scroll;
-        $(window).scroll(function() {
-            scroll = $(window).scrollTop();
-            if (scroll > 100) {
-                $('#logo').css('width', 60);
-            }
-            else if (scroll <= 100) {
-                $('#logo').css('width', 100);
-            }
-        });
-    });
-</script>
+{{--<script>--}}
+    {{--$(function () {--}}
+        {{--var scroll;--}}
+        {{--$(window).scroll(function() {--}}
+            {{--scroll = $(window).scrollTop();--}}
+            {{--if (scroll > 100) {--}}
+                {{--$('#logo').css('width', 60);--}}
+            {{--}--}}
+            {{--else if (scroll <= 100) {--}}
+                {{--$('#logo').css('width', 100);--}}
+            {{--}--}}
+        {{--});--}}
+    {{--});--}}
+{{--</script>--}}
 
 <script src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
 
