@@ -63,6 +63,9 @@ Route::get('/set-language/{lang}', 'LanguagesController@set')->name('set.languag
 
 Route::post('/add-to-cart', 'CartController@addToCart');
 Route::get('/get-cart', 'CartController@getCart');
+Route::get('/remove-from-cart/{id}', 'CartController@removeFromCart'); //Remove 1 item From Cart
+Route::get('/delete-from-cart/{id}', 'CartController@deleteFromCart'); //Delete items from Cart
+Route::get('/add-to-cart/{id}', 'CartController@getAddToCart'); // ADD
 
 Route::resource('product', 'ProductController')->only([
     'show',
