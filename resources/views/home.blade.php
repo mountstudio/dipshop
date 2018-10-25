@@ -47,14 +47,6 @@
     </div>
 </div>
 
-
-
-
-
-
-
-
-
 <script src="{{ asset('js/app.js') }}"></script>
 <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
 <script src="{{ asset('js/smooth-scroll.js') }}"></script>

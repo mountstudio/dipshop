@@ -90,7 +90,7 @@ class HtmlContainer
                 $result .= '<tr>
                             <th scope="row">'. ($i + 1) .'</th>
                             <td class="p-2"><img class="img-fluid" width="70" height="70" src="' . asset('uploads/small/' . $item['item']->image) .'"/></td>
-                            <td class="align-middle">' . $item['item']->name . ' <br><b>' . __('categories.' . $item['item']->category->slug) . '</b></td>
+                            <td class="align-middle"><span class="font-weight-bold">' . $item['item']->name . '</span><br><b>' . __('categories.' . $item['item']->category->slug) . '</b></td>
                             <td class="align-middle">
                             <div class="d-flex align-items-center">
                             <p class="btn btn-danger m-0 font-weight-bold from_cart" data-id="'. $item['item']->id .'">-</p>

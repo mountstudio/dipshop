@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    @include('_partials._banners')
+{{--    @include('_partials._banners')--}}
     @include('_partials._categories')
     <div class="container py-5">
         <div class="row">

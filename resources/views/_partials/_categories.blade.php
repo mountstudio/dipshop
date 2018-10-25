@@ -64,10 +64,6 @@
 
 @push('scripts')
     <script>
-        $('.cart').tooltip();
-    </script>
-
-    <script>
         $(function(){
             jQuery('img.svg').each(function(){
                 var $img = jQuery(this);
@@ -103,6 +99,5 @@
 
             });
         });
-
     </script>
 @endpush
