@@ -191,22 +191,22 @@
     <script src="{{ asset('js/smooth-scroll.js') }}"></script>
 
 {{--<script src="{{ asset('js/classie.js') }}" defer></script>--}}
-    <script>
-        $(function () {
-            let scroll;
-            let logo = $('#logo');
-            $(window).scroll(function() {
-                scroll = $(window).scrollTop();
-                if (scroll > 230) {
-                    logo.css('width', 60);
+    {{--<script>--}}
+        {{--$(function () {--}}
+            {{--let scroll;--}}
+            {{--let logo = $('#logo');--}}
+            {{--$(window).scroll(function() {--}}
+                {{--scroll = $(window).scrollTop();--}}
+                {{--if (scroll > 230) {--}}
+                    {{--logo.css('width', 60);--}}
 
-                }
-                else if (scroll <= 350) {
-                    logo.css('width', 120);
-                }
-            });
-        });
-    </script>
+                {{--}--}}
+                {{--else if (scroll <= 350) {--}}
+                    {{--logo.css('width', 120);--}}
+                {{--}--}}
+            {{--});--}}
+        {{--});--}}
+    {{--</script>--}}
 
     <script>
 

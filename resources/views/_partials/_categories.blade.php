@@ -1,55 +1,55 @@
 <div class="shadow-sm sticky-top bg-dark shadow pt-5">
     <div class="container d-flex align-items-center">
         <a class="mr-auto p-0" href="/">
-            <img id="logo" class="m-2 transition-500" src="/images/logo1.png" style="width:120px; height:auto;" alt="">
+            <img id="logo" class="m-2 transition-500" src="/images/2.5.png" style="width:120px; height:auto;" alt="">
         </a>
 
         <ul class="nav justify-content-center">
             <li class="nav-item">
                 <a class="nav-link  font-weight-bold text-light" href="{{ route('jewelry') }}">
-                    <img src="{{ asset('images/icons/discount.svg') }}" class="svg category_logo" width="30" height="30">
+                    <img src="{{ asset('images/icons/discount.svg') }}" class="svg category_logo" width="40" height="40">
                     <p class="m-0">{{__('categories.discount')}}</p>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link  font-weight-bold text-light" href="{{ route('alcohol') }}">
-                    <img src="{{ asset('images/icons/wine.svg') }}" class="svg category_logo" width="30" height="30">
-                    <p class="m-0">{{__('categories.alcohol')}}</p>
+                    <img src="{{ asset('images/icons/wine.svg') }}" class="svg category_logo" width="40" height="40">
+                    <p class="m-0">{{__('categories.alkogol')}}</p>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link  font-weight-bold text-light" href="{{ route('cigaretes') }}">
-                    <img src="{{ asset('images/icons/pipe.svg') }}" class="svg category_logo" width="30" height="30">
-                    <p class="m-0">{{__('categories.sigarety')}}</p>
+                    <img src="{{ asset('images/icons/pipe.svg') }}" class="svg category_logo" width="40" height="40">
+                    <p class="m-0">{{__('categories.tobacco')}}</p>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link  font-weight-bold text-light" href="{{ route('jewelry') }}">
-                    <img src="{{ asset('images/icons/diamond.svg') }}" class="svg category_logo" width="30" height="30">
+                    <img src="{{ asset('images/icons/diamond.svg') }}" class="svg category_logo" width="40" height="40">
                     <p class="m-0">{{__('categories.jewelry')}}</p>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link  font-weight-bold text-light" href="{{ route('perfume') }}">
-                    <img src="{{ asset('images/icons/perfume.svg') }}" class="svg category_logo" width="30" height="30">
+                    <img src="{{ asset('images/icons/perfume.svg') }}" class="svg category_logo" width="40" height="40">
                     <p class="m-0">{{__('categories.perfumery')}}</p>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link  font-weight-bold text-light" href="{{ route('coffee') }}">
-                    <img src="{{ asset('images/icons/coffee-bean.svg') }}" class="svg category_logo" width="30" height="30">
+                    <img src="{{ asset('images/icons/coffee-bean.svg') }}" class="svg category_logo" width="40" height="40">
                     <p class="m-0">{{__('categories.coffee')}}</p>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link  font-weight-bold text-light" href="{{ route('accessories') }}">
-                    <img src="{{ asset('images/icons/wristwatch.svg') }}" class="svg category_logo" width="30" height="30">
+                    <img src="{{ asset('images/icons/wristwatch.svg') }}" class="svg category_logo" width="40" height="40">
                     <p class="m-0">{{__('categories.accessories')}}</p>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link  font-weight-bold text-light" href="{{ route('accessories') }}">
-                    <img src="{{ asset('images/icons/gift.svg') }}" class="svg category_logo" width="30" height="30">
+                    <img src="{{ asset('images/icons/gift.svg') }}" class="svg category_logo" width="40" height="40">
                     <p class="m-0">{{__('categories.gift')}}</p>
                 </a>
             </li>
