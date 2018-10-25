@@ -20,7 +20,7 @@
             <li class="nav-item">
                 <a class="nav-link  font-weight-bold text-light" href="{{ route('cigaretes') }}">
                     <img src="{{ asset('images/icons/pipe.svg') }}" class="svg category_logo" width="40" height="40">
-                    <p class="m-0">{{__('categories.tobacco')}}</p>
+                    <p class="m-0">{{__('categories.sigarety')}}</p>
                 </a>
             </li>
             <li class="nav-item">
