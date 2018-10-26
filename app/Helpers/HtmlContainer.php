@@ -62,7 +62,7 @@ class HtmlContainer
 
     public static function fillCartInfo(&$result, $cart)
     {
-        if ($cart) {
+        if ($cart->items) {
             $i = 0;
             $result .= '<table class="table table-bordered mb-0">
                         <thead>
@@ -104,7 +104,7 @@ class HtmlContainer
                             <p class="btn btn-success m-0 font-weight-bold to_cart" data-id="'. $item['item']->id .'">+</p>
                             </td>
                             <td class="align-middle">
-                            <span class="font-weight-bold ml-1">'. $item['qty'] * number_format($item['item']->price, 2) . '&euro;</span>
+                            <span class="font-weight-bold ml-1">'. number_format($item['price'], 2) . '&euro;</span>
                             </td>
                             <td class="align-middle">
                             <p class="btn btn-danger m-0 font-weight-bold delete_from_cart" data-id="'. $item['item']->id .'">X</p>

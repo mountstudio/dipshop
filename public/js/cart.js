@@ -95,6 +95,7 @@ function registerRemoveFromCart(item) {
             },
             type: 'POST',
             success: function (res) {
+                console.log(res);
                 updateHtml(res);
             },
             error: function () {
