@@ -78,4 +78,16 @@ class CartController extends Controller
 
         return response()->json(['cart' => $cart, 'result' => $result]);
     }
+
+    public function order() {
+        $oldCart = \Session::get('cart');
+        $cart = new Cart($oldCart);
+
+        return view('order.order', [
+            'products' => $cart->items,
+            'totalQty' => $cart->totalQty,
+            'totalPrice' => $cart->totalPrice,
+            'realPrice' => $cart->realPrice,
+        ]);
+    }
 }

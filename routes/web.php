@@ -66,6 +66,9 @@ Route::post('/add-to-cart', 'CartController@addToCart'); //Add 1 item To Cart
 Route::post('/remove-from-cart', 'CartController@removeFromCart'); //Remove 1 item From Cart
 Route::post('/delete-from-cart', 'CartController@deleteFromCart'); //Delete items from Cart
 
+//ORDER
+Route::get('/order', 'CartController@order');
+
 Route::resource('product', 'ProductController')->only([
     'show',
 ]);
