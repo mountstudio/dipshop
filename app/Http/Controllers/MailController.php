@@ -10,8 +10,8 @@ class MailController extends Controller
     //
     public function index()
     {
-        \Mail::send(['html' => 'mail'],['name', 'Dipshop mag'], function($message){
-            $message->to('Mackinkenny@gmail.com', 'Dipmarket ept')->subject('Test email');
+        \Mail::send(['text' => 'mail'],['name', 'Dipshop mag'], function($message){
+            $message->to('Mackinkenny@gmail.com', 'Dipmarket ept')->subject('Новая регистрация');
             $message->from('Mackinkenny@gmail.com', 'Dipshop mag');
         });
     }
