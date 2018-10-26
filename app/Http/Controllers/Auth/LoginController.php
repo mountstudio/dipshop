@@ -26,7 +26,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -43,12 +43,13 @@ class LoginController extends Controller
         return 'name';
     }
 
-//    protected function authenticated(Request $request, $user)
-//    {
-//        if (\Auth::user()->admin === 1) {
-//            return redirect()->route('options');
-//        }
-//
-//        return redirect()->route('profile');
-//    }
+    protected function authenticated(Request $request, $user)
+    {
+        if (!$user->is_active) {
+            auth()->logout();
+            return back()->with(['info' => 'Your account is not activated yet, contact admin']);
+        }
+
+        return redirect()->route('homepage');
+    }
 }
