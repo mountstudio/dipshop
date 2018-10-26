@@ -61,11 +61,10 @@ Route::get('/getproperties/{id}', 'PropertyController@getPropertiesByCategory')-
 
 Route::get('/set-language/{lang}', 'LanguagesController@set')->name('set.language');
 
-Route::post('/add-to-cart', 'CartController@addToCart');
 Route::get('/get-cart', 'CartController@getCart');
-Route::get('/remove-from-cart/{id}', 'CartController@removeFromCart'); //Remove 1 item From Cart
-Route::get('/delete-from-cart/{id}', 'CartController@deleteFromCart'); //Delete items from Cart
-Route::get('/add-to-cart/{id}', 'CartController@getAddToCart'); // ADD
+Route::post('/add-to-cart', 'CartController@addToCart'); //Add 1 item To Cart
+Route::post('/remove-from-cart', 'CartController@removeFromCart'); //Remove 1 item From Cart
+Route::post('/delete-from-cart', 'CartController@deleteFromCart'); //Delete items from Cart
 
 Route::resource('product', 'ProductController')->only([
     'show',

@@ -68,10 +68,12 @@ class HtmlContainer
                         <thead>
                         <tr>
                             <th class="text-center" scope="col">№</th>
-                            <th class="text-center" scope="col">Image</th>
-                            <th class="text-center" scope="col">Name</th>
-                            <th class="text-center" scope="col">Price</th>
-                            <th class="text-center" scope="col">Actions</th>
+                            <th class="text-center" scope="col">'. __('cart.image') .'</th>
+                            <th class="text-center" scope="col">'. __('cart.name') .'</th>
+                            <th class="text-center" scope="col">'. __('cart.price') .'</th>
+                            <th class="text-center" scope="col">'. __('cart.count') .'</th>
+                            <th class="text-center" scope="col">'. __('cart.total') .'</th>
+                            <th class="text-center" scope="col">'. __('cart.action') .'</th>
                         </tr>
                         </thead>
                         <tbody>';
@@ -93,13 +95,20 @@ class HtmlContainer
                             <td class="align-middle"><span class="font-weight-bold">' . $item['item']->name . '</span><br><b>' . __('categories.' . $item['item']->category->slug) . '</b></td>
                             <td class="align-middle">
                             <div class="d-flex align-items-center">
+                            <span class="font-weight-bold ml-1">' . number_format($item['item']->price, 2) . '&euro;</span>
+                            </div>
+                            </td>
+                            <td class="align-middle">
                             <p class="btn btn-danger m-0 font-weight-bold from_cart" data-id="'. $item['item']->id .'">-</p>
                             <span class="mx-1 font-weight-bold text-center" style="min-width: 13px;">'. $item['qty'] . '</span> 
                             <p class="btn btn-success m-0 font-weight-bold to_cart" data-id="'. $item['item']->id .'">+</p>
-                            <span class="font-weight-bold ml-1">&nbsp;x &nbsp;' . number_format($item['item']->price, 2) . '&euro;</span>
-                            </div>
                             </td>
-                            <td class="align-middle">Delete</td>
+                            <td class="align-middle">
+                            <span class="font-weight-bold ml-1">'. $item['qty'] * number_format($item['item']->price, 2) . '&euro;</span>
+                            </td>
+                            <td class="align-middle">
+                            <p class="btn btn-danger m-0 font-weight-bold delete_from_cart" data-id="'. $item['item']->id .'">X</p>
+                            </td>
                         </tr>';
 
                 $i++;
@@ -108,7 +117,7 @@ class HtmlContainer
                     </table>
                     <div class="row">
                     <div class="col d-flex justify-content-end mt-3 mr-5">
-                    <b style="font-size: 18px;">Итого: <span class="totalPrice">' . $cart->totalPrice . '</span>&euro;</b>
+                    <b class="font-weight-bold" style="font-size: 18px;">'. __('cart.total') .': <span class="totalPrice">' . $cart->totalPrice . '</span>&euro;</b>
                     </div>
                     </div>';
         } else {

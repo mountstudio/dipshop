@@ -72,6 +72,10 @@ class CartController extends Controller
         \Session::remove('cart');
         \Session::put('cart', $cart);
 
-        return response()->json(['cart' => $cart]);
+        $result = '';
+
+        HtmlContainer::fillCartInfo($result, $cart);
+
+        return response()->json(['cart' => $cart, 'result' => $result]);
     }
 }
