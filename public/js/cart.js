@@ -9,6 +9,24 @@ $.ajax({
     }
 });
 
+function updateHtml(res) {
+    if (res.cart !== null) {
+        $('#cart-qty').html(res.cart.totalQty);
+    }
+    let result = $('#cart-result').html(res.result);
+    result.find('.to_cart').each(function (key, item) {
+        registerAddToCart($(item));
+    });
+    result.find('.from_cart').each(function (key, item) {
+        registerRemoveFromCart($(item));
+    });
+    result.find('.delete_from_cart').each(function (key, item) {
+        registerDeleteFromCart($(item));
+    });
+}
+
+//ADD TO CART
+
 $('.to_cart').each(function (key, item) {
     registerAddToCart($(item));
 });
@@ -53,12 +71,68 @@ function registerAddToCart(item) {
     });
 }
 
-function updateHtml(res) {
-    if (res.cart !== null) {
-        $('#cart-qty').html(res.cart.totalQty);
-    }
-    let result = $('#cart-result').html(res.result);
-    result.find('.to_cart').each(function (key, item) {
-        registerAddToCart($(item));
-    });
+//REMOVE FROM CART
+
+$('.from_cart').each(function (key, item) {
+    registerRemoveFromCart($(item));
+});
+
+function registerRemoveFromCart(item) {
+    item.click(function(e) {
+        e.preventDefault();
+        let btn = $(e.currentTarget);
+
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+
+        $.ajax({
+            url: '/remove-from-cart',
+            data: {
+                'product_id': btn.data('id')
+            },
+            type: 'POST',
+            success: function (res) {
+                updateHtml(res);
+            },
+            error: function () {
+                console.log('error');
+            }
+        });
+    })
+}
+
+//DELETE FROM CART
+
+$('.delete_from_cart').each(function (key, item) {
+    registerDeleteFromCart($(item));
+});
+
+function registerDeleteFromCart(item) {
+    item.click(function(e) {
+        e.preventDefault();
+        let btn = $(e.currentTarget);
+
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+
+        $.ajax({
+            url: '/delete-from-cart',
+            data: {
+                'product_id': btn.data('id')
+            },
+            type: 'POST',
+            success: function (res) {
+                updateHtml(res);
+            },
+            error: function () {
+                console.log('error');
+            }
+        });
+    })
 }
