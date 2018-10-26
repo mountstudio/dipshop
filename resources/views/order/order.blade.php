@@ -9,21 +9,22 @@
                 @if($products)
                     <div class=" d-none d-lg-flex row text-center justify-content-lg-between p-3">
                         <div class="col-lg-1">
+                            {{__('cart.image')}}
                         </div>
                         <div class="col-auto">
-                            Товар
+                            {{__('cart.name')}}
                         </div>
                         <div class="col-auto">
-                            Цена
+                            {{__('cart.price')}}
                         </div>
                         <div class="col-auto">
-                            Количество
+                            {{__('cart.count')}}
                         </div>
                         <div class="col-auto">
-                            Сумма
+                            {{__('cart.summ')}}
                         </div>
                         <div class="col-auto">
-                            Удалить
+                            {{__('cart.action')}}
                         </div>
                     </div>
                 @endif
@@ -48,7 +49,7 @@
                                     <div class="col-12 col-lg-auto my-4">
                                         <a href="/remove-from-cart }}" class="p-2 font-weight-bold bg-danger text-light">-</a>
                                         <span class="mx-1">{{ $product['qty'] }}</span>
-                                        <a href="/add-to-cart" class="p-2 font-weight-bold bg-success text-light">+</a>
+                                        <a href="/add-to-cart" class="btn btn-success p-2 font-weight-bold  text-light to_cart">+</a>
                                     </div>
                                     <div class="col-auto col-lg-auto">
                                         {{ $product['price'] }} сом
@@ -82,12 +83,12 @@
                 <input type="hidden" value="{{ Session::get('cart')->realPrice }}" name="summ">
                 <div class="row">
                     <div class="col d-flex justify-content-end mx-auto mt-3">
-                        <b style="font-size: 18px;">Итого: <span class="totalPrice">{{ $totalPrice }}</span> сом</b>
+                        <b style="font-size: 18px;">{{__('cart.total')}}: <span class="totalPrice">{{ $totalPrice }}</span> &euro;</b>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col d-flex justify-content-end mx-auto mt-3">
-                        <button type="submit" class="btn btn-outline-dark ali">Оформить заказ</button>
+                        <button type="submit" class="btn btn-outline-dark ali">{{ __('cart.checkout')  }}</button>
                     </div>
                 </div>
             </form>

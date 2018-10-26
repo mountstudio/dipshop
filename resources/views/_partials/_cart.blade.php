@@ -21,7 +21,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">{{ __('cart.close') }}</button>
-                <button type="button" class="btn btn-primary">{{ __('cart.checkout') }}</button>
+                <a href="/order" type="button" class="btn btn-primary">{{ __('cart.checkout') }}</a>
             </div>
         </div>
     </div>
