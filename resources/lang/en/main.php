@@ -20,8 +20,8 @@ return [
     'cartnotwork'       => 'Shopping cart temporarily unavailable',
 
     //dev
-    'devpagetitle'      => 'Section temporarily unavailable',
-    'devpagetext'       => 'At the drafting stage',
+    'devpagetitle'      => 'We are waiting for you in 2019',
+    'devpagetext'       => '',
 
     //titles
     'others'            => 'Others',
