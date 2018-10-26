@@ -2,7 +2,7 @@
 
 @section('content')
 
-  @include('_partials._banners')
+  {{--@include('_partials._banners')--}}
 	@include('_partials._categories') 
 
 	<div class="container w-100 py-5 border-bottom">

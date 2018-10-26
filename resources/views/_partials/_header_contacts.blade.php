@@ -1,4 +1,4 @@
-<div class="bg-dark text-light fixed-top" style="max-height: 34px;">
+<div class="bg-dark text-light" style="max-height: 34px;">
     <div class="container-fluid">
         <div class="row justify-content-around">
             <div class="col-auto text-left">
@@ -8,7 +8,7 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="nav mx-auto">
                     <li class="nav-item">
-                        <a href="/home" class="nav-link text-light">{{ __('main.main') }}</a>
+                        <a href="/" class="nav-link text-light">{{ __('main.main') }}</a>
                     </li>
                     <li class="nav-item">
                         <a href="" class="nav-link text-light">{{ __('main.about')  }}</a>

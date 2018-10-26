@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'MainController@home');
+Route::get('/', 'MainController@index')->name('homepage');
 
 
 
@@ -55,14 +55,20 @@ Route::get('/jewelry', 'ProductController@jewelry')->name('jewelry');
 Route::get('/accessories', 'ProductController@accessories')->name('accessories');
 Route::get('/coffee', 'ProductController@coffee')->name('coffee');
 Route::get('/perfume', 'ProductController@perfume')->name('perfume');
+Route::get('/send', 'MailController@index');
 
 Route::get('/getchildren/{id}', 'CategoryController@getChildren')->name('getchildren');
 Route::get('/getproperties/{id}', 'PropertyController@getPropertiesByCategory')->name('getproperties');
 
 Route::get('/set-language/{lang}', 'LanguagesController@set')->name('set.language');
 
-Route::post('/add-to-cart', 'CartController@addToCart');
 Route::get('/get-cart', 'CartController@getCart');
+Route::post('/add-to-cart', 'CartController@addToCart'); //Add 1 item To Cart
+Route::post('/remove-from-cart', 'CartController@removeFromCart'); //Remove 1 item From Cart
+Route::post('/delete-from-cart', 'CartController@deleteFromCart'); //Delete items from Cart
+
+//ORDER
+Route::get('/order', 'CartController@order');
 
 Route::resource('product', 'ProductController')->only([
     'show',

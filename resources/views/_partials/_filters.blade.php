@@ -17,7 +17,7 @@
                 </select>
                 <select id="sortParam" name="param"  class=" form-control form-control-sm col-2 ml-3 custom-select my-1 mr-sm-2" >
                     <option value="price" selected>{{__('filter.price')}}</option>
-                    {{--<option value="order">Order</option>--}}
+                    {{--<option value="order">order</option>--}}
                     {{--<option value="newest">Newest</option>--}}
                 </select>
                 <div class="custom-control custom-radio custom-control-inline">

@@ -7,6 +7,11 @@
         <div class="col-4" style="background-color: #fffffff0;">
             <div class="d-flex align-items-center justify-content-center text-dark font-weight-bold" style="height: 100vh;">
                 <form action="{{ route('login') }}" method="post" class="col-10">
+                    @if(Session::has('info'))
+                        <div class="alert alert-info" role="alert">
+                            {{ Session::get('info') }}
+                        </div>
+                    @endif
                     <div class="text-center mb-4">
                         <a class="p-0" href="/"><img id="logo" src="/images/2.1.png" style="width:100px; height:auto;" alt=""></a>
                     </div>

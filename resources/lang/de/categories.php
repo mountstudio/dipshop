@@ -2,7 +2,7 @@
 
 return [
     //Categories menu Parent
-    'alcohol'       => 'Alkohol',
+    'alkogol'       => 'Alkohol',
     'sigarety'       => 'Tabak',
     'jewelry'       => 'Schmuck',
     'perfumery'     => 'Parfümerie',
@@ -22,5 +22,5 @@ return [
     'prochie'       => 'Andere',
     'pivo'          => 'Bier',
     'discount'      => 'Rabatt',
-    'gift'          => 'Geschenk',
+    'gift'          => 'Sets',
 ];
