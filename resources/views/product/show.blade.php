@@ -31,9 +31,11 @@
                     <div class="col-12 mb-3 align-self-end">
                         <div class="row justify-content-around align-items-center">
                             <div class="col-auto text-capitalize font-weight-bold h3">{{ __('categories.'.$product->category->slug) }}</div>
-                            <div class="col-auto">
-                                <span class="h2 font-weight-bold">{{ number_format($product->price, 2) }}</span> <span class="currency h5">&euro;</span>
-                            </div>
+                            @if(!Auth::guest())
+                                <div class="col-auto">
+                                    <span class="h2 font-weight-bold">{{ number_format($product->price, 2) }}</span> <span class="currency h5">&euro;</span>
+                                </div>
+                            @endif
                         </div>
                     </div>
                     <div class="col-12 text-center align-self-end">
