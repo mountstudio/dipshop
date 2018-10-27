@@ -53,12 +53,14 @@
                     <p class="m-0">{{__('categories.gift')}}</p>
                 </a>
             </li>
+            @if(!Auth::guest())
             <li class="nav-item">
                 <a class="nav-link  font-weight-bold text-light text-center" href="{{ asset('images/category/catalog.txt') }}" download>
                     <img src="{{ asset('images/icons/file.svg') }}" class="svg category_logo" width="40" height="40">
                     <p class="m-0">Скачать каталог</p>
                 </a>
             </li>
+            @endif
         </ul>
         <ul class="nav ml-auto">
             <li class="nav-item dropdown">

@@ -20,8 +20,8 @@ return [
     'cartnotwork'       => 'Einkaufswagen vorübergehend nicht verfügbar',
 
     //dev
-    'devpagetitle'      => 'Abschnitt vorübergehend nicht verfügbar',
-    'devpagetext'       => 'In der Entwurfsphase',
+    'devpagetitle'      => 'Wir warten auf Sie im Jahr 2019',
+    'devpagetext'       => '',
 
     //titles
     'others'            => 'Ondere',
