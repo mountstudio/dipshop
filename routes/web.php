@@ -12,8 +12,8 @@
 */
 
 Route::get('/', 'MainController@index')->name('homepage');
-
-
+Route::get('/about', 'MainController@about')->name('about');
+Route::get('/contacts', 'MainController@contacts')->name('contacts');
 
 Auth::routes();
 
@@ -68,7 +68,7 @@ Route::post('/remove-from-cart', 'CartController@removeFromCart'); //Remove 1 it
 Route::post('/delete-from-cart', 'CartController@deleteFromCart'); //Delete items from Cart
 
 //ORDER
-Route::get('/order', 'CartController@order');
+Route::match(['get', 'post'], '/order', 'CartController@order');
 
 Route::resource('product', 'ProductController')->only([
     'show',

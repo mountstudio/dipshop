@@ -11,10 +11,10 @@
                         <a href="/" class="nav-link text-light">{{ __('main.main') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link text-light">{{ __('main.about')  }}</a>
+                        <a href="{{ route('about') }}" class="nav-link text-light">{{ __('main.about')  }}</a>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link text-light">{{ __('main.contacts')  }}</a>
+                        <a href="{{ route('contacts') }}" class="nav-link text-light">{{ __('main.contacts')  }}</a>
                     </li>
                 </ul>
 

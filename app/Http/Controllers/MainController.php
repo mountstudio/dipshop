@@ -40,4 +40,14 @@ class MainController extends Controller
             'products' => Product::searchProducts($request->search),
         ]);
     }
+
+    public function about()
+    {
+        return view('about');
+    }
+
+    public function contacts()
+    {
+        return view('contacts');
+    }
 }

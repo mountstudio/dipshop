@@ -10,6 +10,11 @@ $.ajax({
 });
 
 function updateHtml(res) {
+    if (res.cart.items == 0) {
+        $('#order-cart').addClass('d-none');
+    } else {
+        $('#order-cart').removeClass('d-none');
+    }
     if (res.cart !== null) {
         $('#cart-qty').html(res.cart.totalQty);
     }
