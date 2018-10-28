@@ -99,9 +99,9 @@ class HtmlContainer
                             </div>
                             </td>
                             <td class="align-middle">
-                            <p class="btn btn-danger m-0 font-weight-bold from_cart" data-id="'. $item['item']->id .'">-</p>
+                            <p class="btn btn-danger m-0 pr-2 pl-2 font-weight-bold from_cart" data-id="'. $item['item']->id .'">-</p>
                             <span class="mx-1 font-weight-bold text-center" style="min-width: 13px;">'. $item['qty'] . '</span> 
-                            <p class="btn btn-success m-0 font-weight-bold to_cart" data-id="'. $item['item']->id .'">+</p>
+                            <p class="btn btn-success m-0 pr-2 pl-2 font-weight-bold to_cart" data-id="'. $item['item']->id .'">+</p>
                             </td>
                             <td class="align-middle">
                             <span class="font-weight-bold ml-1">'. $item['qty'] * number_format($item['item']->price, 2) . '&euro;</span>
