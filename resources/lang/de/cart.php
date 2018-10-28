@@ -11,5 +11,7 @@ return [
     'total' => 'Gesamt',
     'action' => 'Aktion',
     'close' => 'Schließen',
-    'checkout' => 'Auschecken'
+    'checkout' => 'Auschecken',
+    'checkouting' => 'Kasse',
+    'order-info' => 'Bestellinformationen'
 ];
