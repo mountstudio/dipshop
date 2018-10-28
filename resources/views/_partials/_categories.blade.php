@@ -1,7 +1,7 @@
-<div class="shadow-sm bg-dark shadow pt-5">
+<div class="shadow-sm bg-dark shadow pt-5 transition-750 category">
     <div class="container-fluid d-flex align-items-center px-5">
         <a class="mr-auto" href="/">
-            <img id="logo" class="m-2 transition-500" src="/images/2.5.png" style="width:120px; height:auto;" alt="">
+            <img id="logo" class="m-2 transition-500" src="/images/logo2.png" style="width:120px; height:auto;" alt="">
         </a>
 
         <ul class="nav justify-content-center">
@@ -55,9 +55,9 @@
             </li>
             @if(!Auth::guest())
             <li class="nav-item">
-                <a class="nav-link  font-weight-bold text-light text-center" href="{{ asset('images/category/catalog.txt') }}" download>
+                <a class="nav-link font-weight-bold text-light text-center" href="{{ asset('images/category/catalog.pdf') }}" download>
                     <img src="{{ asset('images/icons/file.svg') }}" class="svg category_logo" width="40" height="40">
-                    <p class="m-0">Скачать каталог</p>
+                    <p class="m-0">{{ __('categories.download_catalog') }}</p>
                 </a>
             </li>
             @endif
@@ -107,5 +107,23 @@
 
             });
         });
+
+        $(window).scroll(handleTopScroll);
+        var prevScrollValue = 0;
+        var category = $('.category');
+
+        function handleTopScroll(e) {
+            var currentScrollValue = $(this).scrollTop();
+
+            if (currentScrollValue < 50) {
+                category.removeClass('category-animate')
+            } else if ( currentScrollValue > prevScrollValue ) {
+                prevScrollValue = currentScrollValue;
+                category.removeClass('category-animate')
+            } else {
+                prevScrollValue = currentScrollValue;
+                category.addClass('category-animate')
+            }
+        }
     </script>
 @endpush

@@ -1,4 +1,4 @@
-<div class="bg-dark text-light" style="max-height: 34px;">
+<div class="bg-dark text-light sticky-top" style="max-height: 34px;">
     <div class="container-fluid">
         <div class="row justify-content-around">
             <div class="col-auto text-left">

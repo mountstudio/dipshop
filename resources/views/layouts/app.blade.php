@@ -11,8 +11,8 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/all.css') }}" rel="stylesheet">
+{{--    <link href="{{ asset('css/main.css') }}" rel="stylesheet">--}}
     <link href="{{ asset('css/login.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
@@ -37,7 +37,7 @@
             </div>
         </div>
     </footer>
-    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/all.js') }}"></script>
     <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('js/smooth-scroll.js') }}"></script>
     <script>
@@ -51,6 +51,6 @@
         );
     </script>
     @stack('scripts')
-    <script src="{{ asset('js/cart.js') }}"></script>
+{{--    <script src="{{ asset('js/cart.js') }}"></script>--}}
 </body>
 </html>

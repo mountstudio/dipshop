@@ -11,5 +11,7 @@ return [
     'total' => 'Total',
     'action' => 'Action',
     'close' => 'Close',
-    'checkout' => 'Checkout'
+    'checkout' => 'Checkout',
+    'checkouting' => 'Checkout',
+    'order-info' => 'Order information'
 ];
