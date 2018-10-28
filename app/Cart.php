@@ -67,7 +67,8 @@ class Cart
             }
         }
         if (1 === $storedItem['qty']) {
-            $this->delete($item, $id);
+//            $this->delete($item, $id);
+            unset($this->items[$id]);
         } else {
             $storedItem['qty'] -= 1;
             $storedItem['price'] = $item->price * $storedItem['qty'];
