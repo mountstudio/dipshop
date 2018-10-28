@@ -1,4 +1,4 @@
-<div class="shadow-sm bg-dark shadow pt-5">
+<div class="shadow-sm bg-dark shadow pt-5 transition-750 category">
     <div class="container-fluid d-flex align-items-center px-5">
         <a class="mr-auto" href="/">
             <img id="logo" class="m-2 transition-500" src="/images/2.5.png" style="width:120px; height:auto;" alt="">
@@ -107,5 +107,23 @@
 
             });
         });
+
+        $(window).scroll(handleTopScroll);
+        var prevScrollValue = 0;
+        var category = $('.category');
+
+        function handleTopScroll(e) {
+            var currentScrollValue = $(this).scrollTop();
+
+            if (currentScrollValue < 50) {
+                category.removeClass('category-animate')
+            } else if ( currentScrollValue > prevScrollValue ) {
+                prevScrollValue = currentScrollValue;
+                category.removeClass('category-animate')
+            } else {
+                prevScrollValue = currentScrollValue;
+                category.addClass('category-animate')
+            }
+        }
     </script>
 @endpush
