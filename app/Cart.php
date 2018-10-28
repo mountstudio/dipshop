@@ -67,7 +67,6 @@ class Cart
             }
         }
         if (1 === $storedItem['qty']) {
-//            $this->delete($item, $id);
             unset($this->items[$id]);
         } else {
             $storedItem['qty'] -= 1;
@@ -89,7 +88,6 @@ class Cart
         if ($this->items) {
             if (array_key_exists($id, $this->items)) {
                 $storedItem = $this->items[$id];
-//                array_splice($this->items, $id, 1);
                 unset($this->items[$id]);
             }
         }
