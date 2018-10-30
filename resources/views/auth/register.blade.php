@@ -12,21 +12,33 @@
                         </div>
                         @csrf
                         <div class="form-group">
-                            <label for="exampleInputEmail1">E-mail</label>
-                            <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter E-mail">
+                            <label for="email">E-mail</label>
+                            <input name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter E-mail">
                             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPassword1">Username</label>
-                            <input name="name" type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter username">
+                            <label for="name">Name</label>
+                            <input name="name" type="text" class="form-control" id="name" placeholder="Enter name">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPassword1">Password</label>
-                            <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            <label for="last_name">Last name</label>
+                            <input name="last_name" type="text" class="form-control" id="last_name" placeholder="Enter last name">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPassword1">Repeat password</label>
-                            <input name="password_confirmation" type="password" class="form-control" id="exampleInputPassword1" placeholder="Repeat password">
+                            <label for="embassy">Embassy</label>
+                            <input name="embassy" type="text" class="form-control" id="embassy" placeholder="Enter embassy">
+                        </div>
+                        <div class="form-group">
+                            <label for="code">Code</label>
+                            <input name="code" type="text" class="form-control" id="code" placeholder="Enter your code">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input name="password" type="password" class="form-control" id="password" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <label for="repeated_password">Repeat password</label>
+                            <input name="password_confirmation" type="password" class="form-control" id="repeated_password" placeholder="Repeat password">
                         </div>
                         <div class="form-group form-check">
                             <input type="checkbox" class="form-check-input" id="exampleCheck1">
