@@ -25,8 +25,5 @@ class ChangeValueProp extends Migration
      */
     public function down()
     {
-        Schema::table('product_property', function (Blueprint $table) {
-            $table->string('value')->nullable(false)->change();
-        });
     }
 }

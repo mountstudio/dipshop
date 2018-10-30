@@ -15,8 +15,7 @@ class RenameCategoryPropsTable extends Migration
     {
         Schema::rename('category_props', 'category_properties');
         Schema::table('category_properties', function (Blueprint $table) {
-            $table->dropColumn('id');
-            $table->integer('category_id')->first();
+            $table->integer('category_id')->after('id');
             $table->integer('property_id')->after('category_id');
         });
     }
@@ -28,9 +27,8 @@ class RenameCategoryPropsTable extends Migration
      */
     public function down()
     {
-        Schema::rename('category_props', 'category_properties');
-        Schema::table('category_properties', function (Blueprint $table) {
-            $table->increments('id')->first();
+        Schema::rename('category_properties', 'category_props');
+        Schema::table('category_props', function (Blueprint $table) {
             $table->dropColumn(['category_id', 'property_id']);
         });
     }

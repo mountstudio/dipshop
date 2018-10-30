@@ -13,9 +13,6 @@ class AddIdColumnToProductPropertyTable extends Migration
      */
     public function up()
     {
-        Schema::table('product_property', function (Blueprint $table) {
-            $table->increments('id')->first();
-        });
     }
 
     /**
@@ -25,8 +22,5 @@ class AddIdColumnToProductPropertyTable extends Migration
      */
     public function down()
     {
-        Schema::table('product_property', function (Blueprint $table) {
-            $table->dropColumn('id');
-        });
     }
 }
