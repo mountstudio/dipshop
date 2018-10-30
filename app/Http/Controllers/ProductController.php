@@ -90,51 +90,6 @@ class ProductController extends Controller
         ]);
     }
 
-    public function addToCart(Request $request)
-    {
-        $oldCart = \Session::has('cart') ? \Session::get('cart') : null;
-
-        $product = (new Product)->find($request->product_id);
-
-        $cart = new Cart($oldCart);
-        $cart->add($product, $product->id);
-
-        \Session::remove('cart');
-        \Session::put('cart', $cart);
-
-        return response()->json(['cart' => $cart]);
-    }
-
-    public function removeFromCart(Request $request)
-    {
-        $oldCart = \Session::has('cart') ? \Session::get('cart') : null;
-
-        $product = (new Product)->find($request->product_id);
-
-        $cart = new Cart($oldCart);
-        $cart->remove($product, $product->id);
-
-        \Session::remove('cart');
-        \Session::put('cart', $cart);
-
-        return response()->json(['cart' => $cart]);
-    }
-
-    public function deleteFromCart(Request $request)
-    {
-        $oldCart = \Session::has('cart') ? \Session::get('cart') : null;
-
-        $product = (new Product)->find($request->product_id);
-
-        $cart = new Cart($oldCart);
-        $cart->delete($product, $product->id);
-
-        \Session::remove('cart');
-        \Session::put('cart', $cart);
-
-        return response()->json(['cart' => $cart]);
-    }
-
     public function alcohols()
     {
         $products = collect()->merge(Product::all()->where('category_id', '=', 1));

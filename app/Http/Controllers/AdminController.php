@@ -27,8 +27,8 @@ class AdminController extends Controller
 
         return Datatables::of($users)
             ->addColumn('action', function ($user) {
-                return '<a href="'.route('user.edit', $user->id).'" class="btn btn-sm btn-primary"><i class="far fa-edit"></i> Edit</a>
-                        <a href="'.route('user.destroy', $user->id).'" class="btn btn-sm btn-danger"><i class="far fa-trash-alt"></i> Delete</a>';
+                return '<a href="'.route('user.activate', $user->id).'" class="btn btn-sm btn-primary"><i class="fas fa-lock-open"></i> Активировать</a>
+                        <a href="'.route('user.deactivate', $user->id).'" class="btn btn-sm btn-danger"><i class="fas fa-lock"></i> Деактивировать</a>';
             })
             ->removeColumn('password')
             ->make(true);

@@ -32,6 +32,9 @@ Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function () {
     Route::get('options', 'AdminController@options')->name('options');
 
     Route::resource('user', 'UserController');
+    Route::get('/activate-user/{id}', 'UserController@activate')->name('user.activate');
+    Route::get('/deactivate-user/{id}', 'UserController@deactivate')->name('user.deactivate');
+
     Route::resource('product', 'ProductController')->except([
         'show'
     ]);

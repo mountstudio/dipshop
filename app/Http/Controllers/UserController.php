@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -23,4 +24,21 @@ class UserController extends Controller
         return view('user.order');
     }
 
+    public function activate($id)
+    {
+        $user = User::find($id);
+        $user->is_active = true;
+        $user->save();
+
+        return redirect()->route('user.index');
+    }
+
+    public function deactivate($id)
+    {
+        $user = User::find($id);
+        $user->is_active = false;
+        $user->save();
+
+        return redirect()->route('user.index');
+    }
 }
