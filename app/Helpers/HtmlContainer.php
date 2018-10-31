@@ -62,7 +62,7 @@ class HtmlContainer
 
     public static function fillCartInfo(&$result, $cart)
     {
-        if ($cart->items) {
+        if ($cart && $cart->items) {
             $i = 0;
             $result .= '<table class="table table-bordered mb-0">
                         <thead>

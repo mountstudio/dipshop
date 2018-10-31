@@ -10,7 +10,7 @@ $.ajax({
 });
 
 function updateHtml(res) {
-    if (res.cart.items == 0) {
+    if (res.cart == null || res.cart.items == 0) {
         $('#order-cart').addClass('d-none');
     } else {
         $('#order-cart').removeClass('d-none');
