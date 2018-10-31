@@ -59,6 +59,7 @@ Route::get('/accessories', 'ProductController@accessories')->name('accessories')
 Route::get('/coffee', 'ProductController@coffee')->name('coffee');
 Route::get('/perfume', 'ProductController@perfume')->name('perfume');
 Route::get('/send', 'MailController@index');
+Route::get('/bid', 'Controller@bid')->name('bid');
 
 Route::get('/getchildren/{id}', 'CategoryController@getChildren')->name('getchildren');
 Route::get('/getproperties/{id}', 'PropertyController@getPropertiesByCategory')->name('getproperties');

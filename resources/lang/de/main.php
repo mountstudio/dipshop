@@ -27,4 +27,18 @@ return [
     'others'            => 'Ondere',
     'similar'           => 'Ähnlich',
     'search-results'    => 'Suchergebnisse',
+
+    //contacts
+    'name'              => 'Name',
+    'phone'             => 'Telefonnummer',
+    'email'             => 'Email',
+    'question'          => 'Frage',
+
+
+    'maxim'              => 'Maxim Nudelmann',
+    'tel'                => 'Tel',
+    'address.contact'    => 'Address: Chingiz Aitmatov Ave 299/1 Bishkek, KG',
+    'Site'               => 'Site',
+    'address.s'          => 'Address',
+    'submit'             => 'Senden'
 ];

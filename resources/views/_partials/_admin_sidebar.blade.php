@@ -14,4 +14,7 @@
     <li class="nav-item py-1 border-bottom {{ Request::is('admin/user') ? 'bg-secondary' : '' }}">
         <a class="nav-link {{ Request::is('admin/user') ? 'text-light' : 'text-dark' }}" href="{{ route('user.index') }}">Users</a>
     </li>
+    <li class="nav-item py-1 border-bottom {{ Request::is('admin/bid') ? 'bg-secondary' : '' }}">
+        <a class="nav-link {{ Request::is('admin/bid') ? 'text-light' : 'text-dark' }}" href="{{ route('bid.index') }}">Bid</a>
+    </li>
 </ul>

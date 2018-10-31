@@ -28,5 +28,18 @@ return [
     'similar'           => 'Similar',
     'search-results'    => 'Search results',
 
+    //contacts
+    'name'              => 'Your Name',
+    'phone'             => 'Phone Number',
+    'email'             => 'Your email',
+    'question'          => 'Your question',
+
+    'maxim'              => 'Maxim Nudelmann',
+    'tel'                => 'Tel',
+    'address.contact'    => 'Address: Chingiz Aitmatov Ave 299/1 Bishkek, KG',
+    'site'               => 'Site',
+    'address.s'          => 'Address',
+    'submit'             => 'Submit'
+
 
 ];
