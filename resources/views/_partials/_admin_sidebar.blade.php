@@ -11,6 +11,9 @@
     <li class="nav-item py-1 border-bottom {{ Request::is('admin/product') ? 'bg-secondary' : '' }}">
         <a class="nav-link {{ Request::is('admin/product') ? 'text-light' : 'text-dark' }}" href="{{ route('product.index') }}">Products</a>
     </li>
+    <li class="nav-item py-1 border-bottom {{ Request::is('admin/basket') ? 'bg-secondary' : '' }}">
+        <a class="nav-link {{ Request::is('admin/basket') ? 'text-light' : 'text-dark' }}" href="{{ route('basket.index') }}">Orders</a>
+    </li>
     <li class="nav-item py-1 border-bottom {{ Request::is('admin/user') ? 'bg-secondary' : '' }}">
         <a class="nav-link {{ Request::is('admin/user') ? 'text-light' : 'text-dark' }}" href="{{ route('user.index') }}">Users</a>
     </li>

@@ -34,8 +34,12 @@ Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function () {
     Route::resource('user', 'UserController');
     Route::get('/activate-user/{id}', 'UserController@activate')->name('user.activate');
     Route::get('/deactivate-user/{id}', 'UserController@deactivate')->name('user.deactivate');
+    Route::get('/delivered/{id}', 'BasketController@delivered')->name('basket.delivered');
 
     Route::resource('product', 'ProductController')->except([
+        'show'
+    ]);
+    Route::resource('basket', 'BasketController')->except([
         'show'
     ]);
     Route::resource('category', 'CategoryController')->except([
@@ -48,6 +52,7 @@ Route::get('datatable/getusers', 'AdminController@getUsers')->name('datatable.ge
 Route::get('datatable/getproducts', 'AdminController@getProducts')->name('datatable.getproducts');
 Route::get('datatable/gettypes', 'AdminController@getTypes')->name('datatable.gettypes');
 Route::get('datatable/getproperties', 'AdminController@getProperties')->name('datatable.getproperties');
+Route::get('datatable/getbaskets', 'AdminController@getBaskets')->name('datatable.getbaskets');
 
 Route::get('/home', 'HomeController@index')->name('welcome');
 
@@ -72,6 +77,9 @@ Route::post('/delete-from-cart', 'CartController@deleteFromCart'); //Delete item
 
 //ORDER
 Route::match(['get', 'post'], '/order', 'CartController@order');
+Route::resource('basket', 'BasketController')->except([
+    'index'
+]);
 
 Route::resource('product', 'ProductController')->only([
     'show',

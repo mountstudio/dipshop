@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Basket;
 use App\Cart;
 use App\Helpers\HtmlContainer;
 use App\Product;
@@ -79,12 +80,8 @@ class CartController extends Controller
         return response()->json(['cart' => $cart, 'result' => $result]);
     }
 
-    public function order(Request $request)
+    public function order()
     {
-        if ($request->request->all()) {
-            dd($request);
-        }
-
         $oldCart = \Session::get('cart');
         $cart = new Cart($oldCart);
 

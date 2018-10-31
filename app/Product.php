@@ -41,4 +41,9 @@ class Product extends Model
     {
         return $this->belongsToMany('App\Property')->withPivot('value');
     }
+
+    public function baskets()
+    {
+        return $this->belongsToMany('App\Basket')->withPivot(['qty', 'price']);
+    }
 }
