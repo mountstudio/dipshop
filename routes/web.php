@@ -39,6 +39,7 @@ Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function () {
     Route::resource('product', 'ProductController')->except([
         'show'
     ]);
+    Route::get('/bid', 'MainController@bidIndex')->name('bid.index');
     Route::resource('basket', 'BasketController')->except([
         'show'
     ]);
@@ -53,6 +54,7 @@ Route::get('datatable/getproducts', 'AdminController@getProducts')->name('datata
 Route::get('datatable/gettypes', 'AdminController@getTypes')->name('datatable.gettypes');
 Route::get('datatable/getproperties', 'AdminController@getProperties')->name('datatable.getproperties');
 Route::get('datatable/getbaskets', 'AdminController@getBaskets')->name('datatable.getbaskets');
+Route::get('datatable/getbids', 'AdminController@getBids')->name('datatable.getbids');
 
 Route::get('/home', 'HomeController@index')->name('welcome');
 

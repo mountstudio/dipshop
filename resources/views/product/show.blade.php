@@ -2,7 +2,7 @@
 
 @section('content')
 {{--    @include('_partials._banners')--}}
-    @include('_partials._categories')
+    @include('_partials._categories', ['fixed' => true])
     <div class="container py-5">
         <div class="row">
             <div class="col-5 card pt-3">

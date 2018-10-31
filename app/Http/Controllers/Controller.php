@@ -16,14 +16,9 @@ class Controller extends BaseController
 
     public function bid(Request $request)
     {
-        $bid = new Bid();
-
-        $bid->name = $request->name;
-        $bid->phone = $request->phone;
-        $bid->email = $request->email;
-        $bid->question = $request->question;
+        $bid = new Bid($request->request->all());
         $bid->save();
 
-        return back();
+        return back()->with('question_status', 'Your question on our mind!');
     }
 }

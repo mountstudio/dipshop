@@ -50,4 +50,9 @@ class MainController extends Controller
     {
         return view('contacts');
     }
+
+    public function bidIndex()
+    {
+        return view('bid._admin_index');
+    }
 }

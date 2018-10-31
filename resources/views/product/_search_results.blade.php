@@ -1,8 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    @include('_partials._banners')
-    @include('_partials._categories')
+    @include('_partials._categories', ['fixed' => true])
 
     <div class="container py-5">
        <h3 class="text-center">{{ __('main.search-results') }} ({{ $products->count()  }})</h3>

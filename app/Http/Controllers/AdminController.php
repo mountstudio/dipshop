@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Basket;
+use App\Bid;
 use App\Product;
 use App\Category;
 use App\Property;
@@ -68,6 +69,14 @@ class AdminController extends Controller
                 return '<a href="'.route('property.edit', $model->id).'" class="btn btn-sm btn-primary"><i class="far fa-edit"></i> Edit</a>
                         <a href="'.route('property.destroy', $model->id).'" data-id="'.$model->id.'" onclick="event.preventDefault();" data-toggle="modal" data-target="#delete-confirmation" class="btn btn-sm btn-danger"><i class="far fa-trash-alt"></i> Delete</a>';
             })
+            ->make(true);
+    }
+
+    public function getBids()
+    {
+        $bids = Bid::query();
+
+        return Datatables::eloquent($bids)
             ->make(true);
     }
 

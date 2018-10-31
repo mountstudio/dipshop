@@ -1,6 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
+    @include('_partials._categories', ['fixed' => false])
+    @if(Session::has('question_status'))
+        <div class="alert alert-success fixed-top alert-dismissible fade show w-25" role="alert" style="top: 10px; right: 10px; left: auto;">
+            {{ Session::get('question_status') }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    @endif
     <div class="container py-5">
         <div class="row">
             <div class="col-6">
@@ -45,8 +54,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="content" class="font-weight-normal">{{ __('main.about')  }}<span class="text-danger">*</span></label>
-                                <textarea id="content" name="question" class="form-control">
-                                </textarea>
+                                <textarea id="content" name="question" rows="10" class="form-control"></textarea>
                             </div>
 
                             <button class="btn btn-primary" type="submit">{{ __('main.submit')  }}</button>

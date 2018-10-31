@@ -108,7 +108,9 @@
             });
         });
 
-        $(window).scroll(handleTopScroll);
+        @if($fixed)
+            $(window).scroll(handleTopScroll);
+        @endif
         var prevScrollValue = 0;
         var category = $('.category');
 
