@@ -1,7 +1,14 @@
-<a href="#" class="nav-link text-light position-relative font-weight-light cart" data-toggle="modal" data-target="#cartModal" role="button" aria-haspopup="true" aria-expanded="false">
-    <i class="fas fa-shopping-cart fa-lg"></i>
-    <span class="badge badge-pill badge-light position-absolute" id="cart-qty" style="top: 0; right: -7px;">0</span>
-</a>
+@auth()
+    <a href="#" class="nav-link text-light position-relative font-weight-light cart" data-toggle="modal" data-target="#cartModal" role="button" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-shopping-cart fa-lg"></i>
+        <span class="badge badge-pill badge-light position-absolute" id="cart-qty" style="top: 0; right: -7px;">0</span>
+    </a>
+@else
+    <a href="{{ route('login') }}" class="nav-link text-light position-relative font-weight-light cart">
+        <i class="fas fa-shopping-cart fa-lg"></i>
+        <span class="badge badge-pill badge-light position-absolute" id="cart-qty" style="top: 0; right: -7px;">0</span>
+    </a>
+@endauth
 
 
 <!-- Modal -->

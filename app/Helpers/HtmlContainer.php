@@ -62,7 +62,7 @@ class HtmlContainer
 
     public static function fillCartInfo(&$result, $cart)
     {
-        if ($cart->items) {
+        if ($cart && $cart->items) {
             $i = 0;
             $result .= '<table class="table table-bordered mb-0">
                         <thead>
@@ -121,7 +121,7 @@ class HtmlContainer
                     </div>
                     </div>';
         } else {
-            $result .= '<div class="dropdown-item"><p class="m-0 p-0">'. __('cart.empty') .'</p></div>';
+            $result .= '<p class="font-weight-normal f-size-20">'. __('cart.empty') .'</p>';
         }
     }
 

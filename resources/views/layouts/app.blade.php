@@ -14,6 +14,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
     <link href="{{ asset('css/login.css') }}" rel="stylesheet">
+    @stack('styles')
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
     <link rel="icon" type="image/png" href="{{ asset('images/icon.png') }}" />
@@ -23,6 +24,14 @@
 </head>
 <body>
     @include('_partials._header_contacts')
+    @if(Session::has('order_status'))
+        <div class="alert alert-success fixed-top alert-dismissible fade show w-25" role="alert" style="top: 10px; right: 10px; left: auto;">
+            {{ Session::get('order_status') }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    @endif
     <main>
         @yield('content')
     </main>

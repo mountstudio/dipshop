@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Basket;
 use App\Product;
 use App\Category;
 use App\Property;
@@ -65,7 +66,25 @@ class AdminController extends Controller
         return Datatables::eloquent($properties)
             ->addColumn('action', function ($model) {
                 return '<a href="'.route('property.edit', $model->id).'" class="btn btn-sm btn-primary"><i class="far fa-edit"></i> Edit</a>
-                        <a href="'.route('property.destroy', $model->id).'" data-id="'.$model->id.'"onclick="event.preventDefault();" data-toggle="modal" data-target="#delete-confirmation" class="btn btn-sm btn-danger"><i class="far fa-trash-alt"></i> Delete</a>';
+                        <a href="'.route('property.destroy', $model->id).'" data-id="'.$model->id.'" onclick="event.preventDefault();" data-toggle="modal" data-target="#delete-confirmation" class="btn btn-sm btn-danger"><i class="far fa-trash-alt"></i> Delete</a>';
+            })
+            ->make(true);
+    }
+
+    public function getBaskets()
+    {
+        $baskets = Basket::query();
+
+        return DataTables::eloquent($baskets)
+            ->addColumn('action', function ($model) {
+                return '<a href="'.route('basket.show', $model->id).'" class="btn btn-sm btn-primary show-basket" data-id="'.$model->id.'" onclick="event.preventDefault();" data-toggle="modal" data-target="#show-basket"><i class="fas fa-info"></i> Подробнее</a>
+                        <a href="'.route('basket.delivered', $model->id).'" class="btn btn-sm btn-success"><i class="fas fa-truck"></i> Доставлено</a>';
+            })
+            ->setRowClass(function ($modal) {
+                return $modal->is_delivered ? 'bg-warning' : '';
+            })
+            ->order(function ($query) {
+                $query->orderBy('created_at', 'desc');
             })
             ->make(true);
     }
