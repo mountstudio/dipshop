@@ -136,7 +136,7 @@
                 deliveryForm.append(html);
                 $('#date').datepicker({
                     format: "dd/mm/yyyy",
-                    startDate: "31/10/2018",
+                    startDate: new Date(),
                     autoclose: true,
                     todayHighlight: true
                 });
