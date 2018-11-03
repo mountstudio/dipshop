@@ -3,7 +3,7 @@
 @section('content')
 
   {{--@include('_partials._banners')--}}
-	@include('_partials._categories') 
+	@include('_partials._categories', ['fixed' => true])
 
 	<div class="container w-100 py-5 border-bottom">
 		@include('_partials._filters')

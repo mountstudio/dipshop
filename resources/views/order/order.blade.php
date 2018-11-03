@@ -27,7 +27,7 @@
                     <td class="p-1">
                         <div class="d-flex justify-content-center align-items-center">
                             <div class="col-auto">
-                                <img class="img-fluid" width="90" height="90" src="http://dipshop/uploads/small/{{ $product['item']->image }}">
+                                <img class="img-fluid" width="90" height="90" src="/uploads/small/{{ $product['item']->image }}">
                             </div>
                         </div>
                     </td>
@@ -136,7 +136,7 @@
                 deliveryForm.append(html);
                 $('#date').datepicker({
                     format: "dd/mm/yyyy",
-                    startDate: "31/10/2018",
+                    startDate: new Date(),
                     autoclose: true,
                     todayHighlight: true
                 });

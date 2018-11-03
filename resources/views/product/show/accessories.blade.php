@@ -3,7 +3,7 @@
 @section('content')
 
     {{--@include('_partials._banners')--}}
-    @include('_partials._categories')
+    @include('_partials._categories', ['fixed' => true])
 
     <div class="container py-5 my-5">
         <div class="row justify-content-center">

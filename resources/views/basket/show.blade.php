@@ -20,7 +20,7 @@
             <td class="p-1">
                 <div class="d-flex justify-content-center align-items-center">
                     <div class="col-auto">
-                        <img class="img-fluid" width="90" height="90" src="http://dipshop/uploads/small/{{ $product->image }}">
+                        <img class="img-fluid" width="90" height="90" src="/uploads/small/{{ $product->image }}">
                     </div>
                 </div>
             </td>
