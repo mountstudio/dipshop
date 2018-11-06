@@ -38,6 +38,6 @@ return [
     'tel'                => 'Тел',
     'address.contact'    => 'Адресс: Пр. Чингиза Айтматова, 299/1',
     'site'               => 'Сайт',
-    'address.s'          => 'Адресс',
+    'address.address'    => 'Адрес',
     'submit'             => 'Отправить'
 ];

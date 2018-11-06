@@ -110,7 +110,6 @@
 
         @if($fixed)
             $(window).scroll(handleTopScroll);
-        @endif
         var prevScrollValue = 0;
         var category = $('.category');
 
@@ -127,5 +126,7 @@
                 category.addClass('category-animate')
             }
         }
+        @endif
+
     </script>
 @endpush

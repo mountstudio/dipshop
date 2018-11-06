@@ -2,6 +2,9 @@
 
 @section('content')
     <div class="container py-5">
+        <div class="row justify-content-center py-4">
+            <h2 class="h1">О магазине</h2>
+        </div>
         <div class="row">
             <div class="col-12 f-size-18 font-weight-normal">
                 <p>
@@ -14,7 +17,7 @@
                     Наши партнеры в Германии работают напрямую и в тесном сотрудничестве с ведущими мировыми брэндами и обеспечивают своевременную поставку качественных товаров.
                 </p>
                 <p>
-                    Наша команда в Кыргызстане заботится о персональном сервисе, индивидуальном подходе и VIPобслуживание наших клиентов.
+                    Наша команда в Кыргызстане заботится о персональном сервисе, индивидуальном подходе и VIP обслуживание наших клиентов.
                 </p>
                 <p>
                     Для Вашего удобства мы открыли магазин в Бишкеке, где Вы можете приобрести штучные товары без длительных ожиданий по поставкам.
@@ -27,32 +30,9 @@
                 </p>
             </div>
         </div>
-        <div class="row mt-5">
+        <div class="row mt-5 justify-content-center">
             <div class="col-6">
-                <div class="d-flex font-weight-normal">
-                    <div class="col-4">
-                        <img src="{{ asset('images/contacts/dipshop.png') }}" class="img-fluid" alt="">
-                    </div>
-                    <div class="col">
-                        <p>Maxim Nudelmann, <span class="text-muted">COO</span></p>
-                        <p>Tel: +49 173 203 93 93</p>
-                        <p>Address: Chingiz Aitmatov Ave 299/1 Bishkek, KG</p>
-                        <p>Site: <a href="http://www.1961.kg/" target="_blank">http://www.1961.kg/</a>, <a href="http://www.dipmarket.kg/" target="_blank">http://www.dipmarket.kg/</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="d-flex font-weight-normal">
-                    <div class="col-4">
-                        <img src="{{ asset('images/contacts/diplomatic.jpg') }}" class="img-fluid" alt="">
-                    </div>
-                    <div class="col">
-                        <p>AEREA GmbH</p>
-                        <p>Tel: +49 30 30 20 67 62</p>
-                        <p>Address: Kurfürstendamm 110 10711 Berlin</p>
-                        <p>Site: <a href="http://www.aerea-group.com/" target="_blank">http://www.aerea-group.com/</a></p>
-                    </div>
-                </div>
+                @include('contacts.dipshop')
             </div>
         </div>
     </div>
