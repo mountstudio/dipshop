@@ -3,7 +3,7 @@
 return [
 
     //head contact
-    'address' => '299/1 Chingiz Aitmatov Ave.',
+    'address'           => 'Chingiz Aitmatov Ave 299/1 Bishkek, KG',
 
     //Menu
     'main'              => 'Main',
@@ -29,16 +29,23 @@ return [
     'search-results'    => 'Search results',
 
     //contacts
-    'name'              => 'Your Name',
-    'phone'             => 'Phone Number',
+    'name'              => 'Name',
+    'last_name'         => 'Last name',
+    'embassy'           => 'Embassy',
+    'code'              => 'Diplomatic code',
+    'delivery'          => 'Delivery',
+    'order.address'     => 'Delivery address',
+    'order.date'        => 'Date of delivery',
+    'order.time'        => 'Time of delivery',
+    'phone'             => 'Phone number',
     'email'             => 'Your email',
     'question'          => 'Your question',
 
-    'tel'                => 'Tel',
-    'address.contact'    => 'Address: Chingiz Aitmatov Ave 299/1 Bishkek, KG',
-    'site'               => 'Site',
-    'address.address'    => 'Address',
-    'submit'             => 'Submit'
+    'bid.tel'           => 'Tel',
+    'bid.contact'       => 'Address: Chingiz Aitmatov Ave 299/1 Bishkek, KG',
+    'bid.site'          => 'Site',
+    'bid.address'       => 'Address',
+    'bid.submit'        => 'Submit'
 
 
 ];

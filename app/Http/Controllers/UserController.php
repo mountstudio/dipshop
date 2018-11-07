@@ -24,10 +24,11 @@ class UserController extends Controller
         return view('user.order');
     }
 
-    public function activate($id)
+    public function activate(Request $request, $id)
     {
         $user = User::find($id);
         $user->is_active = true;
+        $user->percent = $request->percent;
         $user->save();
 
         return redirect()->route('user.index');

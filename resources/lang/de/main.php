@@ -3,7 +3,7 @@
 return [
 
     //head contact
-    'address'           => '299/1 Chingiz Aitmatov Ave.',
+    'address'           => '299/1 Chingiz Aitmatov Ave Bishkek, KG',
 
     //Menu
     'main'              => 'Hauptseite',
@@ -30,15 +30,21 @@ return [
 
     //contacts
     'name'              => 'Name',
+    'last_name'         => 'Familienname',
+    'embassy'           => 'Botschaft',
+    'code'              => 'Diplomatic code',
+    'delivery'          => 'Versand',
+    'order.address'     => 'Versandadresse',
+    'order.date'        => 'Datum der Lieferung',
+    'order.time'        => 'Lieferzeit',
     'phone'             => 'Telefonnummer',
     'email'             => 'Email',
     'question'          => 'Frage',
 
 
-    'maxim'              => 'Maxim Nudelmann',
-    'tel'                => 'Tel',
-    'address.contact'    => 'Address: Chingiz Aitmatov Ave 299/1 Bishkek, KG',
-    'Site'               => 'Site',
-    'address.s'          => 'Address',
-    'submit'             => 'Senden'
+    'bid.tel'           => 'Tel',
+    'bid.contact'       => 'Address: Chingiz Aitmatov Ave 299/1 Bishkek, KG',
+    'bid.site'          => 'Site',
+    'bid.address'       => 'Address',
+    'bid.submit'        => 'Senden'
 ];

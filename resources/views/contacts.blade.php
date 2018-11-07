@@ -33,7 +33,7 @@
                                 <input id="E-mail" type="text" name="email" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label for="content" class="font-weight-normal">{{ __('main.about')  }}<span class="text-danger">*</span></label>
+                                <label for="content" class="font-weight-normal">{{ __('main.question')  }}<span class="text-danger">*</span></label>
                                 <textarea id="content" name="question" rows="10" class="form-control"></textarea>
                             </div>
 

@@ -15,13 +15,13 @@
             <table class="table table-bordered" id="baskets-table">
                 <thead>
                 <tr>
-                    <th>Id</th>
-                    <th>Name</th>
-                    <th>Last name</th>
-                    <th>Embassy</th>
-                    <th>Delivery</th>
-                    <th>Status</th>
-                    <th>Actions</th>
+                    <th>№</th>
+                    <th>Имя</th>
+                    <th>Фамилия</th>
+                    <th>Посольтсво</th>
+                    <th>Доставка</th>
+                    <th>Статус</th>
+                    <th>Действия</th>
                 </tr>
                 </thead>
             </table>

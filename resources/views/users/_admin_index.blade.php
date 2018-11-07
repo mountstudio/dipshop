@@ -7,20 +7,22 @@
             <table class="table table-bordered" id="users-table">
                 <thead>
                 <tr>
-                    <th>Id</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Created At</th>
-                    <th>Updated At</th>
-                    <th>Status</th>
-                    <th>Actions</th>
+                    <th>№</th>
+                    <th>Имя</th>
+                    <th>Фамилия</th>
+                    <th>Зарегистрирован</th>
+                    <th>Скидка</th>
+                    <th>Статус</th>
+                    <th>Действия</th>
                 </tr>
                 </thead>
             </table>
         </div>
     </div>
+    @include('users._activate_modal')
 
 @endsection
+
 
 @push('scripts')
     <script>
@@ -34,12 +36,17 @@
                     { data: 'name', name: 'name' },
                     { data: 'email', name: 'email' },
                     { data: 'created_at', name: 'created_at' },
-                    { data: 'updated_at', name: 'updated_at' },
+                    { data: 'percent', name: 'percent' },
                     { data: 'is_active', name: 'status'},
                     { data: 'action', name: 'action', orderable: false, searchable: false }
-
                 ]
             });
         });
+    </script>
+    <script>
+        $('#activate-user').on('show.bs.modal', function (e) {
+            let btn = $(e.relatedTarget);
+            $('#activate-user').find('form').attr('action', btn.data('url'));
+        })
     </script>
 @endpush

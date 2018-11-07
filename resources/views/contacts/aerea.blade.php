@@ -4,8 +4,8 @@
     </div>
     <div class="col">
         <p>AEREA GmbH</p>
-        <p>{{ __('main.tel')  }}: +49 30 30 20 67 62</p>
-        <p>{{ __('main.address.address')  }}: Kurfürstendamm 110 10711 Berlin</p>
-        <p>{{ __('main.site')  }}: <a href="http://www.aerea-group.com/" target="_blank">http://www.aerea-group.com/</a></p>
+        <p>{{ __('main.bid.tel')  }}: +49 30 30 20 67 62</p>
+        <p>{{ __('main.bid.address')  }}: Kurfürstendamm 110 10711 Berlin</p>
+        <p>{{ __('main.bid.site')  }}: <a href="http://www.aerea-group.com/" target="_blank">http://www.aerea-group.com/</a></p>
     </div>
 </div>

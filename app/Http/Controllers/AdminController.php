@@ -25,11 +25,11 @@ class AdminController extends Controller
 
     public function getUsers()
     {
-        $users = User::select(['id', 'name', 'email', 'password', 'created_at', 'updated_at','is_active']);
+        $users = User::select(['id', 'name', 'email', 'password', 'created_at', 'percent','is_active']);
 
         return Datatables::of($users)
             ->addColumn('action', function ($user) {
-                return '<a href="'.route('user.activate', $user->id).'" class="btn btn-sm btn-primary"><i class="fas fa-lock-open"></i> Активировать</a>
+                return '<a href="'.route('user.activate', $user->id).'" data-id="'.$user->id.'" data-url="'. route('user.activate', $user->id) .'" onclick="event.preventDefault();" data-toggle="modal" data-target="#activate-user" class="btn btn-sm btn-primary"><i class="fas fa-lock-open"></i> Активировать</a>
                         <a href="'.route('user.deactivate', $user->id).'" class="btn btn-sm btn-danger"><i class="fas fa-lock"></i> Деактивировать</a>';
             })
             ->removeColumn('password')
@@ -43,7 +43,7 @@ class AdminController extends Controller
         return Datatables::eloquent($products)
             ->addColumn('action', function ($model) {
                 return '<a href="'.route('product.edit', $model->id).'" class="btn btn-sm btn-primary"><i class="far fa-edit"></i> Edit</a>
-                        <a href="'.route('product.destroy', $model->id).'" data-id="'.$model->id.'"onclick="event.preventDefault();" data-toggle="modal" data-target="#delete-confirmation" class="btn btn-sm btn-danger"><i class="far fa-trash-alt"></i> Delete</a>';
+                        <a href="'.route('product.destroy', $model->id).'" data-id="'.$model->id.'" onclick="event.preventDefault();" data-toggle="modal" data-target="#delete-confirmation" class="btn btn-sm btn-danger"><i class="far fa-trash-alt"></i> Delete</a>';
             })
             ->make(true);
     }
@@ -55,7 +55,7 @@ class AdminController extends Controller
         return Datatables::eloquent($categories)
             ->addColumn('action', function ($model) {
                 return '<a href="'.route('category.edit', $model->id).'" class="btn btn-sm btn-primary"><i class="far fa-edit"></i> Edit</a>
-                        <a href="'.route('category.destroy', $model->id).'" data-id="'.$model->id.'"onclick="event.preventDefault();" data-toggle="modal" data-target="#delete-confirmation" class="btn btn-sm btn-danger"><i class="far fa-trash-alt"></i> Delete</a>';
+                        <a href="'.route('category.destroy', $model->id).'" data-id="'.$model->id.'" onclick="event.preventDefault();" data-toggle="modal" data-target="#delete-confirmation" class="btn btn-sm btn-danger"><i class="far fa-trash-alt"></i> Delete</a>';
             })
             ->make(true);
     }

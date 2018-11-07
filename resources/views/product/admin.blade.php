@@ -13,11 +13,11 @@
             <table class="table table-bordered" id="products-table">
                 <thead>
                 <tr>
-                    <th>Id</th>
-                    <th>Name</th>
-                    <th>Price</th>
-                    <th>Category</th>
-                    <th>Actions</th>
+                    <th>№</th>
+                    <th>Наименование</th>
+                    <th>Цена</th>
+                    <th>Категория</th>
+                    <th>Действия</th>
                 </tr>
                 </thead>
             </table>

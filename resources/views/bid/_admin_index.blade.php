@@ -6,11 +6,11 @@
             <table class="table table-bordered" id="bids-table">
                 <thead>
                 <tr>
-                    <th>Id</th>
-                    <th>Name</th>
+                    <th>№</th>
+                    <th>Имя</th>
                     <th>E-mail</th>
-                    <th>Phone</th>
-                    <th>Question</th>
+                    <th>Номер тел.</th>
+                    <th>Вопрос</th>
                 </tr>
                 </thead>
             </table>

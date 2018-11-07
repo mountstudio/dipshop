@@ -38,7 +38,7 @@
                     </td>
                     <td class="align-middle">
                         <div class="d-flex align-items-center justify-content-center">
-                            <span class="font-weight-bold ml-1">{{ $product['item']->price }}&euro;</span>
+                            <span class="font-weight-bold ml-1">{{ number_format($product['item']->price, 2) }}&euro;</span>
                         </div>
                     </td>
                     <td class="align-middle">
@@ -48,7 +48,7 @@
                     </td>
                     <td class="align-middle">
                         <div class="d-flex align-items-center justify-content-center">
-                            <span class="font-weight-bold ml-1">{{ $product['price'] }}&euro;</span>
+                            <span class="font-weight-bold ml-1">{{ number_format($product['price'], 2) }}&euro;</span>
                         </div>
                     </td>
                 </tr>
@@ -57,7 +57,12 @@
         </table>
         <div class="row justify-content-end mt-3">
             <div class="col-auto">
-                <p class="font-weight-bold f-size-20">Total: {{ $totalPrice }}&euro;</p>
+                @if(Auth::user()->percent)
+                    <p class="font-weight-bold f-size-20 text-right">Your discount: {{ Auth::user()->percent }}%</p>
+                    <p class="font-weight-bold f-size-20 text-right">Total: {{ number_format($totalPrice, 2) }}&euro; - {{ number_format(round($totalPrice * Auth::user()->percent / 100, 2), 2) }}&euro; = {{ number_format($totalPrice - round($totalPrice * Auth::user()->percent / 100, 2), 2) }}&euro;</p>
+                @else
+                    <p class="font-weight-bold f-size-20 text-right">Total: {{ number_format($totalPrice, 2) }}&euro;</p>
+                @endif
             </div>
         </div>
 
@@ -67,26 +72,26 @@
                     @csrf
                     <div class="form-row my-4">
                         <div class="col">
-                            <label for="name">First name <span class="text-danger">*</span></label>
+                            <label for="name">{{ __('main.name') }} <span class="text-danger">*</span></label>
                             <input type="text" value="{{ Auth::user()->name }}" class="form-control" name="name" id="name" required>
                         </div>
                         <div class="col">
-                            <label for="last_name">Last name <span class="text-danger">*</span></label>
+                            <label for="last_name">{{ __('main.last_name') }} <span class="text-danger">*</span></label>
                             <input type="text" value="{{ Auth::user()->last_name }}" class="form-control" name="last_name" id="last_name" required>
                         </div>
                     </div>
                     <div class="form-row my-4">
                         <div class="col">
-                            <label for="embassy">Embassy <span class="text-danger">*</span></label>
+                            <label for="embassy">{{ __('main.embassy') }} <span class="text-danger">*</span></label>
                             <input type="text" value="{{ Auth::user()->embassy }}" class="form-control" name="embassy" id="embassy" required>
                         </div>
                         <div class="col">
-                            <label for="code">Code <span class="text-danger">*</span></label>
+                            <label for="code">{{ __('main.code') }} <span class="text-danger">*</span></label>
                             <input type="text" value="{{ Auth::user()->code }}" class="form-control" name="code" id="code" required>
                         </div>
                     </div>
                     <div class="form-group">
-                        Delivery
+                        {{ __('main.delivery') }}
                         <label class="switch">
                             <input type="checkbox" name="delivery" id="delivery">
                             <span class="slider round"></span>
@@ -115,15 +120,15 @@
     <script>
         let html = $('<div class="form-row my-4">\n' +
             '                            <div class="col">\n' +
-            '                                <label for="address">Address <span class="text-danger">*</span></label>\n' +
+            '                                <label for="address">{{ __('main.order.address') }} <span class="text-danger">*</span></label>\n' +
             '                                <input type="text" class="form-control" name="address" id="address" required>\n' +
             '                            </div>\n' +
             '                            <div class="col">\n' +
-            '                                <label for="date">Date of delivery <span class="text-danger">*</span></label>\n' +
+            '                                <label for="date">{{ __('main.order.date') }} <span class="text-danger">*</span></label>\n' +
             '                                <input type="text" class="form-control" name="date" id="date" required>\n' +
             '                            </div>\n' +
             '                            <div class="col">\n' +
-            '                                <label for="time">Time of delivery <span class="text-danger">*</span></label>\n' +
+            '                                <label for="time">{{ __('main.order.time') }} <span class="text-danger">*</span></label>\n' +
             '                                <input type="time" class="form-control" name="time" id="time" required>\n' +
             '                            </div>\n' +
             '                        </div>');

@@ -31,7 +31,7 @@
             </td>
             <td class="align-middle">
                 <div class="d-flex align-items-center justify-content-center">
-                    <span class="font-weight-bold ml-1">{{ $product->price }}&euro;</span>
+                    <span class="font-weight-bold ml-1">{{ number_format($product->price, 2) }}&euro;</span>
                 </div>
             </td>
             <td class="align-middle">
@@ -41,7 +41,7 @@
             </td>
             <td class="align-middle">
                 <div class="d-flex align-items-center justify-content-center">
-                    <span class="font-weight-bold ml-1">{{ $product->pivot->price }}&euro;</span>
+                    <span class="font-weight-bold ml-1">{{ number_format($product->pivot->price, 2) }}&euro;</span>
                 </div>
             </td>
         </tr>
@@ -49,9 +49,18 @@
     </tbody>
 </table>
 <div class="row justify-content-end mt-3 f-size-20 font-weight-bold">
-    <div class="col-auto">
-        Итого: {{ $basket->total_price }}&euro;
-    </div>
+    @if($basket->user->percent)
+        <div class="col-12 text-right">
+            Скидка: {{ $basket->user->percent }}%
+        </div>
+        <div class="col-auto">
+            Итого: {{ number_format($basket->total_price, 2) }}&euro; - {{ number_format(round($basket->total_price * $basket->user->percent / 100, 2), 2) }}&euro; = {{ number_format($basket->total_price - round($basket->total_price * $basket->user->percent / 100, 2), 2) }}&euro;
+        </div>
+    @else
+        <div class="col-auto">
+            Итого: {{ number_format($basket->total_price, 2) }}&euro;
+        </div>
+    @endif
 </div>
 
 <div class="row f-size-16 font-weight-normal">
