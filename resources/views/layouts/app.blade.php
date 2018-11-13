@@ -3,17 +3,23 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=1920, initial-scale=1">
+    <meta name="viewport" content="width=1440, initial-scale=1">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+<style type="text/css">
+    @media screen and (min-width: 1000px){
+        body {
+            zoom: 80%;
+        }
+    }
+</style>
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/login.css') }}" rel="stylesheet">
     @stack('styles')
     <!-- <link rel="stylesheet" href="//cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css"> -->
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
