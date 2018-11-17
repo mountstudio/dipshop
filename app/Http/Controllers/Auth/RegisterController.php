@@ -64,9 +64,8 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        \Mail::send(['html' => 'mail'],['name', 'info'], function($message){
-            $message->to('Mackinkenny@gmail.com', 'dipmarket')->subject('Новая регистрация');
-            $message->from('dipmarket.info@gmail.com', 'info');
+        \Mail::send('mail', ['name' => 'info'], function($message){
+            $message->to('iurii@1961.kg', 'dipmarket')->subject('Новая регистрация');
         });
         return User::create([
             'name' => $data['name'],
