@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ChangePasswordRequest;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -41,5 +42,24 @@ class UserController extends Controller
         $user->save();
 
         return redirect()->route('user.index');
+    }
+
+    public function changeGet()
+    {
+        $this->middleware('auth');
+
+        return view('auth.passwords.change');
+    }
+
+    public function changePost(ChangePasswordRequest $request)
+    {
+        $this->middleware('auth');
+
+        $validated = $request->validated();
+
+        Auth::user()->password = \Hash::make($validated['new_password']);
+        Auth::user()->save();
+
+        return redirect()->route('homepage');
     }
 }

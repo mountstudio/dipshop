@@ -54,7 +54,7 @@
             Скидка: {{ $basket->user->percent }}%
         </div>
         <div class="col-auto">
-            Итого: {{ number_format($basket->total_price, 2) }}&euro; - {{ number_format(round($basket->total_price * $basket->user->percent / 100, 2), 2) }}&euro; = {{ number_format($basket->total_price - round($basket->total_price * $basket->user->percent / 100, 2), 2) }}&euro;
+            Итого: {{ number_format($basket->total_price, 2) }}&euro; - {{ number_format(round($basket->total_price * $basket->percent / 100, 2), 2) }}&euro; = {{ number_format($basket->total_price - round($basket->total_price * $basket->percent / 100, 2), 2) }}&euro;
         </div>
     @else
         <div class="col-auto">

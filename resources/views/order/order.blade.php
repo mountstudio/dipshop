@@ -70,6 +70,7 @@
             @if(Session::get('cart')->items)
                 <form class="font-weight-normal f-size-18 py-3" action="{{ route('basket.store') }}" method="post">
                     @csrf
+                    <input type="hidden" name="percent" value="{{ Auth::user()->percent }}">
                     <div class="form-row my-4">
                         <div class="col">
                             <label for="name">{{ __('main.name') }} <span class="text-danger">*</span></label>

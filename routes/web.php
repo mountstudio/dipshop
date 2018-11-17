@@ -17,6 +17,8 @@ Route::get('/contacts', 'MainController@contacts')->name('contacts');
 
 Auth::routes();
 
+Route::get('/password/change', 'UserController@changeGet')->name('change_password');
+Route::post('/password/change', 'UserController@changePost')->name('change_password_post');
 
 Route::get('/productshow/{id}', 'ProductController@product');
 Route::get('/profile', 'UserController@profile')->name('profile');

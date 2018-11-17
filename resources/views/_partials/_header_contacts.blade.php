@@ -1,20 +1,20 @@
-<div class="bg-dark text-light sticky-top" style="max-height: 34px;">
+<div class="bg-dark text-light sticky-top">
     <div class="container-fluid">
-        <div class="row justify-content-around">
+        <div class="row justify-content-around align-items-center">
             <div class="col-auto text-left">
-                <p class="py-2" style="font-size: 16px;">{{__('main.address')}}</p>
+                <p class="p-0 m-0 font-weight-normal">{{__('main.address')}}</p>
             </div>
             <div class="col d-flex justify-content-around" id="navbarSupportedContent">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav mx-auto">
-                    <li class="nav-item">
-                        <a href="/" class="nav-link text-light">{{ __('main.main') }}</a>
+                    <li class="nav-item d-flex">
+                        <a href="/" class="nav-link text-light align-self-center">{{ __('main.main') }}</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="{{ route('about') }}" class="nav-link text-light">{{ __('main.about')  }}</a>
+                    <li class="nav-item d-flex">
+                        <a href="{{ route('about') }}" class="nav-link text-light align-self-center">{{ __('main.about')  }}</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="{{ route('contacts') }}" class="nav-link text-light">{{ __('main.contacts')  }}</a>
+                    <li class="nav-item d-flex">
+                        <a href="{{ route('contacts') }}" class="nav-link text-light align-self-center">{{ __('main.contacts')  }}</a>
                     </li>
                 </ul>
 
@@ -24,15 +24,15 @@
                 <ul class="nav">
                     <!-- Authentication Links -->
                     @guest
-                        <li class="nav-item">
-                            <a class="nav-link text-light" href="{{ route('login') }}">{{ __('main.signin') }}</a>
+                        <li class="nav-item d-flex">
+                            <a class="btn btn-dark align-self-center py-0 nav-link text-light" href="{{ route('login') }}">{{ __('main.signin') }}</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" href="{{ route('register') }}">{{ __('main.register') }}</a>
+                        <li class="nav-item d-flex">
+                            <a class="btn btn-dark align-self-center py-0 nav-link text-light" href="{{ route('register') }}">{{ __('main.register') }}</a>
                         </li>
                     @else
-                        <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link text-light dropdown-toggle" href="#" role="button"
+                        <li class="nav-item dropdown d-flex">
+                            <a id="navbarDropdown" class="nav-link align-self-center font-weight-bold text-light dropdown-toggle" href="#" role="button"
                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
@@ -41,6 +41,9 @@
                                 @if(Auth::user()->admin)
                                     <a class="dropdown-item" href="{{ route('options') }}">Admin</a>
                                 @endif
+                                <a class="dropdown-item" href="{{ route('change_password') }}">
+                                    Change password
+                                </a>
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                                          document.getElementById('logout-form').submit();">
@@ -58,8 +61,8 @@
 
                 <!-- Language switcher -->
                 <ul class="nav">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link text-light dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                    <li class="nav-item dropdown d-flex">
+                        <a class="nav-link text-light align-self-center dropdown-toggle" href="#" id="navbarDropdownMenuLink"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <img src="/images/flags/{{App::getLocale()}}.svg"/> {{strtoupper(App::getLocale())}}
                         </a>
@@ -79,9 +82,9 @@
                 </ul>
             </div>
             <div class="col-auto text-right d-flex justify-content-end">
-                <a href="mailto:dipmarket@1961.kg" class="py-2 mx-2 text-light" style="font-size: 16px;">dipmarket@1961.kg</a>
-                <a href="tel:+996 (555) 961 967" class="py-2 mx-2 text-light" style="font-size: 16px;">+996 (555) 961 967</a>
-                <a href="tel:+996 (312) 961 967" class="py-2 mx-2 text-light" style="font-size: 16px;">+996 (312) 961 967</a>
+                <a href="mailto:dipmarket@1961.kg" class="py-2 mx-2 text-light font-weight-normal">dipmarket@1961.kg</a>
+                <a href="tel:+996 (555) 961 967" class="py-2 mx-2 text-light font-weight-normal">+996 (555) 961 967</a>
+                <a href="tel:+996 (312) 961 967" class="py-2 mx-2 text-light font-weight-normal">+996 (312) 961 967</a>
             </div>
         </div>
     </div>

@@ -2,9 +2,9 @@
 
 @section('content')
 <div class="container-fluid">
-    <div class="row justify-content-end">
-        <div class="col" style="background-image: url('/images/wall6.jpg'); background-position: center; background-size: cover;"></div>
-        <div class="col-4" style="background-color: #fffffff0;">
+    <div class="row justify-content-end" style="background-image: url('/images/wall6.jpg'); background-position: center; background-size: cover;">
+        <div class="col"></div>
+        <div class="col-4" style="background-color: #ffffff9e;">
             <div class="d-flex align-items-center justify-content-center text-dark font-weight-bold" style="height: 100vh;">
                 <form action="{{ route('login') }}" method="post" class="col-10">
                     @if(Session::has('info'))

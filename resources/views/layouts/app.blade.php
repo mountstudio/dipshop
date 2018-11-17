@@ -11,7 +11,7 @@
 <style type="text/css">
     @media screen and (min-width: 1000px){
         body {
-            zoom: 80%;
+            font-size: 0.7rem!important;
         }
     }
 </style>
