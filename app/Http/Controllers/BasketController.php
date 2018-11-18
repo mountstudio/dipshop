@@ -37,7 +37,7 @@ class BasketController extends Controller
         if ($request->delivery) {
             $basket->delivery = true;
             $basket->address = $request->address;
-            $basket->delivery_date = new \DateTime($request->date);
+            $basket->delivery_date = \DateTime::createFromFormat('d/m/Y', $request->date);
             $basket->delivery_time = new \DateTime($request->time);
         } else {
             $basket->delivery = false;
