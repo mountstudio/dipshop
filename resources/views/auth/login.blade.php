@@ -17,8 +17,8 @@
                     </div>
                     @csrf
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Username</label>
-                        <input name="name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username" required>
+                        <label for="code">Your code</label>
+                        <input name="code" type="text" class="form-control" id="code" aria-describedby="emailHelp" placeholder="Enter your code" required>
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Password</label>

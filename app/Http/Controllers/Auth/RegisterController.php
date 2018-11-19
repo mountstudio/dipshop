@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Mail\RegistrationComplete;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -53,6 +54,10 @@ class RegisterController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
+            'code' => 'required|string',
+            'phone_number' => 'required|string',
+            'embassy' => 'required|string',
+            'last_name' => 'required|string',
         ]);
     }
 
@@ -64,9 +69,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        \Mail::send('mail', ['name' => 'info'], function($message){
-            $message->to('iurii@1961.kg', 'dipmarket')->subject('Новая регистрация');
-        });
+        \Mail::send(new RegistrationComplete());
         return User::create([
             'name' => $data['name'],
             'last_name' => $data['last_name'],

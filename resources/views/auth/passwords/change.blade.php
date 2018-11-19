@@ -16,12 +16,12 @@
                             <a class="p-0" href="/"><img id="logo" src="/images/2.1.png" style="width:100px; height:auto;" alt=""></a>
                         </div>
                         <div class="text-center mb-4">
-                            <p>{{ Auth::user()->name }} {{ Auth::user()->last_name }}</p>
+                            <p class="text-capitalize">{{ Auth::user()->name }} {{ Auth::user()->last_name }}</p>
                         </div>
                         @csrf
                         <div class="form-group">
                             <label for="current_password">Current password</label>
-                            <input name="current_password" type="password" class="form-control" id="current_password" aria-describedby="emailHelp" placeholder="Enter username" required>
+                            <input name="current_password" type="password" class="form-control" id="current_password" aria-describedby="emailHelp" placeholder="Enter current password" required>
                         </div>
                         <div class="form-group">
                             <label for="new_password">New password</label>

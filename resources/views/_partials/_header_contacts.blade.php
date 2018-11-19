@@ -32,7 +32,7 @@
                         </li>
                     @else
                         <li class="nav-item dropdown d-flex">
-                            <a id="navbarDropdown" class="nav-link align-self-center font-weight-bold text-light dropdown-toggle" href="#" role="button"
+                            <a id="navbarDropdown" class="nav-link align-self-center font-weight-bold text-light dropdown-toggle text-capitalize" href="#" role="button"
                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>

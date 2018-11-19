@@ -14,47 +14,43 @@
                         <div class="form-row mb-3">
                             <div class="col-6">
                                 <label for="name">Name</label>
-                                <input name="name" type="text" class="form-control" id="name" placeholder="Enter name">
+                                <input name="name" type="text" class="form-control" id="name" placeholder="Enter name" required>
                             </div>
                             <div class="col-6">
                                 <label for="last_name">Last name</label>
-                                <input name="last_name" type="text" class="form-control" id="last_name" placeholder="Enter last name">
+                                <input name="last_name" type="text" class="form-control" id="last_name" placeholder="Enter last name" required>
                             </div>
                         </div>
                         <div class="form-row mb-3">
                             <div class="col-6">
                                 <label for="email">E-mail</label>
-                                <input name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter E-mail">
+                                <input name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter E-mail" required>
                                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                             </div>
                             <div class="col-6">
                                 <label for="phone_number">Phone number</label>
-                                <input name="phone_number" type="text" class="form-control" id="phone_number" placeholder="Enter phone number">
+                                <input name="phone_number" type="text" class="form-control" id="phone_number" placeholder="Enter phone number" required>
                             </div>
                         </div>
                         <div class="form-row mb-3">
                             <div class="col-6">
                                 <label for="embassy">Embassy</label>
-                                <input name="embassy" type="text" class="form-control" id="embassy" placeholder="Enter embassy">
+                                <input name="embassy" type="text" class="form-control" id="embassy" placeholder="Enter embassy" required>
                             </div>
                             <div class="col-6">
                                 <label for="code">Code</label>
-                                <input name="code" type="text" class="form-control" id="code" placeholder="Enter your code">
+                                <input name="code" type="text" class="form-control" id="code" placeholder="Enter your code" required>
                             </div>
                         </div>
                         <div class="form-row mb-3">
                             <div class="col-6">
                                 <label for="password">Password</label>
-                                <input name="password" type="password" class="form-control" id="password" placeholder="Password">
+                                <input name="password" type="password" class="form-control" id="password" placeholder="Password" required>
                             </div>
                             <div class="col-6">
                                 <label for="repeated_password">Repeat password</label>
-                                <input name="password_confirmation" type="password" class="form-control" id="repeated_password" placeholder="Repeat password">
+                                <input name="password_confirmation" type="password" class="form-control" id="repeated_password" placeholder="Repeat password" required>
                             </div>
-                        </div>
-                        <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                         <a class="btn btn-link" href="{{ route('login') }}">
