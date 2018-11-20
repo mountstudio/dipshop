@@ -25,7 +25,7 @@ class AdminController extends Controller
 
     public function getUsers()
     {
-        $users = User::select(['id', 'name', 'email', 'password', 'created_at', 'percent','is_active']);
+        $users = User::select(['id', 'name','last_name','embassy','code','phone_number', 'email', 'password', 'created_at', 'percent','is_active']);
 
         return Datatables::of($users)
             ->addColumn('action', function ($user) {

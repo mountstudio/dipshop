@@ -10,7 +10,11 @@
                     <th>№</th>
                     <th>Имя</th>
                     <th>Фамилия</th>
+                    <th>Email</th>
                     <th>Зарегистрирован</th>
+                    <th>Номер телефона</th>
+                    <th>Дип. номер</th>
+                    <th>Посольство</th>
                     <th>Скидка</th>
                     <th>Статус</th>
                     <th>Действия</th>
@@ -34,8 +38,12 @@
                 columns: [
                     { data: 'id', name: 'id' },
                     { data: 'name', name: 'name' },
+                    { data: 'last_name', name: 'last_name' },
                     { data: 'email', name: 'email' },
                     { data: 'created_at', name: 'created_at' },
+                    { data: 'phone_number', name: 'phone_number' },
+                    { data: 'code', name: 'code' },
+                    { data: 'embassy', name: 'embassy' },
                     { data: 'percent', name: 'percent' },
                     { data: 'is_active', name: 'status'},
                     { data: 'action', name: 'action', orderable: false, searchable: false }
