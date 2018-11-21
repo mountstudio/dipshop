@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ChangePasswordRequest;
+use App\Mail\UserActiveted;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -31,6 +32,8 @@ class UserController extends Controller
         $user->is_active = true;
         $user->percent = $request->percent;
         $user->save();
+
+        \Mail::to($user->email)->send(new UserActiveted($user));
 
         return redirect()->route('user.index');
     }
