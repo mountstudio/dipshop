@@ -15,9 +15,10 @@
             <div class="col-6">
                 @include('contacts.dipshop')
                 @include('contacts.aerea')
+                @include('contacts.map2gis')
             </div>
             <div class="col-6">
-                <div class="d-flex h-100 align-items-center">
+                <div class="d-flex h-100">
                     <div class="col-12">
                         <form action="{{ route('bid') }}">
                             <div class="form-group">
@@ -37,7 +38,7 @@
                                 <textarea id="content" name="question" rows="10" class="form-control"></textarea>
                             </div>
 
-                            <button class="btn btn-primary" type="submit">{{ __('main.submit')  }}</button>
+                            <button class="btn btn-primary" type="submit">{{ __('main.bid.submit')  }}</button>
                         </form>
                     </div>
                 </div>
