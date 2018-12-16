@@ -131,6 +131,13 @@ svg {
     height: 40px;
     fill: #fff;
 }
+svg.discount {
+    width:35px;
+    height:35px;
+    top:5px;
+    right:5px;
+    fill: #ff8f5b;
+}
 
 .category-animate {
     position: fixed;
