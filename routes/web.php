@@ -49,6 +49,7 @@ Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function () {
         'show'
     ]);
     Route::resource('property', 'PropertyController');
+    Route::resource('stock', 'StockController');
 });
 
 Route::get('datatable/getusers', 'AdminController@getUsers')->name('datatable.getusers');
@@ -57,6 +58,7 @@ Route::get('datatable/gettypes', 'AdminController@getTypes')->name('datatable.ge
 Route::get('datatable/getproperties', 'AdminController@getProperties')->name('datatable.getproperties');
 Route::get('datatable/getbaskets', 'AdminController@getBaskets')->name('datatable.getbaskets');
 Route::get('datatable/getbids', 'AdminController@getBids')->name('datatable.getbids');
+Route::get('datatable/getstocks', 'AdminController@getStocks')->name('datatable.getstocks');
 
 Route::get('/home', 'HomeController@index')->name('welcome');
 

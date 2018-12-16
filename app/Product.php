@@ -46,4 +46,9 @@ class Product extends Model
     {
         return $this->belongsToMany('App\Basket')->withPivot(['qty', 'price']);
     }
+
+    public function stocks()
+    {
+        return $this->belongsToMany('App\Stock')->withPivot('new_price');
+    }
 }
