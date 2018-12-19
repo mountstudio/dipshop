@@ -4,7 +4,7 @@
         <div class="position-relative card hover-shadow transition-500 border pt-3"
              style="border: 3px solid #dee2e6 !important;">
             @if($product->id %2)
-                <img class="svg discount category_logo position-absolute" src="{{ asset('images/icons/discount.svg') }}" style="width:35px; height: 35px; fill: red!important;" alt="">
+                <img class="svg discount category_logo position-absolute" src="{{ asset('images/icons/discount.svg') }}" style="width:35px; height: 35px;" alt="">
                      @endif
                 <a class="text-dark" href="{{ route('product.show', $product->id) }}" style="text-decoration: none;">
                     <img class="card-img-top px-1" src="{{ asset('uploads/small/'.$product->image) }}"
