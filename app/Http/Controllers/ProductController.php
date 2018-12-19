@@ -238,4 +238,12 @@ class ProductController extends Controller
 
         return redirect()->back();
     }
+
+    public function apiIndex()
+    {
+        return response()->json([
+            'products' => \DB::table('products')->get(['id', 'name']),
+//            'products' => Product::all(['id', 'name']),
+        ]);
+    }
 }

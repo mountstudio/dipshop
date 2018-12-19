@@ -37,11 +37,17 @@ class StockController extends Controller
      */
     public function store(Request $request)
     {
-        $stock = Stock::create($request->request->all());
+        $stock = Stock::create([
+            'name' => $request->name,
+            'start_date' => $request->start_date,
+            'end_date' => $request->end_date,
+        ]);
 
-        $this->addProducts($stock, $request);
+        foreach ($request->products as $index => $product) {
+            $stock->products()->attach($product, ['new_price' => $request->prices[$index]]);
+        }
 
-        return redirect('stock.index');
+        return redirect()->route('stock.index');
     }
 
     /**
