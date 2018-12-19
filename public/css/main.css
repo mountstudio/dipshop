@@ -120,6 +120,7 @@ a.underline-link:hover {
 .category_logo {
     display: block;
     margin: auto;
+    fill: #fff;
 }
 
 #cart-result.dropdown-menu.show {
@@ -129,7 +130,14 @@ a.underline-link:hover {
 svg {
     width: 40px;
     height: 40px;
-    fill: #fff;
+}
+
+.discount {
+    width:35px;
+    height:35px;
+    top:5px;
+    right:5px;
+    fill: #ff8f5b;
 }
 
 .category-animate {
