@@ -6,10 +6,17 @@
 
         <ul class="nav justify-content-center">
             <li class="nav-item">
-                <a class="nav-link  font-weight-bold text-light text-center" href="{{ route('jewelry') }}">
-                    <img src="{{ asset('images/icons/discount.svg') }}" class="svg category_logo" width="40" height="40">
-                    <p class="m-0">{{__('categories.discount')}}</p>
-                </a>
+                @if(\App\Product::all()->where('stock_id', '<>', null)->first())
+                    <a class="nav-link  font-weight-bold text-light text-center" href="{{ route('discount') }}">
+                        <img src="{{ asset('images/icons/discount.svg') }}" class="svg category_logo" width="40" height="40">
+                        <p class="m-0">{{__('categories.discount')}}</p>
+                    </a>
+                @else
+                    <div class="nav-link  font-weight-bold text-light text-center" style="cursor:pointer;">
+                        <img src="{{ asset('images/icons/discount.svg') }}" class="svg category_logo" width="40" height="40">
+                        <p class="m-0">{{__('categories.discount')}}</p>
+                    </div>
+                @endif
             </li>
             <li class="nav-item">
                 <a class="nav-link  font-weight-bold text-light text-center" href="{{ route('alcohol') }}">

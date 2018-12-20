@@ -31,7 +31,7 @@
             </td>
             <td class="align-middle">
                 <div class="d-flex align-items-center justify-content-center">
-                    <span class="font-weight-bold ml-1">{{ number_format($product->price, 2) }}&euro;</span>
+                    <span class="font-weight-bold ml-1">{{ number_format($product->pivot->one_price, 2) }}&euro;</span>
                 </div>
             </td>
             <td class="align-middle">

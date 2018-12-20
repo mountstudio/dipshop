@@ -46,7 +46,7 @@ class BasketController extends Controller
         $basket->save();
 
         foreach ($cart->items as $item) {
-            $basket->products()->attach($item['item']->id, ['qty' => $item['qty'], 'price' => $item['price']]);
+            $basket->products()->attach($item['item']->id, ['one_price' => $item['one_price'], 'qty' => $item['qty'], 'price' => $item['price']]);
         }
 
         $basket->save();

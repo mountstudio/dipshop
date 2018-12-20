@@ -44,11 +44,11 @@ class Product extends Model
 
     public function baskets()
     {
-        return $this->belongsToMany('App\Basket')->withPivot(['qty', 'price']);
+        return $this->belongsToMany('App\Basket')->withPivot(['one_price', 'qty', 'price']);
     }
 
-    public function stocks()
+    public function stock()
     {
-        return $this->belongsToMany('App\Stock')->withPivot('new_price');
+        return $this->belongsTo('App\Stock');
     }
 }

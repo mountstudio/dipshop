@@ -38,7 +38,7 @@
                     </td>
                     <td class="align-middle">
                         <div class="d-flex align-items-center justify-content-center">
-                            <span class="font-weight-bold ml-1">{{ number_format($product['item']->price, 2) }}&euro;</span>
+                            <span class="font-weight-bold ml-1">{{ number_format($product['one_price'], 2) }}&euro;</span>
                         </div>
                     </td>
                     <td class="align-middle">

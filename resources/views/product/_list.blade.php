@@ -2,7 +2,7 @@
 
     <div style="min-width: 220px" class="col-2 mb-4">
         <div class="position-relative card hover-shadow transition-500 border pt-3" style="border: 3px solid #dee2e6 !important;">
-            @if($product->stocks->contains($product->id))
+            @if($product->stock)
                 <img class="svg discount category_logo position-absolute" src="{{ asset('images/icons/discount.svg') }}" style="width:35px; height: 35px;" alt="">
             @endif
             <a class="text-dark" href="{{ route('product.show', $product->id) }}" style="text-decoration: none;">
@@ -10,14 +10,14 @@
                      alt="Card image cap">
                 <div class="card-body position-relative d-flex px-2 pb-1">
                     <div class="text-capitalize mr-auto font-weight-bold">{{ __('categories.'.$product->category->slug) }}</div>
-                    @if($product->stocks->contains($product->id))
+                    @if($product->stock)
                         <div class="card-title ml-auto font-weight-bold text-right"
                              style="text-decoration: line-through; min-width: 70px;"><span
                                     class="h6">{{ number_format($product->price, 2) }}</span> &euro;
                         </div>
                         <div class="position-absolute card-title ml-auto font-weight-bold text-right"
                              style="bottom:-15px; right:8px;"><span
-                                    class="h5">{{ number_format($product->price, 2) }}</span> &euro;
+                                    class="h5">{{ number_format($product->new_price, 2) }}</span> &euro;
                         </div>
                     @else
                         <div class="card-title ml-auto font-weight-bold text-right" style=" min-width: 70px;"><span

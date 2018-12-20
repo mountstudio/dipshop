@@ -63,6 +63,7 @@ Route::get('datatable/getstocks', 'AdminController@getStocks')->name('datatable.
 Route::get('/home', 'HomeController@index')->name('welcome');
 
 Route::get('/product/sort', 'ProductController@sort')->name('product');
+Route::get('/stocks', 'ProductController@discounts')->name('discount');
 Route::get('/alcohols', 'ProductController@alcohols')->name('alcohol');
 Route::get('/cigaretes', 'ProductController@cigaretes')->name('cigaretes');
 Route::get('/jewelry', 'ProductController@jewelry')->name('jewelry');

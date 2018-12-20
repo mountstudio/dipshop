@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Product;
 use App\Stock;
 use Illuminate\Http\Request;
 
@@ -39,12 +40,15 @@ class StockController extends Controller
     {
         $stock = Stock::create([
             'name' => $request->name,
-            'start_date' => $request->start_date,
-            'end_date' => $request->end_date,
+            'start_date' => new \DateTime($request->start_date),
+            'end_date' => new \DateTime($request->end_date),
         ]);
 
         foreach ($request->products as $index => $product) {
-            $stock->products()->attach($product, ['new_price' => $request->prices[$index]]);
+            $product = Product::find($product);
+            $product->stock_id = $stock->id;
+            $product->new_price = $request->prices[$index];
+            $product->save();
         }
 
         return redirect()->route('stock.index');

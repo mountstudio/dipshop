@@ -6,6 +6,8 @@ use App\Cart;
 use App\Http\Requests\ProductRequest;
 use App\Product;
 use App\Category;
+use App\Stock;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -87,6 +89,22 @@ class ProductController extends Controller
             'product' => $product,
             'products' => Product::all()->random(10),
             'similars' => Product::all()->where('category_id', '=', $product->category->id )->random(5),
+        ]);
+    }
+
+    public function discounts()
+    {
+        $stocks = Stock::all()
+            ->where('start_date', '<', Carbon::now('GMT+6'))
+            ->where('end_date', '>', Carbon::now('GMT+6'));
+
+        $products = collect();
+        foreach ($stocks as $stock) {
+            $products = $products->merge($stock->products);
+        }
+
+        return view('product.show.discount', [
+            'products' => $products->paginate(20),
         ]);
     }
 
@@ -239,11 +257,20 @@ class ProductController extends Controller
         return redirect()->back();
     }
 
-    public function apiIndex()
+    public function apiIndex(Request $request)
     {
+        if ($request->ids) {
+            $products = Product::whereNotIn('id', $request->ids)
+                ->where('stock_id', '=', null)
+                ->get(['id', 'name']);
+        } else {
+            $products = Product::where('stock_id', '=', null)
+                ->get(['id', 'name']);
+        }
+
         return response()->json([
-            'products' => \DB::table('products')->get(['id', 'name']),
-//            'products' => Product::all(['id', 'name']),
+            'id' => $request->ids,
+            'products' => $products,
         ]);
     }
 }

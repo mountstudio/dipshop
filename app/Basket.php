@@ -15,6 +15,6 @@ class Basket extends Model
 
     public function products()
     {
-        return $this->belongsToMany('App\Product')->withPivot(['qty', 'price']);
+        return $this->belongsToMany('App\Product')->withPivot(['one_price', 'qty', 'price']);
     }
 }

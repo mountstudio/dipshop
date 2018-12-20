@@ -89,7 +89,6 @@ class CartController extends Controller
             'products' => $cart->items,
             'totalQty' => $cart->totalQty,
             'totalPrice' => $cart->totalPrice,
-            'realPrice' => $cart->realPrice,
         ]);
     }
 }

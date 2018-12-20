@@ -95,7 +95,7 @@ class HtmlContainer
                             <td class="align-middle"><span class="font-weight-bold">' . $item['item']->name . '</span><br><b>' . __('categories.' . $item['item']->category->slug) . '</b></td>
                             <td class="align-middle">
                             <div class="d-flex align-items-center">
-                            <span class="font-weight-bold ml-1">' . number_format($item['item']->price, 2) . '&euro;</span>
+                            <span class="font-weight-bold ml-1">' . number_format($item['one_price'], 2) . '&euro;</span>
                             </div>
                             </td>
                             <td class="align-middle">

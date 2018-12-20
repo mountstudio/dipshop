@@ -47,21 +47,38 @@
     <script src="{{ asset('js/selectize.min.js') }}"></script>
     <script>
         let option = [];
+        let arrayProductIds = [];
 
-        $.ajax({
-            url: '/api/products',
-            method: 'GET',
-            success: function (res) {
-                let products = res.products;
+        initProducts();
 
-                for (let i = 0; i < products.length; i++) {
-                    option.push('<option value="' + products[i].id + '">' + products[i].name + '</option>');
+        function initProducts() {
+            let query = '';
+            arrayProductIds ? $.each(arrayProductIds, (index, item) => {
+                if (index == 0) {
+                    query += '?ids[]=';
+                } else {
+                    query += '&ids[]=';
                 }
-            },
-            error: function () {
-                console.log('error');
-            }
-        });
+                query += item;
+            }) : '';
+            console.log(query)
+            $.ajax({
+                url: '/api/products' + query,
+                method: 'GET',
+                success: function (res) {
+                    console.log(res);
+                    let products = res.products;
+
+                    for (let i = 0; i < products.length; i++) {
+                        option.push('<option value="' + products[i].id + '">' + products[i].name + '</option>');
+                    }
+                },
+                error: function () {
+                    console.log('error');
+                }
+            });
+            console.log(option);
+        }
 
         let createBtn = $('#create-select');
 
@@ -78,14 +95,16 @@
             let formGroupSelect = '<div class="form-group col-6" id="new-select-group-' + selectId + '"></div>';
             let formGroupInput = '<div class="form-group col-6" id="new-input-group-' + selectId + '"></div>';
             let input = '<label for="new-input-\' + selectId + \'">Акционная цена</label><input name="prices[]" type="text" id="new-input-' + selectId + '" class="form-control" required>';
-            let select = '<label for="new-select-' + selectId + '">Продукт</label><select name="products[]" class="" id="new-select-' + selectId + '" required></select>';
+            let selectLabel = '<label for="new-select-\' + selectId + \'">Продукт</label>';
+            let select = $('<select name="products[]" class="new-select" id="new-select-' + selectId + '" required></select>');
             const removeBtn = $('<div class="btn btn-danger position-absolute" data-id="' + selectId + '" style="right: -40px; bottom: 22px;"><i class="fas fa-times"></i></div>');
 
             $('#selects').append(formRow);
             $('#new-row-'+selectId).append(formGroupSelect).append(formGroupInput).append(removeBtn);
             removeSelect(removeBtn);
-            $('#new-select-group-'+selectId).append(select);
+            $('#new-select-group-'+selectId).append(selectLabel).append(select);
             $('#new-input-group-'+selectId).append(input);
+            registerSelect(select);
             appendOptions();
             selectId++;
         }
@@ -94,6 +113,25 @@
             let select = $('#new-select-'+selectId);
             select.append(option);
             select.selectize();
+
+            updateOption();
+            initProducts();
+        }
+
+        function registerSelect(item) {
+            item.change(function (e) {
+                updateOption();
+                initProducts();
+            });
+        }
+
+        function updateOption() {
+            option = [];
+            arrayProductIds = [];
+            $('select.new-select').each(function () {
+                arrayProductIds.push($(this).val());
+            });
+            console.log(arrayProductIds);
         }
 
         function removeSelect(item) {
@@ -101,7 +139,14 @@
                 e.preventDefault();
 
                 let id = $(this).data('id');
+                let selectId = $('#new-select-'+id).val();
+
                 $('#new-row-'+id).remove();
+
+                option = [];
+                let index = arrayProductIds.indexOf(selectId);
+                if (index !== -1) arrayProductIds.splice(index, 1);
+                initProducts();
             });
         }
     </script>

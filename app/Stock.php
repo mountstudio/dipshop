@@ -10,6 +10,6 @@ class Stock extends Model
 
     public function products()
     {
-        return $this->belongsToMany('App\Product')->withPivot('new_price');
+        return $this->hasMany('App\Product');
     }
 }
