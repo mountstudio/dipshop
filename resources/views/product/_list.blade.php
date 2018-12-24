@@ -10,20 +10,22 @@
                      alt="Card image cap">
                 <div class="card-body position-relative d-flex px-2 pb-1">
                     <div class="text-capitalize mr-auto font-weight-bold">{{ __('categories.'.$product->category->slug) }}</div>
-                    @if($product->stock)
-                        <div class="card-title ml-auto font-weight-bold text-right"
-                             style="text-decoration: line-through; min-width: 70px;"><span
-                                    class="h6">{{ number_format($product->price, 2) }}</span> &euro;
-                        </div>
-                        <div class="position-absolute card-title ml-auto font-weight-bold text-right"
-                             style="bottom:-15px; right:8px;"><span
-                                    class="h5">{{ number_format($product->new_price, 2) }}</span> &euro;
-                        </div>
-                    @else
-                        <div class="card-title ml-auto font-weight-bold text-right" style=" min-width: 70px;"><span
-                                    class="h5">{{ number_format($product->price, 2) }}</span> &euro;
-                        </div>
-                    @endif
+                    @auth
+                        @if($product->stock)
+                            <div class="card-title ml-auto font-weight-bold text-right"
+                                 style="text-decoration: line-through; min-width: 70px;"><span
+                                        class="h6">{{ number_format($product->price, 2) }}</span> &euro;
+                            </div>
+                            <div class="position-absolute card-title ml-auto font-weight-bold text-right"
+                                 style="bottom:-15px; right:8px;"><span
+                                        class="h5">{{ number_format($product->new_price, 2) }}</span> &euro;
+                            </div>
+                        @else
+                            <div class="card-title ml-auto font-weight-bold text-right" style=" min-width: 70px;"><span
+                                        class="h5">{{ number_format($product->price, 2) }}</span> &euro;
+                            </div>
+                        @endif
+                    @endauth
                 </div>
                 <div class="card-body px-2 pb-0 pt-1 d-flex">
                     <div class="card-title h6 mr-auto" style="min-height: 64px;">{{ $product->name }}</div>
