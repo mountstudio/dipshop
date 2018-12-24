@@ -101,8 +101,12 @@ class Cart
 
     public function checkForStock($item)
     {
-        return $price = $item->stock->start_date < Carbon::now('GMT+6') && $item->stock->end_date > Carbon::now('GMT+6')
-            ? $item->new_price
-            : $item->price;
+        if ($item->stock_id !== null) {
+            return $item->stock->start_date < Carbon::now('GMT+6') && $item->stock->end_date > Carbon::now('GMT+6')
+                ? $item->new_price
+                : $item->price;
+        }
+
+        return $item->price;
     }
 }
