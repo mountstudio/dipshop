@@ -85,10 +85,18 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
+        $countSimilars = Product::all()->where('category_id', '=', $product->category->id )->count();
+
+        if ($countSimilars > 4) {
+            $similars = Product::all()->where('category_id', '=', $product->category->id )->random(5);
+        } else {
+            $similars = null;
+        }
+
         return view('product.show', [
             'product' => $product,
             'products' => Product::all()->random(10),
-            'similars' => Product::all()->where('category_id', '=', $product->category->id )->random(5),
+            'similars' => $similars,
         ]);
     }
 

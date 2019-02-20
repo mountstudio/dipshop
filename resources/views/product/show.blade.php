@@ -46,18 +46,22 @@
         </div>
     </div>
 
-    <div>
-        <hr>
-        <h3 class="text-center">{{ __('main.similar') }}</h3>
-            @include('_partials._similar_slide', ['products' => $similars])
+    @if($similars)
+        <div>
+            <hr>
+            <h3 class="text-center">{{ __('main.similar') }}</h3>
+            @includeWhen($similars, '_partials._similar_slide', ['products' => $similars])
 
-    </div>
+        </div>
+    @endif
 
-    <div>
-        <hr>
-        <h3 class="text-center">{{ __('main.others') }}</h3>
-            @include('_partials._similar_slide', ['products' => $products])
-    </div>
+    @if($products)
+        <div>
+            <hr>
+            <h3 class="text-center">{{ __('main.others') }}</h3>
+            @includeWhen($products, '_partials._similar_slide', ['products' => $products])
+        </div>
+    @endif
 
 
 @endsection
