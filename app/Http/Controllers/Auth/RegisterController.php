@@ -69,7 +69,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        \Mail::to('mackinkenny@gmail.com')->cc('tilek.kubanov@gmail.com')->send(new RegistrationComplete($data));
+        \Mail::to('dipmarket@1961.kg')->cc('tilek.kubanov@gmail.com')->send(new RegistrationComplete($data));
         return User::create([
             'name' => $data['name'],
             'last_name' => $data['last_name'],
