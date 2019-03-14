@@ -39,13 +39,13 @@
             <li class="nav-item">
                 <a class="nav-link  font-weight-bold text-light text-center" href="{{ route('perfume') }}">
                     <img src="{{ asset('images/icons/perfume.svg') }}" class="svg category_logo" width="40" height="40">
-                    <p class="m-0">{{__('categories.perfumery')}}</p>
+                    <p class="m-0">{{__('categories.parfyum-i-cosmetica')}}</p>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link  font-weight-bold text-light text-center" href="{{ route('coffee') }}">
                     <img src="{{ asset('images/icons/coffee-bean.svg') }}" class="svg category_logo" width="40" height="40">
-                    <p class="m-0">{{__('categories.coffee')}}</p>
+                    <p class="m-0">{{__('categories.coffee-i-chocolate')}}</p>
                 </a>
             </li>
             <li class="nav-item">
