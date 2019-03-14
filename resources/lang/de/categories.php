@@ -5,8 +5,8 @@ return [
     'alkogol'           => 'Alkohol',
     'sigarety'          => 'Tabak',
     'jewelry'           => 'Schmuck',
-    'perfumery'         => 'Parfümerie',
-    'coffee'            => 'Kaffee',
+    'parfyum-i-cosmetica'=> 'Parfüm und Kosmetik',
+    'coffee-i-chocolate'=> 'Kaffee und Schokolade',
     'accessories'       => 'Zubehör',
 
     //Child categories
@@ -21,6 +21,10 @@ return [
     'liker'             => 'Liquor',
     'prochie'           => 'Andere',
     'pivo'              => 'Bier',
+    'parfyum'           => 'Parfüm',
+    'kosmetika'         => 'Kosmetika',
+    'kofe'              => 'Kaffee',
+    'shokolad'          => 'schokolade',
     'discount'          => 'Rabatt',
     'gift'              => 'Sets',
     'download_catalog'  => 'Katalog herunterladen',

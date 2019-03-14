@@ -162,12 +162,36 @@ class ProductController extends Controller
 
     public function coffee()
     {
-        return view('product.show.coffee');
+        $products = collect()->merge(Product::all()->where('category_id', '=', 19));
+
+        $categories = (new Category)->find(19)->children;
+
+        foreach ($categories as $category) {
+            $products = $products->merge(Product::all()->where('category_id', '=', $category->id));
+        }
+
+        return view('product.show.coffee', [
+            'products' => $products->paginate(20),
+            'categories' => $categories,
+            'mainCatId' => 19,
+        ]);
     }
 
     public function perfume()
     {
-        return view('product.show.perfume');
+        $products = collect()->merge(Product::all()->where('category_id', '=', 14));
+
+        $categories = (new Category)->find(14)->children;
+
+        foreach ($categories as $category) {
+            $products = $products->merge(Product::all()->where('category_id', '=', $category->id));
+        }
+
+        return view('product.show.perfume', [
+            'products' => $products->paginate(20),
+            'categories' => $categories,
+            'mainCatId' => 14,
+        ]);
     }
 
     public function sort(Request $request)

@@ -5,8 +5,8 @@ return [
     'alkogol'           => 'Алкоголь',
     'sigarety'          => 'Табак',
     'jewelry'           => 'Драгоценности',
-    'perfumery'         => 'Парфюмерия',
-    'coffee'            => 'Кофе',
+    'parfyum-i-cosmetica'=> 'Парфюм и косметика',
+    'coffee-i-chocolate'=> 'Кофе и шоколад',
     'accessories'       => 'Аксессуары',
 
     //Child categories
@@ -21,6 +21,10 @@ return [
     'liker'             => 'Ликер',
     'prochie'           => 'Прочие',
     'pivo'              => 'Пиво',
+    'parfyum'           => 'Парфюм',
+    'kosmetika'         => 'Косметика',
+    'kofe'              => 'Кофе',
+    'shokolad'          => 'Шоколад',
     'discount'          => 'Спец предложения',
     'gift'              => 'Сеты',
     'download_catalog'  => 'Скачать каталог',
